@@ -93,53 +93,28 @@
       </blockquote>
     </div>
 
-    <!-- Hero illustration -->
-    <div class="flex justify-center">
-      <svg viewBox="0 0 380 300" class="w-full max-w-sm drop-shadow-xl" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="hg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
-          <linearGradient id="hg2" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1e1b4b"/><stop offset="100%" stop-color="#1e3a8a"/></linearGradient>
-          <filter id="blur1"><feGaussianBlur stdDeviation="18"/></filter>
-        </defs>
-        <!-- glow blobs -->
-        <ellipse cx="190" cy="150" rx="150" ry="120" fill="#7c3aed" opacity="0.07" filter="url(#blur1)"/>
-        <!-- laptop base -->
-        <rect x="55" y="218" width="270" height="14" rx="7" fill="#cbd5e1"/>
-        <rect x="100" y="230" width="180" height="6" rx="3" fill="#94a3b8"/>
-        <!-- laptop body -->
-        <rect x="70" y="55" width="240" height="168" rx="14" fill="#1e293b"/>
-        <!-- screen -->
-        <rect x="80" y="65" width="220" height="148" rx="9" fill="url(#hg2)"/>
-        <!-- code lines -->
-        <rect x="96" y="80" width="55" height="6" rx="3" fill="#a78bfa"/>
-        <rect x="104" y="94" width="88" height="5" rx="2.5" fill="#60a5fa" opacity="0.8"/>
-        <rect x="104" y="107" width="68" height="5" rx="2.5" fill="#34d399" opacity="0.8"/>
-        <rect x="112" y="120" width="48" height="5" rx="2.5" fill="#fbbf24" opacity="0.8"/>
-        <rect x="104" y="133" width="76" height="5" rx="2.5" fill="#f472b6" opacity="0.8"/>
-        <rect x="96" y="146" width="38" height="6" rx="3" fill="#a78bfa"/>
-        <!-- AI response panel -->
-        <rect x="168" y="72" width="122" height="106" rx="10" fill="#1e40af" opacity="0.92"/>
-        <rect x="176" y="82" width="88" height="5" rx="2.5" fill="#93c5fd"/>
-        <rect x="176" y="94" width="106" height="5" rx="2.5" fill="#bfdbfe" opacity="0.75"/>
-        <rect x="176" y="106" width="96" height="5" rx="2.5" fill="#bfdbfe" opacity="0.75"/>
-        <rect x="176" y="118" width="78" height="5" rx="2.5" fill="#bfdbfe" opacity="0.75"/>
-        <rect x="176" y="130" width="60" height="5" rx="2.5" fill="#bfdbfe" opacity="0.6"/>
-        <rect x="176" y="142" width="40" height="5" rx="2.5" fill="#bfdbfe" opacity="0.5"/>
-        <!-- check badge -->
-        <circle cx="270" cy="192" r="14" fill="#10b981"/>
-        <polyline points="264,192 268,197 277,185" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <!-- tool badges -->
-        <rect x="88" y="184" width="88" height="22" rx="11" fill="url(#hg1)"/>
-        <text x="132" y="199" text-anchor="middle" fill="white" font-size="9.5" font-family="sans-serif" font-weight="bold">⚡ Superpowers</text>
-        <rect x="184" y="184" width="68" height="22" rx="11" fill="#f59e0b"/>
-        <text x="218" y="199" text-anchor="middle" fill="white" font-size="9.5" font-family="sans-serif" font-weight="bold">🔥 GrillMe</text>
-        <!-- decorative dots -->
-        <circle cx="44" cy="95" r="5" fill="#7c3aed" opacity="0.25"/>
-        <circle cx="36" cy="140" r="3" fill="#2563eb" opacity="0.25"/>
-        <circle cx="346" cy="75" r="4" fill="#7c3aed" opacity="0.25"/>
-        <circle cx="354" cy="130" r="6" fill="#2563eb" opacity="0.18"/>
-        <circle cx="350" cy="185" r="3" fill="#10b981" opacity="0.3"/>
-      </svg>
+    <!-- Hero: YouTube embed -->
+    <div class="flex flex-col gap-3">
+      <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 dark:ring-white/10" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/BZPaZzjLIOY"
+          title="400시간 만에 알게 된 Claude Code의 진짜 핵심 도구 6개"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <a
+        href="https://www.youtube.com/watch?v=BZPaZzjLIOY"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
+      >
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        원본 영상 보기 (YouTube)
+      </a>
     </div>
   </div>
 </section>
