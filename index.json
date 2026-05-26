@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "updated_at": "2026-05-26T07:30:28",
+  "reports": [
+    {
+      "slug": "llm-wiki-obsidian-claude-code",
+      "category": "tech",
+      "video_id": "9IuIwXAz_84",
+      "title": "AI시대에 LLM 위키가 꼭 필요한 이유 - 클로드코드 x 옵시디언",
+      "channel": "실용주의 개발",
+      "duration_string": "10분 2초",
+      "duration_seconds": 602,
+      "summary": "옵시디언+클로드코드로 AI가 관리하는 나만의 지식 위키 구축",
+      "video_url": "https://www.youtube.com/watch?v=9IuIwXAz_84",
+      "report_url": "tech/llm-wiki-obsidian-claude-code.html",
+      "thumbnail_url": "https://img.youtube.com/vi/9IuIwXAz_84/maxresdefault.jpg",
+      "processed_date": "2026-05-22"
+    },
+    {
+      "slug": "karpathy-claude-md-vibe-coding",
+      "category": "tech",
+      "video_id": "xnNFexW9Wrk",
+      "title": "바이브코딩계 GD가 공유한 CLAUDE.md 나눕니다",
+      "channel": "미드나잇 로그 Midnight Log",
+      "duration_string": "12분 41초",
+      "duration_seconds": 761,
+      "summary": "카파시의 AI 코딩 원칙 4가지를 담은 CLAUDE.md 활용법",
+      "video_url": "https://www.youtube.com/watch?v=xnNFexW9Wrk",
+      "report_url": "tech/karpathy-claude-md-vibe-coding.html",
+      "thumbnail_url": "https://img.youtube.com/vi/xnNFexW9Wrk/maxresdefault.jpg",
+      "processed_date": "2026-05-21"
+    },
+    {
+      "slug": "claude-code-6-tools",
+      "category": "tech",
+      "video_id": "BZPaZzjLIOY",
+      "title": "400시간 만에 알게 된 Claude Code의 진짜 핵심 도구 6개",
+      "channel": "메이커 에반 | Maker Evan",
+      "duration_string": "9분 34초",
+      "duration_seconds": 574,
+      "summary": "화려한 도구 말고, 매일 써도 되는 도구로 시작하세요",
+      "video_url": "https://www.youtube.com/watch?v=BZPaZzjLIOY",
+      "report_url": "tech/claude-code-6-tools.html",
+      "thumbnail_url": "https://img.youtube.com/vi/BZPaZzjLIOY/maxresdefault.jpg",
+      "processed_date": "2026-05-20"
+    }
+  ]
+}
