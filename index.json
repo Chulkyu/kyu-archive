@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-27T07:33:44",
+  "updated_at": "2026-05-27T09:18:56",
   "reports": [
+    {
+      "slug": "stock-investment-basics-master",
+      "category": "finance",
+      "video_id": "Ub-4riqQZ8I",
+      "title": "20분만에 \"주린이 탈출\"시켜 드립니다 (주식 기초 완전 마스터)",
+      "channel": "자산제곱",
+      "duration_string": "22분 29초",
+      "duration_seconds": 1349,
+      "summary": "주식 투자 핵심 원칙: 심리·비중·타이밍·기업분석 완전 정리",
+      "video_url": "https://www.youtube.com/watch?v=Ub-4riqQZ8I",
+      "report_url": "finance/stock-investment-basics-master.html",
+      "thumbnail_url": "https://img.youtube.com/vi/Ub-4riqQZ8I/maxresdefault.jpg",
+      "processed_date": "2026-05-27"
+    },
     {
       "slug": "karpathy-claude-md-vibe-coding-2",
       "category": "tech",
