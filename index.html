@@ -150,14 +150,10 @@
 
 <!-- ── STATS BAR ─────────────────────────────────────────────── -->
 <section class="px-4 py-8 bg-slate-50 dark:bg-slate-900/60">
-  <div class="max-w-5xl mx-auto grid grid-cols-3 gap-4">
+  <div id="stats-container" class="max-w-5xl mx-auto grid grid-cols-2 gap-4">
     <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
       <div id="stat-total" class="text-3xl font-black gradient-text">–</div>
       <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">전체 레포트</div>
-    </div>
-    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
-      <div id="stat-tech" class="text-3xl font-black text-violet-600 dark:text-violet-400">–</div>
-      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">기술 영상</div>
     </div>
     <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
       <div id="stat-recent" class="text-lg font-bold text-blue-600 dark:text-blue-400 tabular-nums">–</div>
@@ -484,16 +480,41 @@
     metaUpdated.classList.remove('opacity-0');
   }
 
+  const STAT_CATEGORY = {
+    tech:     { label: '기술 영상',     color: 'text-violet-600 dark:text-violet-400' },
+    finance:  { label: '금융 영상',     color: 'text-emerald-600 dark:text-emerald-400' },
+    business: { label: '비즈니스 영상', color: 'text-amber-500 dark:text-amber-400' },
+  };
+
   function populateStats(data) {
-    const total     = data.reports.length;
-    const techCount = data.reports.filter(r => r.category === 'tech').length;
+    const total = data.reports.length;
     const latestDate = data.reports
       .map(r => r.processed_date ?? '')
       .filter(Boolean)
       .sort((a, b) => b.localeCompare(a))[0] ?? '–';
 
+    const catCounts = {};
+    data.reports.forEach(r => { if (r.category) catCounts[r.category] = (catCounts[r.category] ?? 0) + 1; });
+    const activeCats = Object.keys(STAT_CATEGORY).filter(c => catCounts[c]);
+
+    const container = document.getElementById('stats-container');
+    const cols = 1 + activeCats.length + 1;
+    container.className = 'max-w-5xl mx-auto grid gap-4';
+    container.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+
+    const catTiles = activeCats.map(cat => {
+      const { label, color } = STAT_CATEGORY[cat];
+      return `<div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div id="stat-${cat}" class="text-3xl font-black ${color}">–</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">${label}</div>
+      </div>`;
+    }).join('');
+
+    const recentTile = container.querySelector('#stat-recent').closest('div');
+    recentTile.insertAdjacentHTML('beforebegin', catTiles);
+
     animateCount(document.getElementById('stat-total'), total);
-    animateCount(document.getElementById('stat-tech'),  techCount);
+    activeCats.forEach(cat => animateCount(document.getElementById(`stat-${cat}`), catCounts[cat]));
     document.getElementById('stat-recent').textContent = latestDate;
   }
 
