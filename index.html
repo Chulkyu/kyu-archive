@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyu의 AI 영상 라이브러리</title>
-  <meta name="description" content="AI가 자동으로 요약한 영상 지식 베이스">
-  <meta property="og:title" content="Kyu의 AI 영상 라이브러리">
-  <meta property="og:description" content="AI가 자동으로 요약한 영상 지식 베이스">
+  <title>Kyu's Archive</title>
+  <meta name="description" content="Personal knowledge base curated by AI">
+  <meta property="og:title" content="Kyu's Archive">
+  <meta property="og:description" content="Personal knowledge base curated by AI">
   <meta property="og:url" content="https://chulkyu.github.io/youtube-reports/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://img.youtube.com/vi/9IuIwXAz_84/maxresdefault.jpg">
@@ -75,7 +75,7 @@
       <svg class="w-4 h-4 text-red-500 shrink-0" viewBox="0 0 24 24" fill="currentColor">
         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
       </svg>
-      <span>Kyu의 YouTube 라이브러리</span>
+      <span>Kyu's Archive</span>
     </div>
     <div class="flex items-center gap-4">
       <span id="meta-count" class="transition-opacity duration-300 opacity-0">📚 –편</span>
@@ -93,13 +93,13 @@
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
         </svg>
-        AI 영상 지식 베이스
+        Personal Knowledge Base
       </div>
       <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">
-        <span class="gradient-text">Kyu의</span><br>AI 영상 라이브러리
+        <span class="gradient-text">Kyu's</span><br>Archive
       </h1>
       <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-        유튜브 영상을 AI가 분석해 핵심만 정리한 개인 지식 베이스
+        Personal knowledge base curated by AI
       </p>
     </div>
 
@@ -150,13 +150,16 @@
 
 <!-- ── STATS BAR ─────────────────────────────────────────────── -->
 <section class="px-4 py-8 bg-slate-50 dark:bg-slate-900/60">
-  <div id="stats-container" class="max-w-5xl mx-auto grid grid-cols-2 gap-4">
-    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
-      <div id="stat-total" class="text-3xl font-black gradient-text">–</div>
-      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">전체 레포트</div>
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+    <!-- Left: total + category breakdown -->
+    <div class="md:col-span-2 bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm">
+      <div id="stat-total" class="text-4xl font-black gradient-text">–</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 mb-4 font-medium">전체 레포트</div>
+      <div id="stat-cats" class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm"></div>
     </div>
-    <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
-      <div id="stat-recent" class="text-lg font-bold text-blue-600 dark:text-blue-400 tabular-nums">–</div>
+    <!-- Right: recent date -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm flex flex-col justify-center">
+      <div id="stat-recent" class="text-xl font-bold text-blue-600 dark:text-blue-400 tabular-nums">–</div>
       <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">최근 추가일</div>
     </div>
   </div>
@@ -497,21 +500,18 @@
     data.reports.forEach(r => { if (r.category) catCounts[r.category] = (catCounts[r.category] ?? 0) + 1; });
     const activeCats = Object.keys(STAT_CATEGORY).filter(c => catCounts[c]);
 
-    const container = document.getElementById('stats-container');
-    const cols = 1 + activeCats.length + 1;
-    container.className = 'max-w-5xl mx-auto grid gap-4';
-    container.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
-
-    const catTiles = activeCats.map(cat => {
+    // Category breakdown chips inside the left box
+    const catEl = document.getElementById('stat-cats');
+    catEl.innerHTML = activeCats.map((cat, i) => {
       const { label, color } = STAT_CATEGORY[cat];
-      return `<div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
-        <div id="stat-${cat}" class="text-3xl font-black ${color}">–</div>
-        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">${label}</div>
-      </div>`;
+      const sep = i < activeCats.length - 1
+        ? '<span class="text-slate-300 dark:text-slate-600 select-none">·</span>'
+        : '';
+      return `<span class="flex items-center gap-1.5">
+        <span id="stat-${cat}" class="font-black text-lg ${color}">–</span>
+        <span class="text-slate-500 dark:text-slate-400">${label}</span>
+      </span>${sep}`;
     }).join('');
-
-    const recentTile = container.querySelector('#stat-recent').closest('div');
-    recentTile.insertAdjacentHTML('beforebegin', catTiles);
 
     animateCount(document.getElementById('stat-total'), total);
     activeCats.forEach(cat => animateCount(document.getElementById(`stat-${cat}`), catCounts[cat]));
