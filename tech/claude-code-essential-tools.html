@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>400시간 만에 알게 된 Claude Code의 진짜 핵심 도구 6개 | 영상 요약 레포트</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css');
+    body { font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #7c3aed 0%, #2563eb 50%, #0891b2 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .tool-card { transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; }
+    .tool-card:hover { transform: translateY(-6px); }
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at top left, rgba(124,58,237,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(37,99,235,0.08) 0%, transparent 55%);
+    }
+    .dark .hero-bg {
+      background:
+        radial-gradient(ellipse at top left, rgba(124,58,237,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(37,99,235,0.15) 0%, transparent 55%);
+    }
+    .section-line { background: linear-gradient(90deg, transparent, #7c3aed 30%, #2563eb 70%, transparent); height: 1px; }
+    .warning-stripes {
+      background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(234,179,8,0.08) 8px, rgba(234,179,8,0.08) 16px);
+    }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform 0.2s ease; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<script>
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  });
+</script>
+
+<!-- META BAR -->
+<div class="bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-4 py-2">
+  <div class="max-w-5xl mx-auto flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+    <div class="flex items-center gap-2">
+      <svg class="w-4 h-4 text-red-500 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <span>YouTube 영상 자동 요약 레포트</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>⏱ 9분 34초</span>
+      <span>📅 2026-05-13 업로드</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-bg px-4 py-16 md:py-24">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-xs font-semibold px-3 py-1 rounded-full mb-5">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Claude Code 실전 가이드
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">
+        <span class="gradient-text">400시간</span>이<br>증명한 도구들
+      </h1>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-2 leading-relaxed">
+        10개월 실전 검증, <strong>매일 켜두는 핵심 도구 6가지</strong>
+      </p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mb-5">
+        채널: 메이커 에반 | Maker Evan &nbsp;·&nbsp; 원본 제목: "400시간 만에 알게 된 Claude Code의 진짜 핵심 도구 6개"
+      </p>
+      <div class="bg-gradient-to-r from-violet-600 to-blue-600 text-white rounded-2xl p-5 mb-6 shadow-lg">
+        <p class="text-xs font-semibold opacity-75 mb-1">⚡ 한 줄 요약</p>
+        <p class="text-lg font-bold leading-snug">400시간 사용 후 검증한 클로드 코드 핵심 플러그인 6가지 — 화려하지 않아도, 실제로 일이 된다</p>
+      </div>
+      <blockquote class="border-l-4 border-violet-500 pl-4 italic text-slate-600 dark:text-slate-400 text-sm">
+        "화려하지 않아요. 오히려 좀 지루해요. 근데 진짜 효과적이에요."
+        <cite class="block text-xs not-italic mt-1 text-slate-400 dark:text-slate-500">— 00:00:17</cite>
+      </blockquote>
+    </div>
+    <div class="flex flex-col gap-3">
+      <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 dark:ring-white/10" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/BZPaZzjLIOY"
+          title="400시간 만에 알게 된 Claude Code의 진짜 핵심 도구 6개"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <a
+        href="https://www.youtube.com/watch?v=BZPaZzjLIOY"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
+      >
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        원본 영상 보기 (YouTube)
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- 상단: 쉽게 이해하기 -->
+<section class="px-4 py-14 bg-slate-50 dark:bg-slate-900/80">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="flex items-center gap-3 mb-10">
+      <span class="bg-violet-600 text-white text-xs font-bold px-3 py-1 rounded-full">상단</span>
+      <h2 class="text-2xl font-bold">쉽게 이해하기</h2>
+      <span class="text-slate-400 dark:text-slate-500 text-sm hidden sm:inline">— 30초 안에 핵심 파악</span>
+    </div>
+
+    <!-- KPI 박스 -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400 mb-1">400+</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">시간 실전 사용</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-blue-600 dark:text-blue-400 mb-1">6개</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">매일 쓰는 핵심 도구</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400 mb-1">20×</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">Browse 속도 향상</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-orange-600 dark:text-orange-400 mb-1">1/10</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">디버깅 시간 절감</div>
+      </div>
+    </div>
+
+    <!-- 비유 섹션 -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 mb-8 shadow-sm border border-slate-100 dark:border-slate-700">
+      <h3 class="text-lg font-bold mb-6 text-center">💡 비유로 이해하기 — 인턴 vs 시니어 개발자</h3>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-red-50 dark:bg-red-950/30 rounded-2xl p-6 border border-red-100 dark:border-red-900/30">
+          <div class="flex justify-center mb-4">
+            <svg viewBox="0 0 160 130" class="w-32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="26" r="15" fill="#94a3b8"/>
+              <rect x="72" y="41" width="16" height="28" rx="8" fill="#94a3b8"/>
+              <line x1="80" y1="65" x2="55" y2="100" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+              <line x1="80" y1="65" x2="108" y2="95" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+              <line x1="80" y1="52" x2="44" y2="43" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+              <line x1="80" y1="52" x2="118" y2="41" stroke="#94a3b8" stroke-width="7" stroke-linecap="round"/>
+              <line x1="10" y1="33" x2="42" y2="33" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" opacity="0.55"/>
+              <line x1="5" y1="47" x2="37" y2="47" stroke="#ef4444" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+              <text x="90" y="124" font-size="28">💥</text>
+            </svg>
+          </div>
+          <h4 class="font-bold text-red-700 dark:text-red-400 mb-2 text-center">🚫 도구 없이 Claude에게 시키면</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-center">
+            Claude = <strong>빠른 인턴</strong><br>
+            시키면 즉시 코드 뱉음<br>
+            그럴 듯해 보이지만…<br>
+            <span class="text-red-600 dark:text-red-400 font-semibold">엣지 케이스에서 폭발 💥</span>
+          </p>
+        </div>
+        <div class="bg-green-50 dark:bg-green-950/30 rounded-2xl p-6 border border-green-100 dark:border-green-900/30">
+          <div class="flex justify-center mb-4">
+            <svg viewBox="0 0 160 130" class="w-32" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="38" cy="30" r="17" fill="#7c3aed"/>
+              <text x="38" y="37" text-anchor="middle" font-size="15">🛡</text>
+              <circle cx="122" cy="30" r="17" fill="#3b82f6"/>
+              <text x="122" y="37" text-anchor="middle" font-size="15">🤖</text>
+              <line x1="57" y1="30" x2="100" y2="30" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round"/>
+              <polygon points="92,24 101,30 92,36" fill="#7c3aed"/>
+              <rect x="3" y="55" width="98" height="30" rx="9" fill="#7c3aed"/>
+              <text x="52" y="66" text-anchor="middle" fill="white" font-size="8.5" font-weight="bold">잠깐! 계획부터</text>
+              <text x="52" y="78" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8">세우고 가자 ✋</text>
+              <circle cx="122" cy="105" r="19" fill="#10b981"/>
+              <text x="122" y="113" text-anchor="middle" font-size="22" fill="white">✓</text>
+            </svg>
+          </div>
+          <h4 class="font-bold text-green-700 dark:text-green-400 mb-2 text-center">✅ 6개 도구와 함께</h4>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-center">
+            도구들 = <strong>시니어 개발자 감독</strong><br>
+            처음엔 느려도<br>
+            결과물이 달라요<br>
+            <span class="text-green-600 dark:text-green-400 font-semibold">디버깅 시간 1/10 ↓</span>
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/30 rounded-2xl p-4 flex gap-3 items-start">
+        <span class="text-xl shrink-0">💡</span>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <strong>공통 철학:</strong> 이 도구들은 Claude를 <em>빠르게</em> 만드는 게 아니라 <em>차분하게</em> 일하게 만들어요. "처음에 시간 좀 더 쓰면, 나중에 디버깅 시간을 <strong>10분의 1로</strong> 줄여줍니다."
+        </p>
+      </div>
+    </div>
+
+    <!-- 6개 도구 카드 그리드 -->
+    <h3 class="text-xl font-bold mb-5 text-center">🛠 매일 켜두는 도구 6개 한눈에 보기</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-violet-200 dark:hover:border-violet-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-violet-100 dark:bg-violet-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><path d="M22 4L8 23h12l-2 13 18-21H24L22 4z" fill="#7c3aed"/><rect x="27" y="25" width="11" height="2.5" rx="1.25" fill="#a78bfa"/><rect x="27" y="30" width="9" height="2.5" rx="1.25" fill="#a78bfa"/><rect x="27" y="35" width="7" height="2.5" rx="1.25" fill="#c4b5fd"/></svg>
+          </div>
+          <span class="text-xs bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 px-2 py-0.5 rounded-full font-medium">계획·설계</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">① 플러그인</p>
+        <h4 class="font-bold mb-2">Superpowers</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Claude를 시니어처럼 강제. 계획 → 테스트 → 코드 → 리뷰 순서로 단계를 건너뛰지 못하게 한다.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">핵심 스킬: Brainstorming · SDD</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-blue-100 dark:bg-blue-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><path d="M20 4C14 4 10 11 10 20l-2 13c4-4 8-4 8-4h8s4 0 8 4L30 20C30 11 26 4 20 4Z" fill="#2563eb"/><circle cx="20" cy="17" r="5" fill="#bfdbfe"/><path d="M14 29l-4 9 6-4v-5h-2Z" fill="#f59e0b"/><path d="M26 29l4 9-6-4v-5h2Z" fill="#f59e0b"/></svg>
+          </div>
+          <span class="text-xs bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 px-2 py-0.5 rounded-full font-medium">효율·속도</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">② 스택</p>
+        <h4 class="font-bold mb-2">G-Stack</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Y Combinator가 직접 쓰는 셋업. Browse로 20배 빠른 브라우저 자동화, Office Hours로 YC식 아이디어 검증.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">핵심 스킬: Office Hours · Browse</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-orange-200 dark:hover:border-orange-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-orange-100 dark:bg-orange-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><path d="M20 5c0 0-5 7-5 14 0 4.5 2.2 7 5 7s5-2.5 5-7C25 12 20 5 20 5z" fill="#f97316"/><path d="M17 17c0 0-4 5-4 10 0 5 3 8 7 8s7-3 7-8c0-5-4-10-7-10S17 17 17 17z" fill="#ef4444"/><path d="M19 25c0 0-2 3.5-2 7 0 2.5 1.3 3 3 3s3-.5 3-3c0-3.5-2-7-2-7H19z" fill="#fbbf24"/></svg>
+          </div>
+          <span class="text-xs bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 px-2 py-0.5 rounded-full font-medium">코드 품질</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">③ 스킬 by repercok</p>
+        <h4 class="font-bold mb-2">GrillMe</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">코드를 들이밀면 동료처럼 구멍을 찾아줌. PR 올리기 전 부끄러운 실수를 잡는 1인 개발자의 필수템.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">언제: PR 올리기 직전 무조건</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-cyan-200 dark:hover:border-cyan-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-cyan-100 dark:bg-cyan-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><rect x="4" y="4" width="32" height="32" rx="5" fill="#0891b2"/><line x1="4" y1="14" x2="36" y2="14" stroke="#67e8f9" stroke-width="0.6" opacity="0.5"/><line x1="4" y1="24" x2="36" y2="24" stroke="#67e8f9" stroke-width="0.6" opacity="0.5"/><line x1="14" y1="4" x2="14" y2="36" stroke="#67e8f9" stroke-width="0.6" opacity="0.5"/><line x1="24" y1="4" x2="24" y2="36" stroke="#67e8f9" stroke-width="0.6" opacity="0.5"/><rect x="7" y="7" width="10" height="9" rx="2" fill="none" stroke="white" stroke-width="1.8"/><rect x="23" y="7" width="10" height="9" rx="2" fill="none" stroke="white" stroke-width="1.8"/><rect x="14" y="21" width="12" height="11" rx="2" fill="none" stroke="#fbbf24" stroke-width="1.8"/><line x1="12" y1="16" x2="19" y2="21" stroke="white" stroke-width="1.2" opacity="0.7"/><line x1="28" y1="16" x2="21" y2="21" stroke="white" stroke-width="1.2" opacity="0.7"/></svg>
+          </div>
+          <span class="text-xs bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300 px-2 py-0.5 rounded-full font-medium">코드 품질</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">④ 스킬 by repercok</p>
+        <h4 class="font-bold mb-2">Implement Architecture</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">구조를 통째로 다시 봐주는 리팩토링 분석. "더 분리해야 하나?" 혼자선 보이지 않는 것을 잡아준다.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">언제: 리팩토링 시작 전</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-indigo-100 dark:bg-indigo-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><ellipse cx="12" cy="18" rx="7" ry="5" fill="#e0e7ff" stroke="#4338ca" stroke-width="1.5"/><circle cx="12" cy="18" r="3" fill="#4338ca"/><circle cx="13" cy="17" r="1" fill="white"/><ellipse cx="28" cy="18" rx="7" ry="5" fill="#e0e7ff" stroke="#4338ca" stroke-width="1.5"/><circle cx="28" cy="18" r="3" fill="#4338ca"/><circle cx="29" cy="17" r="1" fill="white"/><rect x="6" y="27" width="11" height="3" rx="1.5" fill="#818cf8"/><rect x="23" y="27" width="11" height="3" rx="1.5" fill="#4338ca"/><circle cx="20" cy="7" r="3.5" fill="#4338ca"/><circle cx="20" cy="7" r="1.5" fill="white"/></svg>
+          </div>
+          <span class="text-xs bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-full font-medium">크로스 리뷰</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">⑤ OpenAI 플러그인</p>
+        <h4 class="font-bold mb-2">Codex Review</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">OpenAI 모델 관점의 2차 검토. 같은 모델로만 보면 놓치는 것을 다른 시각이 잡아낸다.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">언제: 워크플로우 마지막 단계</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-emerald-200 dark:hover:border-emerald-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-emerald-100 dark:bg-emerald-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><polygon points="20,4 36,33 4,33" fill="#10b981"/><circle cx="20" cy="23" r="4.5" fill="none" stroke="white" stroke-width="1.8"/><circle cx="20" cy="23" r="2" fill="white"/><ellipse cx="20" cy="23" rx="9" ry="3.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2"/><ellipse cx="20" cy="23" rx="9" ry="3.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" transform="rotate(60 20 23)"/><ellipse cx="20" cy="23" rx="9" ry="3.5" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.2" transform="rotate(-60 20 23)"/></svg>
+          </div>
+          <span class="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full font-medium">프레임워크</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">⑥ Vercel 공식 스킬</p>
+        <h4 class="font-bold mb-2">React Best Practices</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Vercel 팀의 React/Next.js 모범 사례 자동 적용. useEffect 남용·서버·클라이언트 혼용 방지.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">언제: Next.js 프로젝트 시작 시 무조건</p>
+      </div>
+    </div>
+
+    <!-- 보너스 -->
+    <div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800/60 border border-dashed border-slate-300 dark:border-slate-600 rounded-2xl p-5 mb-10">
+      <span class="text-3xl shrink-0">🎁</span>
+      <div class="flex-1">
+        <h4 class="font-bold text-sm mb-0.5">보너스: PPTX + PDF 스킬</h4>
+        <p class="text-sm text-slate-500 dark:text-slate-400">"코드는 잘 짜는데 PPT는 못 만드는" 개발자를 위한 발표자료·보고서 자동 생성 스킬.</p>
+      </div>
+      <span class="text-xs text-slate-400 shrink-0">07:33~</span>
+    </div>
+
+    <!-- 추천 워크플로우 SVG -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 mb-8 shadow-sm border border-slate-100 dark:border-slate-700">
+      <h3 class="text-lg font-bold mb-6 text-center">🔄 추천 워크플로우 (실전 순서)</h3>
+      <div class="overflow-x-auto">
+        <svg viewBox="0 0 900 120" class="w-full min-w-[600px]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arr2" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 9 3, 0 6" fill="#94a3b8"/>
+            </marker>
+          </defs>
+          <rect x="4" y="14" width="120" height="76" rx="13" fill="#7c3aed"/>
+          <text x="64" y="42" text-anchor="middle" fill="white" font-size="18">🧠</text>
+          <text x="64" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">Brainstorm</text>
+          <text x="64" y="78" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8.5">새 기능 전 필수</text>
+          <line x1="126" y1="52" x2="148" y2="52" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+
+          <rect x="150" y="14" width="130" height="76" rx="13" fill="#2563eb"/>
+          <text x="215" y="42" text-anchor="middle" fill="white" font-size="18">⚡</text>
+          <text x="215" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">SDD 코딩</text>
+          <text x="215" y="78" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8.5">서브에이전트 분리</text>
+          <line x1="282" y1="52" x2="304" y2="52" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+
+          <rect x="306" y="14" width="120" height="76" rx="13" fill="#ea580c"/>
+          <text x="366" y="42" text-anchor="middle" fill="white" font-size="18">🔥</text>
+          <text x="366" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">GrillMe</text>
+          <text x="366" y="78" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8.5">PR 전 리뷰</text>
+          <line x1="428" y1="52" x2="450" y2="52" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+
+          <rect x="452" y="14" width="130" height="76" rx="13" fill="#0891b2"/>
+          <text x="517" y="41" text-anchor="middle" fill="white" font-size="16">🏗</text>
+          <text x="517" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">Impl. Arch</text>
+          <text x="517" y="78" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8.5">구조 검토 (선택)</text>
+          <line x1="584" y1="52" x2="606" y2="52" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+
+          <rect x="608" y="14" width="126" height="76" rx="13" fill="#4338ca"/>
+          <text x="671" y="42" text-anchor="middle" fill="white" font-size="18">👁</text>
+          <text x="671" y="62" text-anchor="middle" fill="white" font-size="10" font-weight="700">Codex Review</text>
+          <text x="671" y="78" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8.5">최종 검토</text>
+          <line x1="736" y1="52" x2="758" y2="52" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+
+          <rect x="760" y="14" width="130" height="76" rx="13" fill="#10b981"/>
+          <text x="825" y="47" text-anchor="middle" fill="white" font-size="26">✓</text>
+          <text x="825" y="70" text-anchor="middle" fill="white" font-size="10" font-weight="700">Merge!</text>
+          <text x="825" y="84" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8.5">안심하고</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Browse 속도 비교 CSS 막대 -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 mb-8 shadow-sm border border-slate-100 dark:border-slate-700">
+      <h3 class="font-bold text-base mb-6 text-center">⚡ Browse 플러그인 속도 비교 (명령 1회 기준)</h3>
+      <div class="space-y-5 max-w-xl mx-auto">
+        <div>
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-slate-600 dark:text-slate-400 font-medium">일반 브라우저 실행</span>
+            <span class="font-bold text-red-500">~2,000ms</span>
+          </div>
+          <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-4">
+            <div class="bg-red-500 h-4 rounded-full flex items-center justify-end pr-2" style="width:100%">
+              <span class="text-white text-xs font-bold">기준</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-slate-600 dark:text-slate-400 font-medium">Browse 플러그인 (백그라운드 Chrome 세션)</span>
+            <span class="font-bold text-blue-600 dark:text-blue-400">~150ms</span>
+          </div>
+          <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-4">
+            <div class="bg-blue-500 h-4 rounded-full flex items-center justify-end pr-2" style="width:7.5%">
+            </div>
+          </div>
+          <p class="text-xs text-blue-600 dark:text-blue-400 mt-1 font-semibold text-right">→ 약 20배 빠름</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Claude 세션 지속 시간 비교 CSS 막대 -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 mb-8 shadow-sm border border-slate-100 dark:border-slate-700">
+      <h3 class="font-bold text-base mb-6 text-center">⏱ Claude 세션 지속 시간 비교</h3>
+      <div class="space-y-5 max-w-xl mx-auto">
+        <div>
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-slate-600 dark:text-slate-400 font-medium">도구 없이 (일반 세션)</span>
+            <span class="font-bold text-red-500">~30분</span>
+          </div>
+          <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-4">
+            <div class="bg-red-400 h-4 rounded-full" style="width:16.7%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-2">
+            <span class="text-slate-600 dark:text-slate-400 font-medium">G-Stack Browse + SDD 사용 시</span>
+            <span class="font-bold text-emerald-600 dark:text-emerald-400">2~3시간</span>
+          </div>
+          <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-4">
+            <div class="bg-emerald-500 h-4 rounded-full" style="width:100%"></div>
+          </div>
+          <p class="text-xs text-emerald-600 dark:text-emerald-400 mt-1 font-semibold text-right">→ 4~6배 더 오래 유지</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub 경고 -->
+    <div class="warning-stripes bg-amber-50 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-700/40 rounded-3xl p-6 md:p-8 mb-8">
+      <div class="flex gap-4 items-start">
+        <span class="text-3xl shrink-0">⚠️</span>
+        <div>
+          <h3 class="font-bold text-lg text-amber-800 dark:text-amber-200 mb-3">GitHub 별점 조작 & Prompt Injection 경고</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                GitHub이 거의 <strong>인스타그램처럼 변했어요.</strong> 별점 늘려서 바이럴 일으키려는 프로젝트가 너무 많아요.
+              </p>
+              <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                일부 프로젝트는 README의 설치 스크립트에 <strong class="text-red-600 dark:text-red-400">Prompt Injection</strong>을 심어놔요 — AI 에이전트가 파일을 읽으면 무조건 GitHub 별을 누르도록 유도.
+              </p>
+            </div>
+            <blockquote class="bg-white dark:bg-slate-800 rounded-xl p-4 italic text-sm text-slate-600 dark:text-slate-400 border-l-4 border-amber-400">
+              "별 많다고 좋은 프로젝트라는 보장이 절대 없어요. 지금은 진짜 알짜배기를 골라내는 큐레이션 능력이 제일 중요한 시점입니다."
+              <cite class="block text-xs not-italic mt-2 text-amber-600 dark:text-amber-400">— 01:02</cite>
+            </blockquote>
+          </div>
+
+          <!-- 별점 조작 SVG 일러스트 -->
+          <div class="mt-5 flex justify-center">
+            <svg viewBox="0 0 480 90" class="w-full max-w-lg" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="480" height="90" rx="14" fill="rgba(254,243,199,0.4)"/>
+              <!-- README 파일 -->
+              <rect x="18" y="12" width="80" height="66" rx="7" fill="#1e293b"/>
+              <rect x="24" y="22" width="68" height="4" rx="2" fill="#475569"/>
+              <rect x="24" y="30" width="55" height="3" rx="1.5" fill="#475569" opacity="0.6"/>
+              <rect x="24" y="37" width="60" height="3" rx="1.5" fill="#ef4444" opacity="0.8"/>
+              <rect x="24" y="44" width="50" height="3" rx="1.5" fill="#ef4444" opacity="0.6"/>
+              <rect x="24" y="51" width="58" height="3" rx="1.5" fill="#475569" opacity="0.4"/>
+              <text x="58" y="73" text-anchor="middle" fill="#94a3b8" font-size="8">README.md</text>
+              <!-- Injection 표시 -->
+              <rect x="22" y="34" width="64" height="16" rx="3" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1"/>
+              <text x="54" y="44" text-anchor="middle" fill="#ef4444" font-size="7.5" font-weight="bold">⚠ INJECTED</text>
+              <!-- 화살표 -->
+              <line x1="100" y1="52" x2="140" y2="52" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4,3"/>
+              <polygon points="136,48 144,52 136,56" fill="#94a3b8"/>
+              <!-- 에이전트 -->
+              <rect x="144" y="22" width="72" height="60" rx="10" fill="#3730a3"/>
+              <circle cx="180" cy="42" r="13" fill="#6366f1"/>
+              <circle cx="175" cy="39" r="3.5" fill="white"/>
+              <circle cx="185" cy="39" r="3.5" fill="white"/>
+              <circle cx="175" cy="40" r="1.5" fill="#3730a3"/>
+              <circle cx="185" cy="40" r="1.5" fill="#3730a3"/>
+              <path d="M172 51 Q180 56 188 51" stroke="white" stroke-width="1.5" fill="none"/>
+              <text x="180" y="75" text-anchor="middle" fill="#a5b4fc" font-size="8">Agent 🤖</text>
+              <!-- 화살표 -->
+              <line x1="218" y1="52" x2="258" y2="52" stroke="#94a3b8" stroke-width="1.8" stroke-dasharray="4,3"/>
+              <polygon points="254,48 262,52 254,56" fill="#94a3b8"/>
+              <!-- 별 조작 -->
+              <rect x="262" y="22" width="100" height="60" rx="10" fill="#78350f"/>
+              <text x="312" y="50" text-anchor="middle" font-size="20">⭐⭐⭐</text>
+              <text x="312" y="65" text-anchor="middle" fill="#fbbf24" font-size="8" font-weight="bold">자동 별점 클릭!</text>
+              <text x="312" y="75" text-anchor="middle" fill="#d97706" font-size="7">Prompt Injection</text>
+              <!-- X 표시 -->
+              <circle cx="380" cy="45" r="28" fill="rgba(239,68,68,0.12)" stroke="#ef4444" stroke-width="2"/>
+              <line x1="364" y1="29" x2="396" y2="61" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+              <line x1="396" y1="29" x2="364" y2="61" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+              <text x="380" y="83" text-anchor="middle" fill="#ef4444" font-size="8.5" font-weight="bold">믿지 마세요!</text>
+              <!-- 큐레이션 -->
+              <circle cx="445" cy="45" r="28" fill="rgba(16,185,129,0.12)" stroke="#10b981" stroke-width="2"/>
+              <text x="445" y="40" text-anchor="middle" font-size="16">🔍</text>
+              <text x="445" y="56" text-anchor="middle" fill="#10b981" font-size="7.5" font-weight="bold">큐레이션</text>
+              <text x="445" y="66" text-anchor="middle" fill="#10b981" font-size="7">능력 필요</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 인용구 3개 -->
+    <div class="grid md:grid-cols-3 gap-4">
+      <blockquote class="bg-violet-50 dark:bg-violet-950/30 rounded-2xl p-5 border border-violet-100 dark:border-violet-800/30">
+        <p class="text-sm italic text-slate-700 dark:text-slate-300 leading-relaxed mb-2">"처음에 시간 좀 더 쓰는 게요. 나중에 디버깅 시간을 거의 <strong>10분의 1로</strong> 줄여줘요."</p>
+        <cite class="text-xs text-violet-500 dark:text-violet-400">— 04:19</cite>
+      </blockquote>
+      <blockquote class="bg-blue-50 dark:bg-blue-950/30 rounded-2xl p-5 border border-blue-100 dark:border-blue-800/30">
+        <p class="text-sm italic text-slate-700 dark:text-slate-300 leading-relaxed mb-2">"보통 클로드 30분이면 망가지는데 이거 켜두면 <strong>2시간 3시간</strong>도 멀쩡해요."</p>
+        <cite class="text-xs text-blue-500 dark:text-blue-400">— 03:54</cite>
+      </blockquote>
+      <blockquote class="bg-emerald-50 dark:bg-emerald-950/30 rounded-2xl p-5 border border-emerald-100 dark:border-emerald-800/30">
+        <p class="text-sm italic text-slate-700 dark:text-slate-300 leading-relaxed mb-2">"한 번에 다 깔지는 마세요. 저도 그래봤는데 컨텍스트만 <strong>무거워집니다</strong>."</p>
+        <cite class="text-xs text-emerald-500 dark:text-emerald-400">— 08:07</cite>
+      </blockquote>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- 하단: 자세히 알아보기 -->
+<section class="px-4 py-14 bg-white dark:bg-slate-950">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="flex items-center gap-3 mb-8">
+      <span class="bg-slate-600 dark:bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full">하단</span>
+      <h2 class="text-2xl font-bold">자세히 알아보기</h2>
+      <span class="text-slate-400 dark:text-slate-500 text-sm hidden sm:inline">— 깊이 보고 싶을 때</span>
+    </div>
+
+    <!-- 도구 역할 분류표 -->
+    <div class="bg-slate-50 dark:bg-slate-800/70 rounded-3xl p-6 mb-8 border border-slate-200 dark:border-slate-700 overflow-x-auto">
+      <h3 class="font-bold text-base mb-4">📊 6가지 도구 역할 분류표</h3>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-slate-200 dark:border-slate-700">
+            <th class="text-left py-3 px-3 text-slate-500 dark:text-slate-400 font-semibold text-xs uppercase tracking-wide">도구명</th>
+            <th class="text-left py-3 px-3 text-slate-500 dark:text-slate-400 font-semibold text-xs uppercase tracking-wide">역할</th>
+            <th class="text-left py-3 px-3 text-slate-500 dark:text-slate-400 font-semibold text-xs uppercase tracking-wide">언제 사용</th>
+            <th class="text-left py-3 px-3 text-slate-500 dark:text-slate-400 font-semibold text-xs uppercase tracking-wide">만든 곳</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-700/50">
+          <tr class="hover:bg-white dark:hover:bg-slate-800/50 transition-colors">
+            <td class="py-3 px-3">
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-violet-500 shrink-0"></span><strong>Superpowers</strong></span>
+            </td>
+            <td class="py-3 px-3 text-slate-600 dark:text-slate-400">계획·테스트·리뷰 강제</td>
+            <td class="py-3 px-3 text-slate-600 dark:text-slate-400">모든 코딩 작업 전</td>
+            <td class="py-3 px-3"><span class="bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 text-xs px-2 py-0.5 rounded-full">공식 마켓</span></td>
+          </tr>
+          <tr class="hover:bg-white dark:hover:bg-slate-800/50 transition-colors">
+            <td class="py-3 px-3">
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span><strong>G-Stack (Office Hours)</strong></span>
+            </td>
+            <td class="py-3 px-3 text-slate-600 dark:text-slate-400">YC식 아이디어 검증</td>
+            <td class="py-3 px-3 text-slate-600 dark:text-slate-400">새 사이드 프로젝트·기획 시</td>
+            <td class="py-3 px-3"><span class="bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 text-xs px-2 py-0.5 rounded-full">Y Combinator</span></td>
+          </tr>
+          <tr class="hover:bg-white dark:hover:bg-slate-800/50 transition-colors">
+            <td class="py-3 px-3">
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-sky-500 shrink-0"></span><strong>G-Stack (Browse)</strong></span>
+            </td>
+            <td class="py-3 px-3 text-slate-600 dark:text-slate-400">20배 빠른 브라우저 자동화</td>
+            <td class="py-3 px-3 text-slate-

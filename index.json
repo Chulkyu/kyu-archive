@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-27T07:06:34",
+  "updated_at": "2026-05-27T07:29:36",
   "reports": [
+    {
+      "slug": "claude-code-essential-tools",
+      "category": "tech",
+      "video_id": "BZPaZzjLIOY",
+      "title": "400시간 만에 알게 된 Claude Code의 진짜 핵심 도구 6개",
+      "channel": "메이커 에반 | Maker Evan",
+      "duration_string": "9분 34초",
+      "duration_seconds": 574,
+      "summary": "400시간 사용 후 검증한 클로드 코드 핵심 플러그인 6가지",
+      "video_url": "https://www.youtube.com/watch?v=BZPaZzjLIOY",
+      "report_url": "tech/claude-code-essential-tools.html",
+      "thumbnail_url": "https://img.youtube.com/vi/BZPaZzjLIOY/maxresdefault.jpg",
+      "processed_date": "2026-05-27"
+    },
     {
       "slug": "trump-policy-investment-strategy",
       "category": "finance",
