@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-26T07:30:28",
+  "updated_at": "2026-05-27T07:06:34",
   "reports": [
+    {
+      "slug": "trump-policy-investment-strategy",
+      "category": "finance",
+      "video_id": "K1zRCCBAAV4",
+      "title": "트럼프의 모순된 정책은 \"계산된 설계\"입니다",
+      "channel": "자산제곱",
+      "duration_string": "12분 26초",
+      "duration_seconds": 746,
+      "summary": "트럼프의 모순된 정책은 역사적 레거시를 위한 계산된 딜이며 AI·에너지·디지털달러가 핵심",
+      "video_url": "https://www.youtube.com/watch?v=K1zRCCBAAV4",
+      "report_url": "finance/trump-policy-investment-strategy.html",
+      "thumbnail_url": "https://img.youtube.com/vi/K1zRCCBAAV4/maxresdefault.jpg",
+      "processed_date": "2026-05-27"
+    },
     {
       "slug": "llm-wiki-obsidian-claude-code",
       "category": "tech",
