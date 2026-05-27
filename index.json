@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-27T07:29:36",
+  "updated_at": "2026-05-27T07:33:44",
   "reports": [
+    {
+      "slug": "karpathy-claude-md-vibe-coding-2",
+      "category": "tech",
+      "video_id": "xnNFexW9Wrk",
+      "title": "바이브코딩계 GD가 공유한 CLAUDE.md 나눕니다",
+      "channel": "미드나잇 로그 Midnight Log",
+      "duration_string": "12분 41초",
+      "duration_seconds": 761,
+      "summary": "카파시의 AI 코딩 4원칙을 담은 CLAUDE.md로 AI의 고질적 실수를 방지하는 법",
+      "video_url": "https://www.youtube.com/watch?v=xnNFexW9Wrk",
+      "report_url": "tech/karpathy-claude-md-vibe-coding-2.html",
+      "thumbnail_url": "https://img.youtube.com/vi/xnNFexW9Wrk/maxresdefault.jpg",
+      "processed_date": "2026-05-27"
+    },
     {
       "slug": "claude-code-essential-tools",
       "category": "tech",
