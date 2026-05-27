@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-27T09:18:56",
+  "updated_at": "2026-05-27T23:46:40",
   "reports": [
+    {
+      "slug": "investment-portfolio-strategy-guide",
+      "category": "finance",
+      "video_id": "OhP15WXW7pA",
+      "title": "📊투자 포트폴리오의 모든 것! 나이별 전략, 리밸런싱, 주식/ETF/채권/현금 비중까지!",
+      "channel": "미키피디아",
+      "duration_string": "26분 39초",
+      "duration_seconds": 1599,
+      "summary": "나이별 포트폴리오 구성과 리밸런싱 전략 완벽 정리",
+      "video_url": "https://www.youtube.com/watch?v=OhP15WXW7pA",
+      "report_url": "finance/investment-portfolio-strategy-guide.html",
+      "thumbnail_url": "https://img.youtube.com/vi/OhP15WXW7pA/maxresdefault.jpg",
+      "processed_date": "2026-05-27"
+    },
     {
       "slug": "stock-investment-basics-master",
       "category": "finance",

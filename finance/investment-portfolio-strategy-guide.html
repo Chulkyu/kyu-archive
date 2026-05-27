@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>투자 포트폴리오의 모든 것 — 미키피디아</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { darkMode: 'class' }
+</script>
+<style>
+* { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; }
+.gradient-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4c1d95 100%); }
+.card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+.progress-bar { transition: width 1s ease-in-out; }
+.quote-block { border-left: 4px solid #8b5cf6; }
+</style>
+<script>
+(function(){
+  const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.classList.toggle('dark', dark);
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    document.documentElement.classList.toggle('dark', e.matches);
+  });
+})();
+</script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300">
+
+<!-- HERO -->
+<div class="gradient-hero text-white">
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="bg-violet-500 text-white text-xs font-bold px-3 py-1 rounded-full">금융·투자</span>
+      <span class="text-violet-300 text-sm">미키피디아 · 2026.05.25</span>
+    </div>
+    <h1 class="text-2xl md:text-4xl font-black leading-tight mb-3">📊 투자 포트폴리오의 모든 것!</h1>
+    <p class="text-violet-200 text-base md:text-lg mb-8">나이별 전략, 리밸런싱, 주식/ETF/채권/현금 비중까지 완벽 정리</p>
+
+    <!-- Video -->
+    <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl" style="padding-top:56.25%;">
+      <iframe
+        src="https://www.youtube.com/embed/OhP15WXW7pA"
+        class="absolute inset-0 w-full h-full"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="mt-5 text-center">
+      <a href="https://www.youtube.com/watch?v=OhP15WXW7pA" target="_blank"
+         class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full transition-colors duration-200 text-sm shadow-lg">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        원본 영상 보기
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="max-w-5xl mx-auto px-4 py-12 space-y-16">
+
+  <!-- ① 쉽게 이해하기 -->
+  <section>
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-8 h-8 rounded-full bg-violet-600 flex items-center justify-center text-white font-black text-sm">1</div>
+      <h2 class="text-2xl font-black text-slate-900 dark:text-white">쉽게 이해하기</h2>
+    </div>
+
+    <!-- 한 줄 요약 -->
+    <div class="bg-violet-50 dark:bg-violet-950/40 border border-violet-200 dark:border-violet-800 rounded-2xl p-6 mb-8">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl">💡</span>
+        <div>
+          <p class="text-xs font-bold text-violet-500 uppercase tracking-widest mb-1">한 줄 요약</p>
+          <p class="text-lg md:text-xl font-bold text-slate-900 dark:text-white leading-snug">
+            나이별 포트폴리오 구성과 리밸런싱 전략 완벽 정리
+          </p>
+          <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-relaxed">
+            코어 50%(인덱스 ETF) → 주도주 30%(우량주) → 원자재 5~10% → 와일드카드 10% 이하로 구성하고, 강제 리밸런싱보다 월급날 정기 적립과 급락 시 추가 매수로 포트폴리오를 키워가는 장기투자 전략
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI 박스 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center card-hover">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400">50%</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">코어 인덱스 ETF</div>
+        <div class="text-xs text-slate-400 mt-1">S&P500 + 코스피200</div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center card-hover">
+        <div class="text-4xl font-black text-sky-600 dark:text-sky-400">30%</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">주도주 우량주</div>
+        <div class="text-xs text-slate-400 mt-1">구글·엔비디아·삼전·하이닉스</div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center card-hover">
+        <div class="text-4xl font-black text-amber-500 dark:text-amber-400">10%</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">원자재 (금·은·원유)</div>
+        <div class="text-xs text-slate-400 mt-1">인플레이션 헤지</div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center card-hover">
+        <div class="text-4xl font-black text-rose-500 dark:text-rose-400">10%</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">와일드카드</div>
+        <div class="text-xs text-slate-400 mt-1">양자컴·로봇·가상화폐</div>
+      </div>
+    </div>
+
+    <!-- ★ SVG 포트폴리오 파이 인포그래픽 -->
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 mb-8">
+      <h3 class="text-base font-bold text-slate-800 dark:text-slate-100 mb-4 text-center">📐 포트폴리오 구성 비율 (신규 구성 기준)</h3>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <!-- SVG 도넛 차트 -->
+        <svg viewBox="0 0 220 220" width="220" height="220" class="flex-shrink-0">
+          <!-- 코어 50% (violet) — stroke-dasharray: 50% of 565.48 = 282.74 -->
+          <circle cx="110" cy="110" r="90" fill="none" stroke="#8b5cf6" stroke-width="36"
+            stroke-dasharray="282.74 282.74" stroke-dashoffset="70.68" transform="rotate(-90 110 110)"/>
+          <!-- 주도주 30% -->
+          <circle cx="110" cy="110" r="90" fill="none" stroke="#0ea5e9" stroke-width="36"
+            stroke-dasharray="169.64 395.84" stroke-dashoffset="-212.06" transform="rotate(-90 110 110)"/>
+          <!-- 원자재 10% -->
+          <circle cx="110" cy="110" r="90" fill="none" stroke="#f59e0b" stroke-width="36"
+            stroke-dasharray="56.55 508.93" stroke-dashoffset="-381.70" transform="rotate(-90 110 110)"/>
+          <!-- 와일드카드 10% -->
+          <circle cx="110" cy="110" r="90" fill="none" stroke="#f43f5e" stroke-width="36"
+            stroke-dasharray="56.55 508.93" stroke-dashoffset="-438.25" transform="rotate(-90 110 110)"/>
+          <!-- 중심 텍스트 -->
+          <circle cx="110" cy="110" r="60" fill="white" class="dark:fill-slate-900"/>
+          <text x="110" y="105" text-anchor="middle" font-size="13" font-weight="800" fill="#8b5cf6">포트폴리오</text>
+          <text x="110" y="122" text-anchor="middle" font-size="11" fill="#64748b">구성 비율</text>
+        </svg>
+        <!-- 범례 -->
+        <div class="space-y-3 w-full max-w-xs">
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-1">
+              <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-violet-500"></span>코어 (인덱스 ETF)</span>
+              <span class="text-violet-600 dark:text-violet-400 font-black">50%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2.5">
+              <div class="bg-violet-500 h-2.5 rounded-full" style="width:50%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-0.5">S&P500 30% + 코스피200 15~20% + 기타 5%</p>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-1">
+              <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-sky-500"></span>주도주 (개석거라 우량주)</span>
+              <span class="text-sky-600 dark:text-sky-400 font-black">30%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2.5">
+              <div class="bg-sky-500 h-2.5 rounded-full" style="width:30%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-0.5">구글, 엔비디아, 삼성전자, SK하이닉스</p>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-1">
+              <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-amber-500"></span>원자재 (인플레 헤지)</span>
+              <span class="text-amber-600 dark:text-amber-400 font-black">5~10%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2.5">
+              <div class="bg-amber-500 h-2.5 rounded-full" style="width:10%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-0.5">금, 은, 원유 ETF</p>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm font-semibold mb-1">
+              <span class="flex items-center gap-2"><span class="inline-block w-3 h-3 rounded-full bg-rose-500"></span>와일드카드 (고위험)</span>
+              <span class="text-rose-600 dark:text-rose-400 font-black">≤10%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-2.5">
+              <div class="bg-rose-500 h-2.5 rounded-full" style="width:10%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-0.5">양자컴, 로봇, 가상화폐, 스타트업</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 핵심 포인트 카드 -->
+    <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">🔑 핵심 포인트 6가지</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🏛️</span>
+          <div>
+            <p class="font-bold text-violet-700 dark:text-violet-300 text-sm mb-1">코어 50% — 인덱스 ETF 우선</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">S&P500 30%, 코스피200 15~20%, 기타지수 5%로 안정적인 기반 먼저 구축. 코어가 없을 때 개별 주식 몰빵은 매우 위험.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⭐</span>
+          <div>
+            <p class="font-bold text-sky-700 dark:text-sky-300 text-sm mb-1">주도주 30% — 펀더멘탈 우량주</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">이익률·성장률·점유율·현금흐름이 좋은 '개석거라' 기업. 구글, 엔비디아, 삼성전자, SK하이닉스를 분산 편입.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🎲</span>
+          <div>
+            <p class="font-bold text-rose-700 dark:text-rose-300 text-sm mb-1">와일드카드 ≤10% — 나이 들수록 축소</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">양자컴·로봇·가상화폐 등 고위험 고수익 자산. 20~30대는 10%, 중년 이상은 5% 이하로 제한. 내부 분산 필수.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🏦</span>
+          <div>
+            <p class="font-bold text-emerald-700 dark:text-emerald-300 text-sm mb-1">세금 전략 — 계좌 배치가 핵심</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">양도세 없는 코스피200 ETF → 개인계좌. 과세 대상 S&P500 ETF → DC형/IRP 퇴직연금 계좌에 배치.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🔄</span>
+          <div>
+            <p class="font-bold text-amber-700 dark:text-amber-300 text-sm mb-1">리밸런싱 — 월급날 코어 정기 적립</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">강제 비중 맞추기 대신, 월급날 코어에 정기 적립 + 좋은 개별주식 급락 시 추가 매수. 퇴직연금 자동 설정 필수.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">💰</span>
+          <div>
+            <p class="font-bold text-indigo-700 dark:text-indigo-300 text-sm mb-1">현금·채권 — MMF 통장 활용</p>
+            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">불규칙 지출 예측분을 MMF 통장에 별도 보관. 채권은 돈 버는 시기에 낮게 유지 → 은퇴 시점에 비중 확대.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ② 자세히 알아보기 -->
+  <section>
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-8 h-8 rounded-full bg-sky-600 flex items-center justify-center text-white font-black text-sm">2</div>
+      <h2 class="text-2xl font-black text-slate-900 dark:text-white">자세히 알아보기</h2>
+    </div>
+
+    <!-- 섹션 A: 왜 포트폴리오인가 -->
+    <div class="mb-10">
+      <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🧺</span> 왜 포트폴리오인가 — 종목보다 중요한 것
+      </h3>
+      <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+        개별 주식이 얼마나 오르고 내리는지보다, 나의 전체 포트폴리오가 올라가는 것이 더 중요합니다. 어떤 종목이 오를지 100% 맞출 수 없기 때문에, 종목을 분산해 전체 포트폴리오의 위험을 관리하는 것이 포트폴리오 전략의 핵심입니다.
+      </p>
+      <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
+        포트폴리오는 감정 컨트롤에도 도움을 줍니다. 믿는 종목이 부진할 때도 포트폴리오 전체를 바라보면 패닉 매도 없이 장기투자를 유지할 수 있습니다. 미키님이 삼성전자를 20년 이상 버틸 수 있었던 이유도 바로 이것입니다.
+      </p>
+
+      <!-- 인용문 -->
+      <div class="quote-block bg-violet-50 dark:bg-violet-950/30 pl-5 py-4 pr-4 rounded-r-xl mb-6">
+        <p class="text-slate-700 dark:text-slate-300 italic text-sm leading-relaxed">
+          "종목보다 더 중요한 건 포트폴리오예요. 한창 횡보할 때도 포트폴리오를 봤기 때문에 걔를 들고 있을 수 있었던 거죠."
+        </p>
+        <p class="text-violet-500 text-xs mt-1">(종목 하나에만 집착하면 장기투자가 힘들어집니다. 전체 그림을 봐야 합니다.)</p>
+      </div>
+
+      <!-- SVG: 포트폴리오가 필요한 이유 플로우차트 -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-5 shadow-sm">
+        <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">포트폴리오 전략의 핵심 구조</p>
+        <svg viewBox="0 0 680 180" width="100%" class="overflow-visible">
+          <!-- Box 1 -->
+          <rect x="10" y="60" width="130" height="60" rx="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5"/>
+          <text x="75" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6">개별 종목</text>
+          <text x="75" y="102" text-anchor="middle" font-size="10" fill="#7c3aed">등락 예측 불가</text>
+          <text x="75" y="115" text-anchor="middle" font-size="10" fill="#7c3aed">감정 흔들림</text>
+          <!-- Arrow -->
+          <path d="M142 90 L175 90" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <!-- Box 2 -->
+          <rect x="177" y="60" width="140" height="60" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="1.5"/>
+          <text x="247" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#0369a1">포트폴리오</text>
+          <text x="247" y="102" text-anchor="middle" font-size="10" fill="#0284c7">코어 + 주도주</text>
+          <text x="247" y="115" text-anchor="middle" font-size="10" fill="#0284c7">+ 와일드카드</text>
+          <!-- Arrow -->
+          <path d="M319 90 L352 90" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <!-- Box 3 -->
+          <rect x="354" y="60" width="140" height="60" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="424" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">위험 분산</text>
+          <text x="424" y="102" text-anchor="middle" font-size="10" fill="#16a34a">자동 리밸런싱</text>
+          <text x="424" y="115" text-anchor="middle" font-size="10" fill="#16a34a">장기투자 가능</text>
+          <!-- Arrow -->
+          <path d="M496 90 L529 90" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <!-- Box 4 -->
+          <rect x="531" y="50" width="138" height="80" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+          <text x="600" y="80" text-anchor="middle" font-size="12" font-weight="800" fill="#b45309">경제적 자유</text>
+          <text x="600" y="97" text-anchor="middle" font-size="10" fill="#d97706">투자소득 ≥</text>
+          <text x="600" y="111" text-anchor="middle" font-size="10" fill="#d97706">근로소득</text>
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 섹션 B: 코어 50% 상세 -->
+    <div class="mb-10">
+      <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🏛️</span> 코어 50% — 인덱스 ETF 기반 구축
+      </h3>
+
+      <!-- CSS 진행 막대로 코어 분해 -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm mb-5">
+        <p class="text-sm font-bold text-slate-600 dark:text-slate-400 mb-5 uppercase tracking-wide">코어 50% 세부 구성</p>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <span class="text-sm font-bold text-violet-700 dark:text-violet-300">S&P500 ETF</span>
+                <span class="text-xs text-slate-400 ml-2">미국 500대 우량기업</span>
+              </div>
+              <span class="text-sm font-black text-violet-600">30%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-violet-500 h-3 rounded-full progress-bar" style="width:60%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">전체의 30% / 코어 내 가장 큰 비중 · 퇴직연금(DC/IRP)에 배치 권장</p>
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <span class="text-sm font-bold text-sky-700 dark:text-sky-300">코스피200 ETF</span>
+                <span class="text-xs text-slate-400 ml-2">한국 대표 200 기업</span>
+              </div>
+              <span class="text-sm font-black text-sky-600">15~20%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-sky-500 h-3 rounded-full progress-bar" style="width:36%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">양도소득세 없음 · 개인 계좌에 배치 권장 · 요즘 분위기 매우 좋음</p>
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <div>
+                <span class="text-sm font-bold text-emerald-700 dark:text-emerald-300">기타 국가 지수 ETF</span>
+                <span class="text-xs text-slate-400 ml-2">인도·베트남·중국 등</span>
+              </div>
+              <span class="text-sm font-black text-emerald-600">5%</span>
+            </div>
+            <div class="w-full bg-slate-100 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-emerald-500 h-3 rounded-full progress-bar" style="width:10%"></div>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">미국·한국 외 지역 분산 · 여러 나라 묶은 멀티국가 ETF도 활용 가능</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 세금 전략 비교표 -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm mb-5">
+        <p class="text-sm font-bold text-emerald-700 dark:text-emerald-300 mb-4 flex items-center gap-2">
+          <span>💡</span> 핵심 세금 전략 — 어떤 계좌에 넣을까?
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-slate-50 dark:bg-slate-800">
+                <th class="text-left px-4 py-3 rounded-tl-lg font-bold text-slate-700 dark:text-slate-300">ETF 종류</th>
+                <th class="text-center px-4 py-3 font-bold text-slate-700 dark:text-slate-300">양도소득세</th>
+                <th class="text-center px-4 py-3 font-bold text-slate-700 dark:text-slate-300">최적 계좌</th>
+                <th class="text-right px-4 py-3 rounded-tr-lg font-bold text-slate-700 dark:text-slate-300">이유</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+              <tr>
+                <td class="px-4 py-3 font-semibold text-sky-700 dark:text-sky-300">코스피200 ETF</td>
+                <td class="px-4 py-3 text-center"><span class="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-xs font-bold px-2 py-1 rounded-full">없음</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-700 dark:text-slate-200">개인 계좌</td>
+                <td class="px-4 py-3 text-right text-xs text-slate-500">어차피 세금 없으므로 굳이 연금계좌 불필요</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-violet-700 dark:text-violet-300">S&P500 ETF</td>
+                <td class="px-4 py-3 text-center"><span class="bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 text-xs font-bold px-2 py-1 rounded-full">있음</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-700 dark:text-slate-200">DC형/IRP</td>
+                <td class="px-4 py-3 text-right text-xs text-slate-500">퇴직연금은 매도 시 세금 혜택 → 절세 효과</td>
+              </tr>
+              <tr>
+                <td class="px-4 py-3 font-semibold text-amber-700 dark:text-amber-300">나스닥100 ETF</td>
+                <td class="px-4 py-3 text-center"><span class="bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 text-xs font-bold px-2 py-1 rounded-full">있음</span></td>
+                <td class="px-4 py-3 text-center font-bold text-slate-700 dark:text-slate-200">DC형/IRP</td>
+                <td class="px-4 py-3 text-right text-xs text-slate-500">해외 ETF → 연금계좌 배치 권장</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="quote-block bg-sky-50 dark:bg-sky-950/30 pl-5 py-4 pr-4 rounded-r-xl">
+        <p class="text-slate-700 dark:text-slate-300 italic text-sm leading-relaxed">
+          "퇴직연금 계좌에 코스피200이 들어있고 개인 계좌에 S&P500이 들어있다, 그러면 저라면 이거 바꾸는 거 고민할 겁니다."
+        </p>
+        <p class="text-sky-500 text-xs mt-1">(계좌 배치 최적화만으로도 세금 절감 효과가 큽니다.)</p>
+      </div>
+    </div>
+
+    <!-- 섹션 C: 주도주 vs 와일드카드 비교 -->
+    <div class="mb-10">
+      <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">⚔️</span> 주도주 vs 와일드카드 — 무엇이 다른가
+      </h3>
+
+      <!-- SVG 비교 다이어그램 -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm mb-6">
+        <svg viewBox="0 0 680 220" width="100%" class="overflow-visible">
+          <!-- 주도주 박스 -->
+          <rect x="10" y="10" width="300" height="200" rx="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+          <text x="160" y="42" text-anchor="middle" font-size="14" font-weight="800" fill="#1d4ed8">⭐ 주도주 (30%)</text>
+          <text x="160" y="64" text-anchor="middle" font-size="10" fill="#3b82f6">"개석거라" 기업</text>
+          <!-- 항목들 -->
+          <circle cx="40" cy="90" r="4" fill="#3b82f6"/>
+          <text x="52" y="94" font-size="10" fill="#1e40af">이익률·성장률 탄탄</text>
+          <circle cx="40" cy="115" r="4" fill="#3b82f6"/>
+          <text x="52" y="119" font-size="10" fill="#1e40af">현금흐름 검증됨</text>
+          <circle cx="40" cy="140" r="4" fill="#3b82f6"/>
+          <text x="52" y="144" font-size="10" fill="#1e40af">구글, 엔비디아</text>
+          <circle cx="40" cy="165" r="4" fill="#3b82f6"/>
+          <text x="52" y="169" font-size="10" fill="#1e40af">삼성전자, SK하이닉스</text>
+          <text x="160" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#1d4ed8">5분 이상 설명 가능해야 매수</text>
+
+          <!-- VS 원 -->
+          <circle cx="340" cy="110" r="28" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+          <text x="340" y="107" text-anchor="middle" font-size="11" font-weight="800" fill="#64748b">VS</text>
+          <text x="340" y="122" text-anchor="middle" font-size="8" fill="#94a3b8">차이점</text>
+
+          <!-- 와일드카드 박스 -->
+          <rect x="370" y="10" width="300" height="200" rx="16" fill="#fff1f2" stroke="#f43f5e" stroke-width="2"/>
+          <text x="520" y="42" text-anchor="middle" font-size="14" font-weight="800" fill="#be123c">🎲 와일드카드 (≤10%)</text>
+          <text x="520" y="64" text-anchor="middle" font-size="10" fill="#f43f5e">가능성 기업</text>
+          <circle cx="400" cy="90" r="4" fill="#f43f5e"/>
+          <text x="412" y="94" font-size="10" fill="#9f1239">아직 실적 검증 전</text>
+          <circle cx="400" cy="115" r="4" fill="#f43f5e"/>
+          <text x="412" y="119" font-size="10" fill="#9f1239">고위험 고수익</text>
+          <circle cx="400" cy="140" r="4" fill="#f43f5e"/>
+          <text x="412" y="144" font-size="10" fill="#9f1239">양자컴, 로봇, 가상화폐</text>
+          <circle cx="400" cy="165" r="4" fill="#f43f5e"/>
+          <text x="412" y="169" font-size="10" fill="#9f1239">아이온큐, 리게티 등</text>
+          <text x="520" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#be123c">내부에서도 반드시 분산 투자</text>
+        </svg>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
+        <div class="bg-blue-50 dark:bg-blue-950/30 rounded-xl p-4 border border-blue-200 dark:border-blue-800">
+          <p class="text-blue-800 dark:text-blue-300 font-bold text-sm mb-2">인기 주식 ≠ 주도주</p>
+          <p class="text-blue-700 dark:text-blue-400 text-xs leading-relaxed">테슬라, 아이온큐처럼 미래 기대감으로 인기가 많아도, 현재 영업이익·점유율이 뒷받침 안 되면 주도주로 분류하기 어렵습니다. 테슬라의 영업이익은 현재 현대차보다도 낮습니다.</p>
+        </div>
+        <div class="bg-rose-50 dark:bg-rose-950/30 rounded-xl p-4 border border-rose-200 dark:border-rose-800">
+          <p class="text-rose-800 dark:text-rose-300 font-bold text-sm mb-2">나이별 와일드카드 비중</p>
+          <p class="text-rose-700 dark:text-rose-400 text-xs leading-relaxed">20~30대는 최대 10%까지 와일드카드 허용. 중년 이상은 5% 이하로 제한. 젊을수록 고위험 자산에 대한 '감'이 살아있고, 설령 손실이 나도 만회할 시간이 있습니다.</p>
+        </div>
+      </div>
+
+      <!-- S&P1 전략 소개 -->
+      <div class="bg-amber-50 dark:bg-amber-950/30 rounded-xl p-5 border border-amber-200 dark:border-amber-800">
+        <p class="font-bold text-amber-800 dark:text-amber-300 text-sm mb-2 flex items-center gap-2"><span>🏆</span> 시총 1등 기업만 투자하는 "S&P1 전략"</p>
+        <p class="text-amber-700 dark:text-amber-400 text-xs leading-relaxed">미국 시가총액 1위 기업에만 투자하다가, 1등이 바뀌면 갈아타는 전략. 역사적으로 GE → 마이크로소프트 → 엑손모빌 → 애플 → 엔비디아 순으로 이동. 놀랍게도 이 방법이 장기적으로 S&P500 수익률을 상회했습니다.</p>
+      </div>
+    </div>
+
+    <!-- 섹션 D: 리밸런싱 전략 -->
+    <div class="mb-10">
+      <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🔄</span> 리밸런싱 — 강제 맞추기가 아닌 자연스러운 전략
+      </h3>
+
+      <!-- SVG 리밸런싱 플로우 -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm mb-5">
+        <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-5">월급날 기반 리밸런싱 플로우</p>
+        <svg viewBox="0 0 680 130" width="100%" class="overflow-visible">
+          <!-- Step 1 -->
+          <rect x="10" y="20" width="120" height="70" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="70" y="50" text-anchor="middle" font-size="11" font-weight="700" fill="#7e22ce">💰 월급날</text>
+          <text x="70" y="68" text-anchor="middle" font-size="9.5" fill="#9333ea">수입의 일부</text>
+          <text x="70" y="82" text-anchor="middle" font-size="9.5" fill="#9333ea">투자 배정</text>
+          <!-- Arrow -->
+          <path d="M132 55 L162 55" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+          <!-- Step 2 -->
+          <rect x="164" y="20" width="140" height="70" rx="12" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+          <text x="234" y="47" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">🏛️ 코어 자동 적립</text>
+          <text x="234" y="63" text-anchor="middle" font-size="9.5" fill="#2563eb">주가 안 보고</text>
+          <text x="234" y="77" text-anchor="middle" font-size="9.5" fill="#2563eb">정해진 금액 입금</text>
+          <!-- Arrow -->
+          <path d="M306 55 L336 55" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr2)"/>
+          <!-- Decision box -->
+          <rect x="338" y="15" width="150" height="80" rx="12" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+          <text x="413" y="42" text-anchor="middle" font-size="10.5" font-weight="700" fill="#854d0e">❓ 이번 달</text>
+          <text x="413" y="57" text-anchor="middle" font-size="10" fill="#92400e">추가할 개별 주식</text>
+          <text x="413" y="71" text-anchor="middle" font-size="10" fill="#92400e">있는가?</text>
+          <text x="413" y="85" text-anchor="middle" font-size="9" fill="#ca8a04">(급락한 우량주 포함)</text>
+          <!-- Yes arrow -->
+          <path d="M490 45 L520 45" stroke="#22c55e" stroke-width="2" marker-end="url(#arr3)"/>
+          <text x="504" y="39" font-size="8" fill="#16a34a">YES</text>
+          <!-- Yes box -->
+          <rect x="522" y="20" width="145" height="50" rx="12" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+          <text x="594" y="43" text-anchor="middle" font-size="10.5" font-weight="700" fill="#15803d">개별주식 추가 매수</text>
+          <text x="594" y="59" text-anchor="middle" font-size="9.5" fill="#16a34a">코어 배정금 일부 전환</text>
+          <!-- No arrow (down) -->
+          <path d="M413 97 L413 120" stroke="#f43f5e" stroke-width="2" marker-end="url(#arr4)"/>
+          <text x="420" y="113" font-size="8" fill="#dc2626">NO</text>
+          <text x="413" y="128" text-anchor="middle" font-size="9.5" fill="#9f1239" font-weight="700">코어에 추가 적립</text>
+          <defs>
+            <marker id="arr2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L7,3 z" fill="#94a3b8"/>
+            </marker>
+            <marker id="arr3" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L7,3 z" fill="#22c55e"/>
+            </marker>
+            <marker id="arr4" markerWidth="7" markerHeight="7" refX="3" refY="5" orient="auto">
+              <path d="M0,0 L6,0 L3,7 z" fill="#f43f5e"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="quote-block bg-amber-50 dark:bg-amber-950/30 pl-5 py-4 pr-4 rounded-r-xl mb-5">
+        <p class="text-slate-700 dark:text-slate-300 italic text-sm leading-relaxed">
+          "내가 좋다고 판단되는 기업의 주가가 훅 떨어졌을 때, 이럴 때는 특히 이런 개별 주식에 돈을 더 추가로 넣었어요."
+        </p>
+        <p class="text-amber-600 text-xs mt-1">(외부 충격으로 인한 일시적 급락은 오히려 좋은 추가 매수 기회입니다.)</p>
+      </div>
+
+      <!-- 매도 전략 -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-5 shadow-sm">
+        <p class="font-bold text-slate-700 dark:text-slate-300 text-sm mb-4">📤 언제 파는가 — 2가지 원칙</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 bg-rose-50 dark:bg-rose-950/20 rounded-xl p-4">
+            <span class="text-2xl">💸</span>
+            <div>
+              <p class="font-bold text-rose-700 dark:text-rose-300 text-sm">현금이 필요할 때</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">큰 소비가 생겼을 때 일부 매도. 그러기 위해 열심히 투자하는 것.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-slate-50 dark:bg-slate-800 rounded-xl p-4">
+            <span class="text-2xl">🚩</span>
+            <div>
+              <p class="font-bold text-slate-700 dark:text-slate-300 text-sm">"지금 사라면 안 살 주식"일 때</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">포트 비중과 무관하게, 지금 다시 사지 않을 판단이 들면 매도. 타이밍 보지 않고 즉시 실행.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섹션 E: 채권·현금·MMF -->
+    <div class="mb-10">
+      <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">💵</span> 채권·현금·MMF — 3개 주머니 전략
+      </h3>
+
+      <!-- KPI: 채권 전략 -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center">
+          <div class="text-3xl font-black text-slate-400">60/40</div>
+          <div class="text-xs font-semibold text-slate-500 mt-1">전통 포트 전략</div>
+          <div class="text-xs text-slate-400 mt-1">주식 60% + 채권 40%</div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center">
+          <div class="text-3xl font-black text-indigo-500">나이 = %</div>
+          <div class="text-xs font-semibold text-slate-500 mt-1">나이별 채권 전략</div>
+          <div class="text-xs text-slate-400 mt-1">30살→채권30% / 70살→채권70%</div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-800 text-center">
+          <div class="text-3xl font-black text-emerald-500">미키 전략</div>
+          <div class="text-xs font-semibold text-slate-500 mt-1">돈 버는 시기</div>
+          <div class="text-xs text-slate-400 mt-1">채권 최소화 → 주식 집중</div>
+        </div>
+      </div>
+
+      <!-- 3개 주머니 SVG -->
+      <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-6 shadow-sm mb-5">
+        <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">돈 관리 3개 주머니 시스템</p>
+        <svg viewBox="0 0 680 170" width="100%" class="overflow-visible">
+          <!-- 주머니 1 -->
+          <ellipse cx="113" cy="60" rx="80" ry="30" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+          <rect x="33" y="58" width="160" height="80" rx="0" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2" stroke-top="none"/>
+          <ellipse cx="113" cy="138" rx="80" ry="18" fill="#bae6fd" stroke="#0ea5e9" stroke-width="1.5"/>
+          <text x="113" y="96" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0c4a6e">💳 주머니 1</text>
+          <text x="113" y="112" text-anchor="middle" font-size="9.5" fill="#075985">매달 수입/지출</text>
+          <text x="113" y="127" text-anchor="middle" font-size="9" fill="#0369a1">월급 → 고정지출</text>
+          <!-- 주머니 2 -->
+          <ellipse cx="340" cy="60" rx="80" ry="30" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+          <rect x="260" y="58" width="160" height="80" rx="0" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+          <ellipse cx="340" cy="138" rx="80" ry="18" fill="#fde68a" stroke="#eab308" stroke-width="1.5"/>
+          <text x="340" y="96" text-anchor="middle" font-size="10.5" font-weight="700" fill="#713f12">🏦 주머니 2</text>
+          <text x="340" y="112" text-anchor="middle" font-size="9.5" fill="#92400e">현금 비축 (MMF)</text>
+          <text x="340" y="127" text-anchor="middle" font-size="9" fill="#b45309">불규칙 지출 예측분</text>
+          <!-- 주머니 3 -->
+          <ellipse cx="567" cy="60" rx="80" ry="30" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+          <rect x="487" y="58" width="160" height="80" rx="0" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+          <ellipse cx="567" cy="138" rx="80" ry="18" fill="#e9d5ff" stroke="#a855f7" stroke-width="1.5"/>
+          <text x="567" y="96" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4a044e">📈 주머니 3</text>
+          <text x="567" y="112" text-anchor="middle" font-size="9.5" fill="#6b21a8">투자 포트폴리오</text>
+          <text x="567" y="
