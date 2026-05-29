@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데이비드 가드너의 7가지 투자 전략 | 미키피디아</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <script>
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    body { font-family: 'Pretendard', sans-serif; }
+    .video-wrapper { position: relative; padding-top: 56.25%; overflow: hidden; border-radius: 1rem; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    .gradient-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4c1d95 100%); }
+    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+    .quote-border { border-left: 4px solid #8b5cf6; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeInUp 0.6s ease forwards; }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- 다크모드 토글 -->
+  <div class="fixed top-4 right-4 z-50">
+    <button onclick="document.documentElement.classList.toggle('dark')" class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full p-2.5 shadow-lg hover:shadow-xl transition-all">
+      <span class="dark:hidden text-lg">🌙</span>
+      <span class="hidden dark:inline text-lg">☀️</span>
+    </button>
+  </div>
+
+  <!-- 히어로 영역 -->
+  <div class="gradient-hero text-white">
+    <div class="max-w-5xl mx-auto px-4 py-12">
+      <div class="mb-6">
+        <span class="inline-block bg-violet-500 bg-opacity-40 border border-violet-400 text-violet-200 text-xs font-semibold px-3 py-1 rounded-full mb-3">💹 Finance · 투자 전략</span>
+        <h1 class="text-2xl md:text-4xl font-black leading-tight mb-3">🫵 좋은 주식을 찾는 테스트 방법?<br><span class="text-violet-300">미키김의 투자 멘토가 이야기하는 7가지 투자 전략</span></h1>
+        <div class="flex flex-wrap gap-3 text-sm text-slate-300">
+          <span>📺 미키피디아</span>
+          <span>⏱ 24분 27초</span>
+          <span>📅 2026년 4월 26일</span>
+        </div>
+      </div>
+
+      <!-- 영상 임베드 -->
+      <div class="video-wrapper shadow-2xl">
+        <iframe src="https://www.youtube.com/embed/dGiFydMu1yU" title="미키피디아 데이비드 가드너 인터뷰" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+
+      <div class="mt-5 text-center">
+        <a href="https://www.youtube.com/watch?v=dGiFydMu1yU" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full shadow-lg transition-all hover:scale-105">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          원본 영상 보기
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 메인 컨텐츠 -->
+  <div class="max-w-5xl mx-auto px-4 py-12">
+
+    <!-- ① 쉽게 이해하기 -->
+    <section class="mb-16">
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 bg-violet-100 dark:bg-violet-900 rounded-xl flex items-center justify-center text-xl">💡</div>
+        <div>
+          <p class="text-xs font-semibold text-violet-500 uppercase tracking-widest">Section 01</p>
+          <h2 class="text-2xl font-black">쉽게 이해하기</h2>
+        </div>
+      </div>
+
+      <!-- 한 줄 요약 -->
+      <div class="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-2xl p-6 mb-8 shadow-xl">
+        <p class="text-xs text-violet-200 font-semibold uppercase tracking-widest mb-2">핵심 한 줄 요약</p>
+        <p class="text-white text-xl md:text-2xl font-bold leading-snug">데이비드 가드너의 <span class="text-yellow-300">규칙 파괴 기업 투자</span> 7가지 원칙 — 승자를 찾고, 승자에게 베팅하라</p>
+      </div>
+
+      <!-- KPI 박스 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-md card-hover border border-slate-100 dark:border-slate-700">
+          <div class="text-4xl font-black text-violet-600 dark:text-violet-400">20+</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">권장 포트폴리오 종목 수</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-md card-hover border border-slate-100 dark:border-slate-700">
+          <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400">15년</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">미키김이 팟캐스트 청취한 기간</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-md card-hover border border-slate-100 dark:border-slate-700">
+          <div class="text-4xl font-black text-amber-600 dark:text-amber-400">100x</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">Intuitive Surgical 20년 주가 상승</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-md card-hover border border-slate-100 dark:border-slate-700">
+          <div class="text-4xl font-black text-rose-600 dark:text-rose-400">6가지</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">규칙 파괴 기업의 핵심 속성</div>
+        </div>
+      </div>
+
+      <!-- 핵심 포인트 카드 -->
+      <h3 class="text-lg font-bold mb-5 flex items-center gap-2"><span class="text-violet-500">✦</span> 핵심 포인트 6가지</h3>
+      <div class="grid md:grid-cols-2 gap-4 mb-10">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm card-hover border-l-4 border-violet-500">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🎯</span>
+            <div>
+              <p class="font-bold text-sm mb-1">시장이 아닌 기업에 집중하라</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">시장의 불확실성에 집중하지 말고, 투자하는 기업 자체에 집중하라. 불확실성이 없는 시기는 없다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm card-hover border-l-4 border-sky-500">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🏆</span>
+            <div>
+              <p class="font-bold text-sm mb-1">신흥산업의 탑독(Top Dog)에 투자하라</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">시대를 이끌어가는 신흥산업의 선두기업에 투자하는 것이 핵심 전략이다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm card-hover border-l-4 border-emerald-500">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📈</span>
+            <div>
+              <p class="font-bold text-sm mb-1">승자에게 추가 투자하라 (꽃에 물주기)</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">주가가 오르는 승자 기업에 추가 투자하고, 떨어지는 기업에 물타기하는 것은 피하라.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm card-hover border-l-4 border-amber-500">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">📚</span>
+            <div>
+              <p class="font-bold text-sm mb-1">포트폴리오는 자신의 미래 비전을 담아라</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">브로커나 전문가의 시각이 아닌, 자신의 미래 비전과 관심사를 포트폴리오에 반영해야 한다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm card-hover border-l-4 border-rose-500">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">👻</span>
+            <div>
+              <p class="font-bold text-sm mb-1">스냅 테스트: 이 기업이 사라지면 아쉬울까?</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">해당 기업이 사라졌을 때 사람들이 아쉬워할 만큼 필요한 기업인지 확인하라.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm card-hover border-l-4 border-indigo-500">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">🥤</span>
+            <div>
+              <p class="font-bold text-sm mb-1">콜라 테스트: 독보적 1위인가?</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">코카콜라처럼 뚜렷한 경쟁자(펩시)가 없는 독보적 1위 기업인지 확인하라.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG: 투자 전략 플로우차트 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md mb-6 border border-slate-100 dark:border-slate-700">
+        <h3 class="text-base font-bold mb-4 text-center">📊 규칙 파괴 기업 선별 프로세스</h3>
+        <div class="overflow-x-auto">
+          <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-2xl mx-auto">
+            <!-- 배경 -->
+            <!-- Step 1: 시장 아닌 기업 보기 -->
+            <rect x="10" y="120" width="140" height="60" rx="12" fill="#8b5cf6"/>
+            <text x="80" y="145" text-anchor="middle" fill="white" font-size="11" font-weight="bold">시장 불확실성</text>
+            <text x="80" y="161" text-anchor="middle" fill="#e9d5ff" font-size="10">무시하기</text>
+            <text x="80" y="174" text-anchor="middle" fill="#e9d5ff" font-size="9">→ 기업에 집중</text>
+
+            <!-- 화살표 1 -->
+            <path d="M150 150 L180 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+            <!-- Step 2: 신흥산업 탑독 -->
+            <rect x="180" y="120" width="140" height="60" rx="12" fill="#0ea5e9"/>
+            <text x="250" y="145" text-anchor="middle" fill="white" font-size="11" font-weight="bold">신흥산업 탑독</text>
+            <text x="250" y="161" text-anchor="middle" fill="#e0f2fe" font-size="10">선두기업 탐색</text>
+            <text x="250" y="174" text-anchor="middle" fill="#e0f2fe" font-size="9">Top Dog 확인</text>
+
+            <!-- 화살표 2 -->
+            <path d="M320 150 L350 150" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+            <!-- Step 3: 2가지 테스트 -->
+            <rect x="350" y="105" width="130" height="35" rx="10" fill="#f59e0b"/>
+            <text x="415" y="126" text-anchor="middle" fill="white" font-size="11" font-weight="bold">👻 스냅 테스트</text>
+
+            <rect x="350" y="150" width="130" height="35" rx="10" fill="#f97316"/>
+            <text x="415" y="171" text-anchor="middle" fill="white" font-size="11" font-weight="bold">🥤 콜라 테스트</text>
+
+            <!-- 화살표 3 -->
+            <path d="M480 140 L510 140" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+            <path d="M480 167 L510 167" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+            <!-- Step 4: 투자 결정 -->
+            <rect x="510" y="110" width="130" height="70" rx="12" fill="#10b981"/>
+            <text x="575" y="135" text-anchor="middle" fill="white" font-size="11" font-weight="bold">포트폴리오에</text>
+            <text x="575" y="150" text-anchor="middle" fill="white" font-size="11" font-weight="bold">추가!</text>
+            <text x="575" y="168" text-anchor="middle" fill="#d1fae5" font-size="9">꽃에 물 주기 전략</text>
+
+            <!-- 하단 설명 -->
+            <rect x="10" y="220" width="680" height="85" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="350" y="243" text-anchor="middle" fill="#64748b" font-size="11" font-weight="bold">경마 비유: 경기 시작 후, 빨리 달리는 말을 보고 베팅할 수 있는 것이 주식 투자의 강점!</text>
+            <rect x="30" y="255" width="180" height="38" rx="8" fill="#ede9fe"/>
+            <text x="120" y="274" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="bold">오르는 주식에 추가 투자</text>
+            <text x="120" y="288" text-anchor="middle" fill="#6d28d9" font-size="9">= 꽃에 물 주기 🌸</text>
+
+            <rect x="260" y="255" width="180" height="38" rx="8" fill="#fee2e2"/>
+            <text x="350" y="274" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">떨어지는 주식 물타기 금지</text>
+            <text x="350" y="288" text-anchor="middle" fill="#b91c1c" font-size="9">= 잎에 물 주기 🍂 (피할 것)</text>
+
+            <rect x="490" y="255" width="180" height="38" rx="8" fill="#d1fae5"/>
+            <text x="580" y="274" text-anchor="middle" fill="#059669" font-size="10" font-weight="bold">20개+ 종목 분산 투자</text>
+            <text x="580" y="288" text-anchor="middle" fill="#047857" font-size="9">자신의 관심사 기반 포트폴리오</text>
+
+            <!-- 화살표 마커 -->
+            <defs>
+              <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+              </marker>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- 스냅 & 콜라 테스트 시각화 -->
+      <div class="grid md:grid-cols-2 gap-5 mb-6">
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-2xl p-6 border border-amber-200 dark:border-amber-800 shadow-sm">
+          <div class="text-center mb-4">
+            <span class="text-4xl">👻</span>
+            <h4 class="text-lg font-black text-amber-700 dark:text-amber-400 mt-2">스냅 테스트</h4>
+            <p class="text-xs text-amber-600 dark:text-amber-500 font-medium">Snap Test</p>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-xl p-4 text-sm text-slate-600 dark:text-slate-300">
+            <p class="font-bold text-slate-700 dark:text-slate-200 mb-2">🧪 테스트 방법</p>
+            <p>이 기업이 갑자기 사라진다면, 다음 날 아침 사람들이 그 부재를 아쉬워할까?</p>
+            <div class="mt-3 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✅</span>
+                <span class="text-xs">많은 사람이 불편함을 느낌 → 투자할 기업</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-red-500 font-bold">❌</span>
+                <span class="text-xs">아무도 신경 쓰지 않음 → 투자 재고</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-950 dark:to-pink-950 rounded-2xl p-6 border border-rose-200 dark:border-rose-800 shadow-sm">
+          <div class="text-center mb-4">
+            <span class="text-4xl">🥤</span>
+            <h4 class="text-lg font-black text-rose-700 dark:text-rose-400 mt-2">콜라 테스트</h4>
+            <p class="text-xs text-rose-600 dark:text-rose-500 font-medium">Cola Test</p>
+          </div>
+          <div class="bg-white dark:bg-slate-800 rounded-xl p-4 text-sm text-slate-600 dark:text-slate-300">
+            <p class="font-bold text-slate-700 dark:text-slate-200 mb-2">🧪 테스트 방법</p>
+            <p>코카콜라처럼 독보적 1위인가? 뚜렷한 경쟁자(펩시)가 보이지 않는 기업인가?</p>
+            <div class="mt-3 space-y-2">
+              <div class="flex items-center gap-2">
+                <span class="text-green-500 font-bold">✅</span>
+                <span class="text-xs">명확한 2위 경쟁자가 없음 → 독보적 1위</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-red-500 font-bold">❌</span>
+                <span class="text-xs">유사한 경쟁자 다수 존재 → 선두 지위 불명확</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ② 자세히 알아보기 -->
+    <section>
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-10 h-10 bg-sky-100 dark:bg-sky-900 rounded-xl flex items-center justify-center text-xl">🔍</div>
+        <div>
+          <p class="text-xs font-semibold text-sky-500 uppercase tracking-widest">Section 02</p>
+          <h2 class="text-2xl font-black">자세히 알아보기</h2>
+        </div>
+      </div>
+
+      <!-- David Gardner 소개 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 mb-6 shadow-md border border-slate-100 dark:border-slate-700">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 bg-violet-100 dark:bg-violet-900 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">🧙</div>
+          <div>
+            <h3 class="text-lg font-black mb-1">David Gardner는 누구인가?</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mb-3">미키피디아 채널의 국내 최초 인터뷰 대상</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">미국의 유명 투자 자문회사 <strong>Motley Fool</strong>의 공동 창업자. 셰익스피어 희극에 등장하는 진실만 말하는 광대 '먼드리풀'에서 회사 이름을 따왔으며, 동명의 팟캐스트를 운영하고 있다. 미키김이 15년간 청취한 투자 멘토로, 최근 신간 <strong class="text-violet-600 dark:text-violet-400">『Rule Breakers (규칙 파괴자)』</strong>를 출간했다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 전략 1: 시장 불확실성 -->
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-8 h-8 bg-violet-600 text-white rounded-full flex items-center justify-center font-black text-sm">01</span>
+          <h3 class="text-lg font-bold">시장 불확실성을 무시하는 법</h3>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+          <div class="quote-border pl-4 mb-4">
+            <p class="text-sm italic text-slate-600 dark:text-slate-300">"항상 불안감이 있습니다. 하지만 현재의 불안감이 훨씬 더 부담스럽습니다."</p>
+            <p class="text-xs text-slate-400 mt-1">(불확실성은 항상 존재한다. 지금이 특별히 더 불안하게 느껴질 뿐이다.)</p>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">데이비드 가드너는 시장의 불확실성에 집중하는 것은 시간 낭비라고 강조한다. 강세장이어도 "너무 올랐다"는 말이 나오고, 약세장이어도 "아직 더 내릴 것"이라는 말이 나온다. 불확실성은 항상 존재하기 때문에, 집중해야 할 것은 오직 <strong class="text-violet-600 dark:text-violet-400">투자하는 기업 자체</strong>다.</p>
+        </div>
+      </div>
+
+      <!-- CSS 진행 막대: 불확실성 vs 기업 집중 비율 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-700 mb-6">
+        <h4 class="text-sm font-bold mb-4">📊 투자 집중 우선순위 (데이비드 가드너 관점)</h4>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="font-medium text-emerald-600">기업 펀더멘털 분석</span>
+              <span class="text-slate-500">95%</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-emerald-500 h-3 rounded-full" style="width:95%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="font-medium text-sky-600">신흥 산업 트렌드 파악</span>
+              <span class="text-slate-500">80%</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-sky-500 h-3 rounded-full" style="width:80%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="font-medium text-amber-600">포트폴리오 비전 설계</span>
+              <span class="text-slate-500">70%</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-amber-500 h-3 rounded-full" style="width:70%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="font-medium text-rose-500">시장 거시 지표 / 불확실성 예측</span>
+              <span class="text-slate-500">5%</span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+              <div class="bg-rose-400 h-3 rounded-full" style="width:5%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 전략 2: 탑독 기업 투자 -->
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-black text-sm">02</span>
+          <h3 class="text-lg font-bold">신흥산업의 탑독(Top Dog)에 투자하라</h3>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+          <div class="quote-border pl-4 mb-4" style="border-left-color: #0ea5e9;">
+            <p class="text-sm italic text-slate-600 dark:text-slate-300">"I'm interested in the top dog in an emerging industry"</p>
+            <p class="text-xs text-slate-400 mt-1">(저는 신흥 산업의 선두 기업에 관심이 있습니다)</p>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">가드너가 제시한 예시 기업들: <strong>Intuitive Surgical</strong> (로봇 수술 분야 20년 100배 성장), <strong>Alphabet</strong>, <strong>Amazon</strong>, <strong>Tesla</strong>, <strong>Netflix</strong>, <strong>NVIDIA</strong>. 이 기업들은 모두 각자의 신흥 산업에서 선두 자리를 차지하고 있다.</p>
+          <div class="grid grid-cols-3 md:grid-cols-6 gap-2">
+            <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-2 text-center text-xs font-bold">Amazon</div>
+            <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-2 text-center text-xs font-bold">Alphabet</div>
+            <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-2 text-center text-xs font-bold">Tesla</div>
+            <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-2 text-center text-xs font-bold">Netflix</div>
+            <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-2 text-center text-xs font-bold">NVIDIA</div>
+            <div class="bg-slate-100 dark:bg-slate-700 rounded-xl p-2 text-center text-xs font-bold">Intuitive Surgical</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG: 꽃에 물주기 vs 잎에 물주기 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md mb-6 border border-slate-100 dark:border-slate-700">
+        <h3 class="text-base font-bold mb-5 text-center">🌿 꽃에 물주기 vs 잎에 물주기 전략 비교</h3>
+        <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-2xl mx-auto">
+          <!-- 왼쪽: 꽃에 물주기 -->
+          <rect x="10" y="10" width="295" height="180" rx="16" fill="#f0fdf4" stroke="#86efac" stroke-width="1.5"/>
+          <text x="157" y="40" text-anchor="middle" fill="#166534" font-size="13" font-weight="bold">✅ 꽃에 물주기 (권장)</text>
+          <text x="157" y="60" text-anchor="middle" fill="#15803d" font-size="11">오르는 주식에 추가 투자</text>
+
+          <!-- 꽃 SVG -->
+          <circle cx="100" cy="120" r="18" fill="#fde047"/>
+          <circle cx="82" cy="108" r="10" fill="#f9a8d4"/>
+          <circle cx="118" cy="108" r="10" fill="#f9a8d4"/>
+          <circle cx="82" cy="132" r="10" fill="#f9a8d4"/>
+          <circle cx="118" cy="132" r="10" fill="#f9a8d4"/>
+          <line x1="100" y1="138" x2="100" y2="170" stroke="#4ade80" stroke-width="3"/>
+
+          <!-- 위로 올라가는 화살표 -->
+          <path d="M145 150 L145 90" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+          <text x="145" y="80" text-anchor="middle" fill="#15803d" font-size="10" font-weight="bold">주가 ↑</text>
+          <text x="145" y="165" text-anchor="middle" fill="#15803d" font-size="9">추가 매수 💰</text>
+
+          <text x="210" y="115" text-anchor="middle" fill="#166534" font-size="10">승자에게</text>
+          <text x="210" y="130" text-anchor="middle" fill="#166534" font-size="10">더 베팅</text>
+          <text x="210" y="150" text-anchor="middle" fill="#15803d" font-size="11" font-weight="bold">= 장기 수익</text>
+
+          <!-- 오른쪽: 잎에 물주기 -->
+          <rect x="335" y="10" width="295" height="180" rx="16" fill="#fff1f2" stroke="#fca5a5" stroke-width="1.5"/>
+          <text x="482" y="40" text-anchor="middle" fill="#991b1b" font-size="13" font-weight="bold">❌ 잎에 물주기 (주의)</text>
+          <text x="482" y="60" text-anchor="middle" fill="#dc2626" font-size="11">떨어지는 주식에 물타기</text>
+
+          <!-- 시들어가는 잎 -->
+          <ellipse cx="400" cy="120" rx="20" ry="12" fill="#a3e635" transform="rotate(-20, 400, 120)"/>
+          <ellipse cx="420" cy="130" rx="18" ry="10" fill="#84cc16" transform="rotate(10, 420, 130)"/>
+          <line x1="410" y1="140" x2="410" y2="170" stroke="#86efac" stroke-width="3"/>
+
+          <!-- 아래로 내려가는 화살표 -->
+          <path d="M455 90 L455 150" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+          <text x="455" y="80" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="bold">주가 ↓</text>
+          <text x="455" y="165" text-anchor="middle" fill="#dc2626" font-size="9">추가 매수 💸</text>
+
+          <text x="530" y="115" text-anchor="middle" fill="#991b1b" font-size="10">패자에게</text>
+          <text x="530" y="130" text-anchor="middle" fill="#991b1b" font-size="10">더 베팅</text>
+          <text x="530" y="150" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold">= 손실 확대</text>
+
+          <defs>
+            <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#16a34a"/>
+            </marker>
+            <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- 전략 3: 포트폴리오 -->
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-sm">03</span>
+          <h3 class="text-lg font-bold">좋은 포트폴리오란 무엇인가</h3>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+          <div class="quote-border pl-4 mb-4" style="border-left-color: #10b981;">
+            <p class="text-sm italic text-slate-600 dark:text-slate-300">"Your portfolio should represent your best vision of our future. Not your broker's best vision."</p>
+            <p class="text-xs text-slate-400 mt-1">(당신의 포트폴리오는 브로커의 비전이 아닌, 당신의 미래에 대한 최고의 비전을 상징해야 합니다.)</p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-3">
+            <div class="bg-emerald-50 dark:bg-emerald-950 rounded-xl p-4 text-center">
+              <div class="text-2xl mb-2">🌱</div>
+              <p class="text-xs font-bold text-emerald-700 dark:text-emerald-400">20개+ 종목으로 시작</p>
+              <p class="text-xs text-slate-500 mt-1">균등 배분으로 출발점을 공정하게</p>
+            </div>
+            <div class="bg-sky-50 dark:bg-sky-950 rounded-xl p-4 text-center">
+              <div class="text-2xl mb-2">❤️</div>
+              <p class="text-xs font-bold text-sky-700 dark:text-sky-400">자신의 관심사 반영</p>
+              <p class="text-xs text-slate-500 mt-1">passion, hobbies, interest가 포트폴리오에 담겨야</p>
+            </div>
+            <div class="bg-violet-50 dark:bg-violet-950 rounded-xl p-4 text-center">
+              <div class="text-2xl mb-2">📖</div>
+              <p class="text-xs font-bold text-violet-700 dark:text-violet-400">책장처럼 자신을 표현</p>
+              <p class="text-xs text-slate-500 mt-1">포트폴리오는 당신의 가치관을 반영하는 거울</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 비교 표: 물타기 vs 승자 추가 매수 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md mb-6 border border-slate-100 dark:border-slate-700 overflow-x-auto">
+        <h3 class="text-base font-bold mb-4">📋 투자 전략 비교표</h3>
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100 dark:bg-slate-700">
+              <th class="text-left p-3 rounded-tl-xl font-bold text-slate-600 dark:text-slate-300">구분</th>
+              <th class="text-center p-3 font-bold text-rose-600">❌ 잘못된 접근</th>
+              <th class="text-center p-3 rounded-tr-xl font-bold text-emerald-600">✅ 올바른 접근</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+            <tr>
+              <td class="p-3 font-medium text-slate-600 dark:text-slate-400">주가 하락 시</td>
+              <td class="p-3 text-center text-rose-600">물타기 (더블 다운)</td>
+              <td class="p-3 text-center text-emerald-600">보유 또는 일부 정리 고려</td>
+            </tr>
+            <tr class="bg-slate-50 dark:bg-slate-800">
+              <td class="p-3 font-medium text-slate-600 dark:text-slate-400">주가 상승 시</td>
+              <td class="p-3 text-center text-rose-600">"너무 올랐다" 매도</td>
+              <td class="p-3 text-center text-emerald-600">추가 매수 (꽃에 물주기)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-slate-600 dark:text-slate-400">기업 선택 기준</td>
+              <td class="p-3 text-center text-rose-600">저점 매수, 목표가 위주</td>
+              <td class="p-3 text-center text-emerald-600">기업의 본질적 가치와 성장성</td>
+            </tr>
+            <tr class="bg-slate-50 dark:bg-slate-800">
+              <td class="p-3 font-medium text-slate-600 dark:text-slate-400">포트폴리오 구성</td>
+              <td class="p-3 text-center text-rose-600">브로커/전문가 추천 따르기</td>
+              <td class="p-3 text-center text-emerald-600">자신의 미래 비전 반영</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-medium text-slate-600 dark:text-slate-400">투자 스타일</td>
+              <td class="p-3 text-center text-rose-600">잦은 트레이딩, 단기 매매</td>
+              <td class="p-3 text-center text-emerald-600">장기 보유 (Amazon 29년 보유)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 전략 4: AI 시대 투자 -->
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-sm">04</span>
+          <h3 class="text-lg font-bold">AI 시대에 규칙 파괴 기업 찾기</h3>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-slate-100 dark:border-slate-700">
+          <div class="quote-border pl-4 mb-4" style="border-left-color: #6366f1;">
+            <p class="text-sm italic text-slate-600 dark:text-slate-300">"When Amazon was founded, Jeff Bezos had no idea what AWS would be. It was an online bookstore."</p>
+            <p class="text-xs text-slate-400 mt-1">(아마존이 창립되었을 때, 제프 베조스는 AWS가 무엇이 될지 몰랐습니다. 그것은 단순한 온라인 서점이었어요.)</p>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">AI 혁명은 30년 전 인터넷의 등장과 유사한 <strong>텍토닉(Tectonic) 변화</strong>다. 현재 우리가 예상할 수 없는 수많은 기업이 앞으로 탄생할 것이다. 인터넷 시대에 야후가 구글에 자리를 내줬듯, AI 시대의 최종 승자는 아직 알 수 없다.</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-indigo-50 dark:bg-indigo-950 rounded-xl p-4">
+              <p class="font-bold text-indigo-700 dark:text-indigo-400 text-sm mb-2">📌 가드너의 AI 시대 조언</p>
+              <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-2">
+                <li class="flex items-start gap-2"><span class="text-indigo-500 font-bold">1.</span>긴장하지 말고 관심을 가져라</li>
+                <li class="flex items-start gap-2"><span class="text-indigo-500 font-bold">2.</span>오늘의 모든 AI 투자처에 올인하지 마라</li>
+                <li class="flex items-start gap-2"><span class="text-indigo-500 font-bold">3.</span>10년 후 나타날 새로운 기업에 열린 마음을 유지하라</li>
+                <li class="flex items-start gap-2"><span class="text-indigo-500 font-bold">4.</span>스냅+콜라 테스트로 유망 기업을 걸러내라</li>
+              </ul>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-700 rounded-xl p-4">
+              <p class="font-bold text-slate-700 dark:text-slate-300 text-sm mb-2">🕰 인터넷 시대와 AI 시대 비교</p>
+              <div class="space-y-2 text-xs text-slate-600 dark:text-slate-400">
+                <div class="flex justify-between">
+                  <span>인터넷 초기 선두</span>
+                  <span class="font-bold">Yahoo</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>인터넷 최종 승자</span>
+                  <span class="font-bold text-emerald-600">Google</span>
+                </div>
+                <div class="border-t border-slate-200 dark:border-slate-600 my-2"></div>
+                <div class="flex justify-between">
+                  <span>Amazon 설립 시</span>
+                  <span class="font-bold">온라인 서점</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Amazon 현재</span>
+                  <span class="font-bold text-emerald-600">클라우드+커머스 제왕</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 미키김의 코멘트 -->
+      <div class="bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-700 dark:to-slate-800 rounded-2xl p-6 mb-6 shadow-xl">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-2xl flex-shrink-0">🎙</div>
+          <div>
+            <p class="text-violet-300 text-xs font-semibold uppercase tracking-widest mb-2">미키김의 코멘트</p>
+            <p class="text-white text-sm leading-relaxed mb-3">"경마는 내가 경기가 시작하기 전에 배팅을 해야 하는데, 주식 투자라는 것은 경기가 시작된 다음에 어떤 말이 빨리 달리는지를 본 다음에 투자할 수 있다. 저는 이거 진짜 좋은 인사이트입니다."</p>
+            <p class="text-slate-400 text-xs">데이비드 가드너의 '경마 비유'에 대한 미키김의 반응 — 일반 투자자에게 주식 투자가 경마보다 유리한 이유를 설명하는 최고의 비유</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7가지 투자 전략 요약 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700">
+        <h3 class="text-lg font-black mb-5 text-center">🏆 데이비드 가드너의 핵심 투자 전략 총정리</h3>
+        <div class="space-y-3">
+          <div class="flex items-center gap-4 p-3 bg-violet-50 dark:bg-violet-950 rounded-xl">
+            <span class="w-8 h-8 bg-violet-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">1</span>
+            <div>
+              <p class="font-bold text-sm">시장이 아닌 기업에 집중하라</p>
+              <p class="text-xs text-slate-500">불확실성은 항상 존재한다 — 흔들리지 마라</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-3 bg-sky-50 dark:bg-sky-950 rounded-xl">
+            <span class="w-8 h-8 bg-sky-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">2</span>
+            <div>
+              <p class="font-bold text-sm">신흥산업의 탑독(Top Dog)에 투자하라</p>
+              <p class="text-xs text-slate-500">선두 기업이 이미 많이 올라도 여전히 매력적이다</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-3 bg-emerald-50 dark:bg-emerald-950 rounded-xl">
+            <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">3</span>
+            <div>
+              <p class="font-bold text-sm">꽃에 물주기 — 승자에게 추가 투자하라</p>
+              <p class="text-xs text-slate-500">오르는 주식에 더 사고, 떨어지는 주식에 물타기하지 마라</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-3 bg-amber-50 dark:bg-amber-950 rounded-xl">
+            <span class="w-8 h-8 bg-amber-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">4</span>
+            <div>
+              <p class="font-bold text-sm">자신의 미래 비전을 포트폴리오에 담아라</p>
+              <p class="text-xs text-slate-500">브로커가 아닌 나의 관심사, 열정, 취미가 기준이 되어야 한다</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-3 bg-rose-50 dark:bg-rose-950 rounded-xl">
+            <span class="w-8 h-8 bg-rose-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">5</span>
+            <div>
+              <p class="font-bold text-sm">스냅 테스트로 필수 기업을 확인하라</p>
+              <p class="text-xs text-slate-500">이 기업이 사라지면 사람들이 정말 아쉬워할까?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-3 bg-indigo-50 dark:bg-indigo-950 rounded-xl">
+            <span class="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">6</span>
+            <div>
+              <p class="font-bold text-sm">콜라 테스트로 독보적 1위를 확인하라</p>
+              <p class="text-xs text-slate-500">코카콜라처럼 명확한 펩시(2위 경쟁자)가 없는 기업을 찾아라</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 p-3 bg-slate-100 dark:bg-slate-700 rounded-xl">
+            <span class="w-8 h-8 bg-slate-600 text-white rounded-full flex items-center justify-center font-black text-xs flex-shrink-0">7</span>
+            <div>
+              <p class="font-bold text-sm">AI 시대에도 열린 마음으로 장기 투자하라</p>
+              <p class="text-xs text-slate-500">인터넷이 Google을 만들었듯, AI는 우리가 모르는 기업을 만들어낼 것이다</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700 text-center">
+      <p class="text-xs text-slate-400">📺 이 레포트는 <strong class="text-slate-600 dark:text-slate-300">미키피디아</strong> 채널의 영상을 기반으로 작성되었습니다.</p>
+      <p class="text-xs text-slate-400 mt-1">원본 영상: <a href="https://www.youtube.com/watch?v=dGiFydMu1yU" target="_blank" class="text-violet-500 hover:underline">youtube.com/watch?v=dGiFydMu1yU</a></p>
+      <p class="text-xs text-slate-300 dark:text-slate-600 mt-3">투자는 본인 판단 하에 진행하세요. 이 레포트는
