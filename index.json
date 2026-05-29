@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-28T07:27:54",
+  "updated_at": "2026-05-29T07:35:40",
   "reports": [
+    {
+      "slug": "semiconductor-investment-power-map",
+      "category": "finance",
+      "video_id": "fGSpfXBzaQc",
+      "title": "📈지금은 매수 기회? 반도체 투자를 위한 필수 인사이트 총정리 with 반도체 패권 지도",
+      "channel": "미키피디아",
+      "duration_string": "28분 30초",
+      "duration_seconds": 1710,
+      "summary": "반도체 산업 구조와 패권 기업 5곳을 총정리한 투자 인사이트",
+      "video_url": "https://www.youtube.com/watch?v=fGSpfXBzaQc",
+      "report_url": "finance/semiconductor-investment-power-map.html",
+      "thumbnail_url": "https://img.youtube.com/vi/fGSpfXBzaQc/maxresdefault.jpg",
+      "processed_date": "2026-05-29"
+    },
     {
       "slug": "david-gardner-7-investment-strategies",
       "category": "finance",

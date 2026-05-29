@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반도체 투자 패권 지도 | 미키피디아</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { darkMode: 'class' }
+</script>
+<script>
+(function() {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+})();
+</script>
+<style>
+* { font-family: 'Pretendard', sans-serif; }
+.gradient-hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0c4a6e 100%); }
+.card-glass { backdrop-filter: blur(10px); }
+.animate-fade-in { animation: fadeIn 0.6s ease-out; }
+@keyframes fadeIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.kpi-glow-violet { box-shadow: 0 0 30px rgba(139,92,246,0.3); }
+.kpi-glow-sky { box-shadow: 0 0 30px rgba(14,165,233,0.3); }
+.kpi-glow-emerald { box-shadow: 0 0 30px rgba(16,185,129,0.3); }
+.kpi-glow-amber { box-shadow: 0 0 30px rgba(245,158,11,0.3); }
+.kpi-glow-rose { box-shadow: 0 0 30px rgba(244,63,94,0.3); }
+</style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+<!-- 헤더 -->
+<header class="gradient-hero text-white py-10 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="bg-violet-500 text-white text-xs font-bold px-3 py-1 rounded-full">📈 FINANCE</span>
+      <span class="text-slate-300 text-xs">미키피디아 · 2026.02.08 · 28분 30초</span>
+    </div>
+    <h1 class="text-2xl md:text-4xl font-black leading-tight mb-3">
+      📈지금은 매수 기회? 반도체 투자를 위한<br class="hidden md:block"> 필수 인사이트 총정리
+    </h1>
+    <p class="text-slate-300 text-base md:text-lg font-medium">반도체 산업 구조와 패권 기업 5곳을 총정리한 투자 인사이트</p>
+  </div>
+</header>
+
+<!-- 메인 컨테이너 -->
+<main class="max-w-5xl mx-auto px-4 py-10 space-y-12">
+
+  <!-- 유튜브 임베드 -->
+  <section class="animate-fade-in">
+    <div class="rounded-2xl overflow-hidden shadow-2xl" style="position:relative; padding-top:56.25%;">
+      <iframe
+        src="https://www.youtube.com/embed/fGSpfXBzaQc"
+        style="position:absolute; top:0; left:0; width:100%; height:100%;"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+    <div class="mt-4 text-center">
+      <a href="https://www.youtube.com/watch?v=fGSpfXBzaQc" target="_blank"
+        class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full transition-colors shadow-lg">
+        ▶ 원본 영상 보기
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 상단: 쉽게 이해하기 ===== -->
+  <section>
+    <div class="flex items-center gap-2 mb-6">
+      <div class="w-1.5 h-8 bg-violet-500 rounded-full"></div>
+      <h2 class="text-2xl font-black text-slate-900 dark:text-white">쉽게 이해하기</h2>
+    </div>
+
+    <!-- 한 줄 요약 -->
+    <div class="bg-gradient-to-r from-violet-600 to-sky-600 text-white rounded-2xl p-6 mb-8 shadow-xl">
+      <p class="text-sm font-semibold opacity-80 mb-2">💡 한 줄 요약</p>
+      <p class="text-xl md:text-2xl font-black leading-snug">반도체 산업 구조와 패권 기업 5곳을 총정리한 투자 인사이트</p>
+    </div>
+
+    <!-- 핵심 KPI 수치 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg kpi-glow-violet border border-violet-100 dark:border-violet-900">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400">90%</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">엔비디아 GPU 점유율</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg kpi-glow-sky border border-sky-100 dark:border-sky-900">
+        <div class="text-4xl font-black text-sky-600 dark:text-sky-400">70%</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">TSMC 파운드리 점유율</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg kpi-glow-emerald border border-emerald-100 dark:border-emerald-900">
+        <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400">19조</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">SK하이닉스 분기 영업이익</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg kpi-glow-amber border border-amber-100 dark:border-amber-900">
+        <div class="text-4xl font-black text-amber-600 dark:text-amber-400">+137%</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 font-medium">하이닉스 영업이익 YoY</div>
+      </div>
+    </div>
+
+    <!-- 핵심 포인트 카드 -->
+    <h3 class="text-lg font-bold mb-4 text-slate-700 dark:text-slate-300">🎯 핵심 포인트</h3>
+    <div class="grid md:grid-cols-2 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow border-l-4 border-violet-500">
+        <div class="text-2xl mb-2">🏗️</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-1">반도체 산업 3분류 이해</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400">제조방식(팹리스·IDM·파운드리·IP·장비), 역할(시스템·메모리), 용도(데이터센터·모바일·자동차·로봇)로 구분해서 이해해야 한다</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow border-l-4 border-sky-500">
+        <div class="text-2xl mb-2">👑</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-1">반도체 패권 최강자 5곳</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400">엔비디아(GPU·AI플랫폼), 삼성전자(메모리·파운드리), TSMC(위탁생산 70%), SK하이닉스(HBM 1위), 브로드컴(ASIC 설계)</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow border-l-4 border-emerald-500">
+        <div class="text-2xl mb-2">🤖</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-1">엔비디아의 전방위 독주</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400">GPU 90% 점유율과 CUDA 플랫폼으로 데이터센터·자율주행·로봇·양자컴 전 분야에서 최강자 지위 유지</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow border-l-4 border-amber-500">
+        <div class="text-2xl mb-2">📊</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-1">SK하이닉스 추가 상승 여력</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400">HBM 1위로 분기 영업이익 19조(+137%), 올해 영업이익 100~150조 원 전망 — 시총 1,000조 가능성</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow border-l-4 border-rose-500">
+        <div class="text-2xl mb-2">🇰🇷</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-1">코스피 구조적 상승 국면</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400">반도체 슈퍼사이클, 조선·방산·원전 호조, 상법 개정, MSCI 선진국 편입 추진으로 박스피 탈출</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow border-l-4 border-indigo-500">
+        <div class="text-2xl mb-2">💼</div>
+        <h4 class="font-bold text-slate-900 dark:text-white mb-1">코스피200 ETF 전략</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400">원큐200 액티브(총보수 0.01%), 양도소득세 면제 혜택으로 S&P500과 함께 포트폴리오에 담을 만한 선택</p>
+      </div>
+    </div>
+
+    <!-- 반도체 산업 구조 SVG 인포그래픽 -->
+    <h3 class="text-lg font-bold mb-4 text-slate-700 dark:text-slate-300">🗺️ 반도체 산업 구조 한눈에 보기</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-4 md:p-6 mb-8 overflow-x-auto">
+      <svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" class="w-full" style="min-width:340px;">
+        <!-- 배경 -->
+        <defs>
+          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f0f4ff;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#e8f5ff;stop-opacity:1"/>
+          </linearGradient>
+        </defs>
+        <rect width="760" height="420" rx="16" fill="url(#bgGrad)"/>
+
+        <!-- 제목 -->
+        <text x="380" y="32" text-anchor="middle" font-size="15" font-weight="800" fill="#1e1b4b">반도체 산업 구조 3대 분류</text>
+
+        <!-- 열1: 제조방식 -->
+        <rect x="20" y="50" width="225" height="350" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+        <text x="132" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#5b21b6">① 제조 방식</text>
+
+        <!-- 팹리스 -->
+        <rect x="34" y="82" width="197" height="52" rx="8" fill="#7c3aed"/>
+        <text x="132" y="101" text-anchor="middle" font-size="10" font-weight="700" fill="white">팹리스 (Fabless)</text>
+        <text x="132" y="116" text-anchor="middle" font-size="9" fill="#ddd6fe">설계만 | 엔비디아, AMD, 브로드컴, 퀄컴</text>
+        <text x="132" y="128" text-anchor="middle" font-size="9" fill="#ddd6fe">★ ASIC 설계 최강자: 브로드컴</text>
+
+        <!-- IDM -->
+        <rect x="34" y="142" width="197" height="52" rx="8" fill="#6d28d9"/>
+        <text x="132" y="161" text-anchor="middle" font-size="10" font-weight="700" fill="white">IDM (설계+생산)</text>
+        <text x="132" y="176" text-anchor="middle" font-size="9" fill="#ddd6fe">삼성전자, SK하이닉스, 인텔, 마이크론</text>
+        <text x="132" y="188" text-anchor="middle" font-size="9" fill="#ddd6fe">★ 메모리 최강: 삼성·하이닉스</text>
+
+        <!-- 파운드리 -->
+        <rect x="34" y="202" width="197" height="52" rx="8" fill="#5b21b6"/>
+        <text x="132" y="221" text-anchor="middle" font-size="10" font-weight="700" fill="white">파운드리 (위탁생산)</text>
+        <text x="132" y="236" text-anchor="middle" font-size="9" fill="#ddd6fe">TSMC(70%), 삼성(8~9%), 인텔</text>
+        <text x="132" y="248" text-anchor="middle" font-size="9" fill="#ddd6fe">★ 위탁생산 절대 1위: TSMC</text>
+
+        <!-- IP -->
+        <rect x="34" y="262" width="93" height="52" rx="8" fill="#4c1d95"/>
+        <text x="80" y="281" text-anchor="middle" font-size="10" font-weight="700" fill="white">IP 기업</text>
+        <text x="80" y="296" text-anchor="middle" font-size="9" fill="#ddd6fe">ARM</text>
+        <text x="80" y="308" text-anchor="middle" font-size="9" fill="#ddd6fe">시놉시스·케이던스</text>
+
+        <!-- 장비 -->
+        <rect x="133" y="262" width="98" height="52" rx="8" fill="#3b0764"/>
+        <text x="182" y="281" text-anchor="middle" font-size="10" font-weight="700" fill="white">장비 기업</text>
+        <text x="182" y="296" text-anchor="middle" font-size="9" fill="#ddd6fe">ASML</text>
+        <text x="182" y="308" text-anchor="middle" font-size="9" fill="#ddd6fe">LAM·AMAT·한미반도체</text>
+
+        <!-- 소부장 태그 -->
+        <rect x="34" y="322" width="197" height="28" rx="6" fill="#ddd6fe"/>
+        <text x="132" y="340" text-anchor="middle" font-size="10" fill="#4c1d95" font-weight="600">💡 소부장(소재·부품·장비) = 낙수 효과</text>
+
+        <!-- 열2: 역할 -->
+        <rect x="259" y="50" width="225" height="350" rx="12" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+        <text x="371" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0369a1">② 역할 (기능)</text>
+
+        <!-- 시스템 반도체 -->
+        <rect x="272" y="82" width="200" height="20" rx="5" fill="#0284c7"/>
+        <text x="372" y="96" text-anchor="middle" font-size="10" font-weight="700" fill="white">시스템 반도체 (연산·두뇌)</text>
+
+        <rect x="272" y="108" width="95" height="40" rx="6" fill="#0ea5e9"/>
+        <text x="320" y="124" text-anchor="middle" font-size="9" font-weight="700" fill="white">CPU</text>
+        <text x="320" y="138" text-anchor="middle" font-size="8" fill="#e0f2fe">인텔</text>
+
+        <rect x="375" y="108" width="97" height="40" rx="6" fill="#0369a1"/>
+        <text x="424" y="124" text-anchor="middle" font-size="9" font-weight="700" fill="white">GPU ⭐</text>
+        <text x="424" y="138" text-anchor="middle" font-size="8" fill="#e0f2fe">엔비디아(90%)</text>
+
+        <rect x="272" y="155" width="95" height="40" rx="6" fill="#0e7490"/>
+        <text x="320" y="171" text-anchor="middle" font-size="9" font-weight="700" fill="white">AP (모바일)</text>
+        <text x="320" y="185" text-anchor="middle" font-size="8" fill="#e0f2fe">퀄컴·미디어텍·애플</text>
+
+        <rect x="375" y="155" width="97" height="40" rx="6" fill="#075985"/>
+        <text x="424" y="171" text-anchor="middle" font-size="9" font-weight="700" fill="white">ASIC ⭐</text>
+        <text x="424" y="185" text-anchor="middle" font-size="8" fill="#e0f2fe">브로드컴(맞춤형)</text>
+
+        <rect x="272" y="202" width="200" height="40" rx="6" fill="#164e63"/>
+        <text x="372" y="218" text-anchor="middle" font-size="9" font-weight="700" fill="white">MCU (제어용)</text>
+        <text x="372" y="232" text-anchor="middle" font-size="8" fill="#e0f2fe">볼륨·온도·브레이크 등 단순 제어 — 유럽·일본 강세</text>
+
+        <!-- 구분선 -->
+        <line x1="272" y1="252" x2="472" y2="252" stroke="#7dd3fc" stroke-width="1" stroke-dasharray="4,3"/>
+
+        <!-- 메모리 반도체 -->
+        <rect x="272" y="260" width="200" height="20" rx="5" fill="#0284c7"/>
+        <text x="372" y="274" text-anchor="middle" font-size="10" font-weight="700" fill="white">메모리 반도체 (저장)</text>
+
+        <rect x="272" y="286" width="95" height="52" rx="6" fill="#0ea5e9"/>
+        <text x="320" y="302" text-anchor="middle" font-size="9" font-weight="700" fill="white">휘발성 (DRAM)</text>
+        <text x="320" y="316" text-anchor="middle" font-size="8" fill="#e0f2fe">DDR: 삼성1·하이닉스2</text>
+        <text x="320" y="328" text-anchor="middle" font-size="8" fill="#fff200">HBM: 하이닉스1⭐</text>
+
+        <rect x="375" y="286" width="97" height="52" rx="6" fill="#0369a1"/>
+        <text x="424" y="302" text-anchor="middle" font-size="9" font-weight="700" fill="white">비휘발성 (NAND)</text>
+        <text x="424" y="316" text-anchor="middle" font-size="8" fill="#e0f2fe">삼성·SK·마이크론</text>
+        <text x="424" y="328" text-anchor="middle" font-size="8" fill="#e0f2fe">샌디스크(분사)</text>
+
+        <!-- 열3: 용도 -->
+        <rect x="498" y="50" width="242" height="350" rx="12" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+        <text x="619" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#065f46">③ 용도 (어디에?)</text>
+
+        <rect x="512" y="82" width="214" height="55" rx="8" fill="#059669"/>
+        <text x="619" y="100" text-anchor="middle" font-size="10" font-weight="700" fill="white">🏢 데이터센터</text>
+        <text x="619" y="115" text-anchor="middle" font-size="8.5" fill="#d1fae5">GPU 1위: 엔비디아 ⭐</text>
+        <text x="619" y="129" text-anchor="middle" font-size="8.5" fill="#d1fae5">HBM 1위: SK하이닉스 ⭐</text>
+
+        <rect x="512" y="145" width="214" height="55" rx="8" fill="#10b981"/>
+        <text x="619" y="163" text-anchor="middle" font-size="10" font-weight="700" fill="white">📱 모바일 &amp; 가전</text>
+        <text x="619" y="178" text-anchor="middle" font-size="8.5" fill="#d1fae5">메모리: 삼성전자 ⭐</text>
+        <text x="619" y="192" text-anchor="middle" font-size="8.5" fill="#d1fae5">AP: 퀄컴·미디어텍·애플</text>
+
+        <rect x="512" y="208" width="214" height="55" rx="8" fill="#34d399"/>
+        <text x="619" y="226" text-anchor="middle" font-size="10" font-weight="700" fill="#064e3b">🚗 자동차</text>
+        <text x="619" y="241" text-anchor="middle" font-size="8.5" fill="#064e3b">자율주행: 엔비디아 vs 테슬라</text>
+        <text x="619" y="255" text-anchor="middle" font-size="8.5" fill="#064e3b">MCU: 최강자 미정 (경쟁 중)</text>
+
+        <rect x="512" y="271" width="214" height="55" rx="8" fill="#6ee7b7"/>
+        <text x="619" y="289" text-anchor="middle" font-size="10" font-weight="700" fill="#064e3b">🤖 로봇</text>
+        <text x="619" y="304" text-anchor="middle" font-size="8.5" fill="#064e3b">AI 두뇌: 엔비디아 ⭐</text>
+        <text x="619" y="318" text-anchor="middle" font-size="8.5" fill="#064e3b">(CUDA 솔루션 기반)</text>
+
+        <rect x="512" y="334" width="214" height="36" rx="8" fill="#a7f3d0"/>
+        <text x="619" y="350" text-anchor="middle" font-size="10" font-weight="700" fill="#064e3b">⚛️ 양자컴퓨터</text>
+        <text x="619" y="364" text-anchor="middle" font-size="8.5" fill="#064e3b">IBM·구글·인텔 + 엔비디아 CUDA-Q</text>
+
+        <!-- 하단 출처 -->
+        <text x="380" y="410" text-anchor="middle" font-size="9" fill="#94a3b8">⭐ = 해당 분야 최강자 | 미키피디아 영상 분석</text>
+      </svg>
+    </div>
+
+    <!-- 반도체 패권 지도 Top 5 -->
+    <h3 class="text-lg font-bold mb-4 text-slate-700 dark:text-slate-300">👑 반도체 패권 지도 Top 5</h3>
+    <div class="grid md:grid-cols-5 gap-3 mb-10">
+      <!-- 엔비디아 -->
+      <div class="bg-gradient-to-b from-violet-600 to-violet-800 rounded-2xl p-4 text-white text-center shadow-xl col-span-1">
+        <div class="text-3xl mb-2">🟢</div>
+        <div class="font-black text-base mb-1">NVIDIA</div>
+        <div class="text-xs opacity-80 mb-2">엔비디아</div>
+        <div class="bg-white/20 rounded-lg p-2 text-xs">
+          <div class="font-bold">GPU 90%</div>
+          <div>CUDA 플랫폼</div>
+          <div>팹리스</div>
+          <div class="mt-1 text-yellow-300 font-bold">최강자 언급 4회</div>
+        </div>
+      </div>
+      <!-- 삼성 -->
+      <div class="bg-gradient-to-b from-blue-600 to-blue-800 rounded-2xl p-4 text-white text-center shadow-xl">
+        <div class="text-3xl mb-2">🔵</div>
+        <div class="font-black text-base mb-1">삼성전자</div>
+        <div class="text-xs opacity-80 mb-2">Samsung</div>
+        <div class="bg-white/20 rounded-lg p-2 text-xs">
+          <div class="font-bold">메모리+파운드리</div>
+          <div>IDM</div>
+          <div>DDR 1위</div>
+          <div class="mt-1 text-yellow-300 font-bold">최강자 언급 2회</div>
+        </div>
+      </div>
+      <!-- TSMC -->
+      <div class="bg-gradient-to-b from-sky-500 to-sky-700 rounded-2xl p-4 text-white text-center shadow-xl">
+        <div class="text-3xl mb-2">🟡</div>
+        <div class="font-black text-base mb-1">TSMC</div>
+        <div class="text-xs opacity-80 mb-2">대만</div>
+        <div class="bg-white/20 rounded-lg p-2 text-xs">
+          <div class="font-bold">파운드리 70%</div>
+          <div>위탁생산 독주</div>
+          <div>아시아 시총 1위</div>
+          <div class="mt-1 text-yellow-300 font-bold">최강자 언급 2회</div>
+        </div>
+      </div>
+      <!-- SK하이닉스 -->
+      <div class="bg-gradient-to-b from-emerald-600 to-emerald-800 rounded-2xl p-4 text-white text-center shadow-xl">
+        <div class="text-3xl mb-2">🟠</div>
+        <div class="font-black text-base mb-1">SK하이닉스</div>
+        <div class="text-xs opacity-80 mb-2">HynixHBM</div>
+        <div class="bg-white/20 rounded-lg p-2 text-xs">
+          <div class="font-bold">HBM 세계 1위</div>
+          <div>19조 영업이익</div>
+          <div>+137% YoY</div>
+          <div class="mt-1 text-yellow-300 font-bold">최강자 언급 2회</div>
+        </div>
+      </div>
+      <!-- 브로드컴 -->
+      <div class="bg-gradient-to-b from-rose-600 to-rose-800 rounded-2xl p-4 text-white text-center shadow-xl">
+        <div class="text-3xl mb-2">🔴</div>
+        <div class="font-black text-base mb-1">Broadcom</div>
+        <div class="text-xs opacity-80 mb-2">브로드컴</div>
+        <div class="bg-white/20 rounded-lg p-2 text-xs">
+          <div class="font-bold">ASIC 설계 1위</div>
+          <div>빅테크 AI칩</div>
+          <div>팹리스</div>
+          <div class="mt-1 text-yellow-300 font-bold">최강자 언급 2회</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GPU 점유율 시각화 -->
+    <h3 class="text-lg font-bold mb-4 text-slate-700 dark:text-slate-300">📊 주요 반도체 시장 점유율</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg mb-10 space-y-5">
+      <div>
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-bold text-slate-700 dark:text-slate-300">🟢 엔비디아 — AI GPU 시장</span>
+          <span class="text-sm font-black text-violet-600">90%</span>
+        </div>
+        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+          <div class="bg-gradient-to-r from-violet-500 to-violet-700 h-4 rounded-full flex items-center justify-end pr-2" style="width:90%">
+            <span class="text-white text-xs font-bold">90%</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 mt-1">AMD 2위(7%) · CUDA 플랫폼 독점 효과</p>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-bold text-slate-700 dark:text-slate-300">🟡 TSMC — 파운드리 시장</span>
+          <span class="text-sm font-black text-sky-600">70%+</span>
+        </div>
+        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+          <div class="bg-gradient-to-r from-sky-400 to-sky-600 h-4 rounded-full flex items-center justify-end pr-2" style="width:70%">
+            <span class="text-white text-xs font-bold">70%</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 mt-1">삼성전자 2위(8~9%) · 2위와 압도적 격차</p>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-bold text-slate-700 dark:text-slate-300">🔵 삼성전자 — DDR D램 시장</span>
+          <span class="text-sm font-black text-blue-600">1위</span>
+        </div>
+        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+          <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-4 rounded-full flex items-center justify-end pr-2" style="width:42%">
+            <span class="text-white text-xs font-bold">~42%</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 mt-1">삼성(1위) → SK하이닉스(2위) → 마이크론(3위)</p>
+      </div>
+      <div>
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-bold text-slate-700 dark:text-slate-300">🟠 SK하이닉스 — HBM 시장</span>
+          <span class="text-sm font-black text-emerald-600">1위</span>
+        </div>
+        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+          <div class="bg-gradient-to-r from-emerald-400 to-emerald-600 h-4 rounded-full flex items-center justify-end pr-2" style="width:55%">
+            <span class="text-white text-xs font-bold">~55%</span>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 mt-1">AI 수요 폭증으로 HBM 슈퍼사이클 진행 중</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== 하단: 자세히 알아보기 ===== -->
+  <section>
+    <div class="flex items-center gap-2 mb-6">
+      <div class="w-1.5 h-8 bg-emerald-500 rounded-full"></div>
+      <h2 class="text-2xl font-black text-slate-900 dark:text-white">자세히 알아보기</h2>
+    </div>
+
+    <!-- 섹션1: 반도체 산업 제조방식 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-6">
+      <h3 class="text-xl font-black text-violet-700 dark:text-violet-400 mb-4">🏭 제조방식으로 본 반도체 기업 유형</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-violet-50 dark:bg-violet-900/30">
+              <th class="text-left p-3 rounded-tl-lg font-bold text-violet-800 dark:text-violet-300">유형</th>
+              <th class="text-left p-3 font-bold text-violet-800 dark:text-violet-300">설명</th>
+              <th class="text-left p-3 rounded-tr-lg font-bold text-violet-800 dark:text-violet-300">대표 기업</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b dark:border-slate-700">
+              <td class="p-3 font-bold text-violet-600">팹리스 (Fabless)</td>
+              <td class="p-3 text-slate-600 dark:text-slate-400">설계만 하고 생산은 위탁</td>
+              <td class="p-3">엔비디아, AMD, 브로드컴, 퀄컴</td>
+            </tr>
+            <tr class="border-b dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30">
+              <td class="p-3 font-bold text-blue-600">IDM</td>
+              <td class="p-3 text-slate-600 dark:text-slate-400">설계·생산 모두 직접 수행</td>
+              <td class="p-3">삼성전자, SK하이닉스, 인텔, 마이크론</td>
+            </tr>
+            <tr class="border-b dark:border-slate-700">
+              <td class="p-3 font-bold text-sky-600">파운드리</td>
+              <td class="p-3 text-slate-600 dark:text-slate-400">위탁 생산 전문</td>
+              <td class="p-3">TSMC(70%), 삼성전자(8~9%), 인텔</td>
+            </tr>
+            <tr class="border-b dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30">
+              <td class="p-3 font-bold text-amber-600">IP 기업</td>
+              <td class="p-3 text-slate-600 dark:text-slate-400">설계 도구·아키텍처 판매</td>
+              <td class="p-3">ARM, 시놉시스(Synopsys), 케이던스(Cadence)</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-emerald-600">장비 기업</td>
+              <td class="p-3 text-slate-600 dark:text-slate-400">제조 장비·소재·부품 공급</td>
+              <td class="p-3">ASML, LAM Research, AMAT, 한미반도체</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 인용구 -->
+      <div class="mt-6 bg-violet-50 dark:bg-violet-900/20 border-l-4 border-violet-500 rounded-r-xl p-4">
+        <p class="text-sm font-bold text-violet-800 dark:text-violet-300 mb-1">💬 영상 속 핵심 발언</p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 italic">"파운드리 사업을 갖고 있다는 거는 정말 귀한 거예요. 그래서 왜 요즘 미국 정부가 인텔 파운드리 사업 엄청 밀어주고 있거든요."</p>
+        <p class="text-xs text-slate-500 mt-2">(파운드리 제조 역량을 보유한다는 것 자체가 전략적 자산이며, 각국 정부의 반도체 패권 경쟁의 핵심이라는 뜻)</p>
+      </div>
+    </div>
+
+    <!-- 섹션2: 엔비디아 독주 분석 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-6">
+      <h3 class="text-xl font-black text-emerald-700 dark:text-emerald-400 mb-4">🤖 엔비디아의 전방위 독주 구조</h3>
+      <p class="text-slate-600 dark:text-slate-400 text-sm mb-5">엔비디아는 하드웨어(GPU)와 소프트웨어(CUDA 플랫폼)를 동시에 장악하며 AI 시대의 핵심 인프라를 독점했습니다. 단순한 반도체 기업이 아닌 AI 개발 생태계 자체를 소유한 기업입니다.</p>
+
+      <!-- 엔비디아 생태계 SVG -->
+      <svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" class="w-full mb-5" style="min-width:300px;">
+        <defs>
+          <linearGradient id="nvidiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#059669"/>
+            <stop offset="100%" style="stop-color:#047857"/>
+          </linearGradient>
+        </defs>
+        <!-- 중심: 엔비디아 -->
+        <ellipse cx="340" cy="150" rx="70" ry="50" fill="url(#nvidiaGrad)" stroke="#d1fae5" stroke-width="2"/>
+        <text x="340" y="145" text-anchor="middle" font-size="13" font-weight="800" fill="white">NVIDIA</text>
+        <text x="340" y="162" text-anchor="middle" font-size="9" fill="#d1fae5">GPU + CUDA</text>
+
+        <!-- 연결선들 -->
+        <line x1="270" y1="135" x2="178" y2="100" stroke="#6ee7b7" stroke-width="2"/>
+        <line x1="270" y1="155" x2="178" y2="190" stroke="#6ee7b7" stroke-width="2"/>
+        <line x1="340" y1="100" x2="340" y2="55" stroke="#6ee7b7" stroke-width="2"/>
+        <line x1="410" y1="135" x2="502" y2="100" stroke="#6ee7b7" stroke-width="2"/>
+        <line x1="410" y1="155" x2="502" y2="190" stroke="#6ee7b7" stroke-width="2"/>
+        <line x1="340" y1="200" x2="340" y2="240" stroke="#6ee7b7" stroke-width="2"/>
+
+        <!-- 위성 노드들 -->
+        <!-- 데이터센터 -->
+        <ellipse cx="340" cy="38" rx="60" ry="22" fill="#7c3aed"/>
+        <text x="340" y="34" text-anchor="middle" font-size="9" font-weight="700" fill="white">🏢 데이터센터</text>
+        <text x="340" y="47" text-anchor="middle" font-size="8" fill="#ddd6fe">H100·A100 GPU</text>
+
+        <!-- 자율주행 -->
+        <ellipse cx="155" cy="100" rx="60" ry="22" fill="#2563eb"/>
+        <text x="155" y="96" text-anchor="middle" font-size="9" font-weight="700" fill="white">🚗 자율주행</text>
+        <text x="155" y="109" text-anchor="middle" font-size="8" fill="#dbeafe">Drive Platform</text>
+
+        <!-- 로봇 -->
+        <ellipse cx="155" cy="190" rx="60" ry="22" fill="#dc2626"/>
+        <text x="155" y="186" text-anchor="middle" font-size="9" font-weight="700" fill="white">🤖 로봇 AI</text>
+        <text x="155" y="199" text-anchor="middle" font-size="8" fill="#fee2e2">Jetson Platform</text>
+
+        <!-- 양자컴 -->
+        <ellipse cx="340" cy="257" rx="62" ry="22" fill="#0369a1"/>
+        <text x="340" y="253" text-anchor="middle" font-size="9" font-weight="700" fill="white">⚛️ 양자컴퓨터</text>
+        <text x="340" y="266" text-anchor="middle" font-size="8" fill="#dbeafe">CUDA-Q Platform</text>
+
+        <!-- AI 개발 -->
+        <ellipse cx="525" cy="100" rx="62" ry="22" fill="#d97706"/>
+        <text x="525" y="96" text-anchor="middle" font-size="9" font-weight="700" fill="white">🧠 AI 개발</text>
+        <text x="525" y="109" text-anchor="middle" font-size="8" fill="#fef3c7">CUDA 생태계</text>
+
+        <!-- ASIC 대응 -->
+        <ellipse cx="525" cy="190" rx="62" ry="22" fill="#7c3aed"/>
+        <text x="525" y="186" text-anchor="middle" font-size="9" font-weight="700" fill="white">🔮 ASIC 위협</text>
+        <text x="525" y="199" text-anchor="middle" font-size="8" fill="#ddd6fe">빅테크 자체칩 경쟁</text>
+
+        <!-- 설명 -->
+        <text x="340" y="295" text-anchor="middle" font-size="9" fill="#64748b">엔비디아 = 반도체 패권 지도에서 최강자 언급 4회 (압도적 1위)</text>
+      </svg>
+
+      <div class="bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-500 rounded-r-xl p-4">
+        <p class="text-sm font-bold text-emerald-800 dark:text-emerald-300 mb-1">💬 영상 속 핵심 발언</p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 italic">"2012년에 한 대학 연구원들이 알렉스넷이라는 딥러닝 모델을 GPU에서 돌려봤더니 결과가 압도적으로 좋게 나온 겁니다."</p>
+        <p class="text-xs text-slate-500 mt-2">(AI가 GPU에서 실행된다는 것을 최초로 증명한 역사적 순간 — 엔비디아 주가 폭등의 출발점이 됨)</p>
+      </div>
+    </div>
+
+    <!-- 섹션3: SK하이닉스 실적 분석 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-6">
+      <h3 class="text-xl font-black text-amber-700 dark:text-amber-400 mb-4">💎 SK하이닉스 — HBM으로 폭발한 실적</h3>
+      <div class="grid md:grid-cols-3 gap-4 mb-5">
+        <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-4 text-center">
+          <div class="text-3xl font-black text-amber-600">19조 원</div>
+          <div class="text-xs text-slate-500 mt-1">분기 영업이익</div>
+        </div>
+        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-4 text-center">
+          <div class="text-3xl font-black text-orange-600">+137%</div>
+          <div class="text-xs text-slate-500 mt-1">전년 동기 대비</div>
+        </div>
+        <div class="bg-rose-50 dark:bg-rose-900/20 rounded-xl p-4 text-center">
+          <div class="text-3xl font-black text-rose-600">100~150조</div>
+          <div class="text-xs text-slate-500 mt-1">2026년 영업이익 전망</div>
+        </div>
+      </div>
+
+      <!-- 삼성 vs 하이닉스 비교 -->
+      <h4 class="font-bold text-slate-700 dark:text-slate-300 mb-3">삼성전자 vs SK하이닉스 비교 (분기 영업이익)</h4>
+      <div class="space-y-3 mb-5">
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="font-medium">삼성전자 (반도체+모바일+가전 합산)</span>
+            <span class="font-bold text-blue-600">20조 원</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-5">
+            <div class="bg-blue-500 h-5 rounded-full flex items-center justify-end pr-2" style="width:100%">
+              <span class="text-white text-xs font-bold">20조</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="font-medium">SK하이닉스 (반도체만)</span>
+            <span class="font-bold text-emerald-600">19조 원</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-5">
+            <div class="bg-emerald-500 h-5 rounded-full flex items-center justify-end pr-2" style="width:95%">
+              <span class="text-white text-xs font-bold">19조</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="font-medium">마이크론 (반도체만, 시총은 하이닉스보다 소폭 높음)</span>
+            <span class="font-bold text-slate-500">~9조 원 추정</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-5">
+            <div class="bg-slate-400 h-5 rounded-full flex items-center justify-end pr-2" style="width:45%">
+              <span class="text-white text-xs font-bold">~9조</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-xl p-4">
+        <p class="text-sm font-bold text-amber-800 dark:text-amber-300 mb-1">💬 영상 속 핵심 발언</p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 italic">"올해 영업이익 100조 이상은 찍을 수 있을 것 같아요. 많이 보는 사람들은 올해 150조 이상을 찍을 거라고 전망하는 애널리스트들도 있습니다. 그러면 PER을 10만 받을 수 있으면 시가총액 1000조 이상이 가능하다는 이야기예요."</p>
+        <p class="text-xs text-slate-500 mt-2">(현재 시총 약 600조 → 영업이익 성장에 따라 1,000조 가능성 있음을 분석한 발언)</p>
+      </div>
+    </div>
+
+    <!-- 섹션4: 코스피 구조적 상승 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-6">
+      <h3 class="text-xl font-black text-sky-700 dark:text-sky-400 mb-4">🇰🇷 코스피 — 17년 박스피 탈출의 이유</h3>
+
+      <!-- 코스피 역사 타임라인 SVG -->
+      <svg viewBox="0 0 680 130" xmlns="http://www.w3.org/2000/svg" class="w-full mb-6" style="min-width:300px;">
+        <rect width="680" height="130" rx="12" fill="#f0f9ff"/>
+        <!-- 타임라인 라인 -->
+        <line x1="30" y1="70" x2="650" y2="70" stroke="#0284c7" stroke-width="3"/>
+        
+        <!-- 1980년대 삼저호황 -->
+        <circle cx="80" cy="70" r="10" fill="#7c3aed"/>
+        <text x="80" y="48" text-anchor="middle" font-size="8.5" font-weight="700" fill="#7c3aed">1980년대</text>
+        <text x="80" y="58" text-anchor="middle" font-size="7.5" fill="#7c3aed">삼저호황</text>
+        <text x="80" y="97" text-anchor="middle" font-size="8" fill="#475569">코스피</text>
+        <text x="80" y="108" text-anchor="middle" font-size="10" font-weight="800" fill="#7c3aed">100→1000</text>
+
+        <!-- 2007년 차화정 -->
+        <circle cx="270" cy="70" r="10" fill="#2563eb"/>
+        <text x="270" y="48" text-anchor="middle" font-size="8.5" font-weight="700" fill="#2563eb">2007년</text>
+        <text x="270" y="58" text-anchor="middle" font-size="7.5" fill="#2563eb">차화정 시대</text>
+        <text x="270" y="97" text-anchor="middle" font-size="8" fill="#475569">코스피</text>
+        <text x="270" y="108" text-anchor="middle" font-size="10" font-weight="800" fill="#2563eb">2000 돌파</text>
+
+        <!-- 17년 박스피 -->
+        <rect x="285" y="58" width="185" height="24" rx="5" fill="#fed7aa"/>
+        <text x="378" y="74" text-anchor="middle" font-size="9" font-weight="700" fill="#92400e">📦 17년 박스피 (2000선 횡보)</text>
+
+        <!-- 2025~2026 -->
+        <circle cx="580" cy="70" r="12" fill="#059669"/>
+        <text x="580" y="46" text-anchor="middle" font-size="8.5" font-weight="700" fill="#059669">2025~2026</text>
+        <text x="580" y="56" text-anchor="middle" font-size="7.5" fill="#059669">반도체 슈퍼사이클</text>
+        <text x="580" y="97" text-anchor="middle" font-size="8" fill="#475569">코스피</text>
+        <text x="580" y="108" text-anchor="middle" font-size="12" font-weight="800" fill="#059669">5000 돌파!</text>
+
+        <!-- 화살표 -->
+        <polygon points="640,67 650,70 640,73" fill="#059669"/>
+      </svg>
+
+      <h4 class="font-bold text-slate-700 dark:text-slate-300 mb-3">📌 코스피 구조적 상승 4가지 이유</h4>
+      <div class="grid md:grid-cols-2 gap-3 mb-5">
+        <div class="flex items-start gap-3 bg-violet-50 dark:bg-violet-900/20 rounded-xl p-4">
+          <div class="text-2xl">💻</div>
+          <div>
+            <div class="font-bold text-sm text-violet-800 dark:text-violet-300">반도체 슈퍼사이클</div>
+            <p class="text-xs text-slate-600 dark:text-slate-400">삼성전자·SK하이닉스 영업이익 각 100조+ 전망. 코스피 기업 합산 영업이익 300조→480조 예상</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-sky-50 dark:bg-sky-900/20 rounded-xl p-4">
+          <div class="text-2xl">⚓</div>
+          <div>
+            <div class="font-bold text-sm text-sky-800 dark:text-sky-300">조선·방산·원전·로봇 호조</div>
+            <p class="text-xs text-slate-600 dark:text-slate-400">반도체 이외에도 실적 좋은 산업이 다양하게 분포. 광범위한 호황 구조</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-4">
+          <div class="text-2xl">📜</div>
+          <div>
+            <div class="font-bold text-sm text-emerald-800 dark:text-emerald-300">상법 개정 + 배당 분리과세</div>
+            <p class="text-xs text-slate-600 dark:text-slate-400">정책적으로 투자자 친화적 환경 조성 → 국내외 자금 유입 가속화</p>
+          </div>
+        </div>
