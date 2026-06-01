@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-05-29T11:13:25",
+  "updated_at": "2026-06-01T07:39:28",
   "reports": [
+    {
+      "slug": "vibe-coding-solo-startup-bootcamp",
+      "category": "business",
+      "video_id": "P3jFI-VpyLg",
+      "title": "이 영상이 당신 인생을 바꿉니다. 바이브 코딩 1인 창업 3시간 통합본",
+      "channel": "조코딩 JoCoding",
+      "duration_string": "3시간 14분 1초",
+      "duration_seconds": 11641,
+      "summary": "AI 바이브 코딩으로 1인 창업, 수익화, 엑싯까지 5주 완성 커리큘럼",
+      "video_url": "https://www.youtube.com/watch?v=P3jFI-VpyLg",
+      "report_url": "business/vibe-coding-solo-startup-bootcamp.html",
+      "thumbnail_url": "https://img.youtube.com/vi/P3jFI-VpyLg/maxresdefault.jpg",
+      "processed_date": "2026-06-01"
+    },
     {
       "slug": "investment-portfolio-strategy-guide",
       "category": "finance",

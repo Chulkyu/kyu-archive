@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바이브 코딩 1인 창업 3시간 통합본 — 조코딩 JoCoding</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: { pretendard: ['Pretendard', 'sans-serif'] }
+    }
+  }
+}
+</script>
+<script>
+(function(){
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+  if(mq.matches){ document.documentElement.classList.add('dark'); }
+  else { document.documentElement.classList.remove('dark'); }
+  mq.addEventListener('change', e => {
+    e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  });
+})();
+</script>
+<style>
+body { font-family: 'Pretendard', sans-serif; }
+.gradient-hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 40%, #4c1d95 100%); }
+.dark .gradient-hero { background: linear-gradient(135deg, #0f0e1a 0%, #1e1b4b 40%, #2d1f5e 100%); }
+.card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(139,92,246,0.25); }
+.week-badge { background: linear-gradient(135deg, #7c3aed, #4f46e5); }
+</style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-pretendard">
+
+<!-- 헤더 -->
+<header class="gradient-hero text-white">
+  <div class="max-w-6xl mx-auto px-4 py-10 md:py-16">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="bg-violet-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Business · Coding</span>
+      <span class="text-violet-300 text-sm">2026.02.16</span>
+    </div>
+    <h1 class="text-2xl md:text-4xl font-black leading-tight mb-2">이 영상이 당신 인생을 바꿉니다.</h1>
+    <h2 class="text-lg md:text-2xl font-bold text-violet-200 mb-4">바이브 코딩 1인 창업 3시간 통합본</h2>
+    <div class="flex items-center gap-2 text-sm text-violet-300 mb-6">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/></svg>
+      <span>조코딩 JoCoding</span>
+      <span class="mx-2">·</span>
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+      <span>3시간 14분 01초</span>
+    </div>
+    <p class="text-violet-100 text-base md:text-lg font-medium max-w-2xl leading-relaxed">
+      AI 바이브 코딩으로 웹 개발·배포·수익화부터 미국 법인 설립·엑싯까지 — 5주 완성 1인 창업 커리큘럼 완전판
+    </p>
+  </div>
+</header>
+
+<!-- 유튜브 임베드 -->
+<div class="max-w-4xl mx-auto px-4 -mt-4 mb-10">
+  <div class="relative rounded-2xl overflow-hidden shadow-2xl" style="padding-top:56.25%;">
+    <iframe
+      class="absolute inset-0 w-full h-full"
+      src="https://www.youtube.com/embed/P3jFI-VpyLg"
+      title="바이브 코딩 1인 창업 3시간 통합본"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+  <div class="flex justify-center mt-4">
+    <a href="https://www.youtube.com/watch?v=P3jFI-VpyLg" target="_blank"
+       class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-lg">
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.5a8.28 8.28 0 004.83 1.53V6.58a4.85 4.85 0 01-1.06.11z"/></svg>
+      원본 영상 보기 (YouTube)
+    </a>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 pb-20 space-y-16">
+
+  <!-- ===== 상단: 쉽게 이해하기 ===== -->
+  <section>
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-1 h-8 bg-violet-500 rounded-full"></div>
+      <h2 class="text-2xl md:text-3xl font-black">🚀 쉽게 이해하기</h2>
+    </div>
+
+    <!-- 한 줄 요약 -->
+    <div class="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-2xl p-6 md:p-8 text-white mb-10 shadow-xl">
+      <div class="text-xs font-bold uppercase tracking-wider text-violet-200 mb-2">핵심 한 줄 요약</div>
+      <p class="text-xl md:text-2xl font-bold leading-snug">
+        AI 바이브 코딩으로 1인 창업, 수익화, 엑싯까지 5주 완성 커리큘럼
+      </p>
+    </div>
+
+    <!-- KPI 박스 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg card-hover border border-violet-100 dark:border-violet-900">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400">5주</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">완성 커리큘럼</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg card-hover border border-sky-100 dark:border-sky-900">
+        <div class="text-4xl font-black text-sky-600 dark:text-sky-400">1인</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">창업 완전 구현</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg card-hover border border-emerald-100 dark:border-emerald-900">
+        <div class="text-3xl font-black text-emerald-600 dark:text-emerald-400">$0</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">기본 인프라 비용</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow-lg card-hover border border-amber-100 dark:border-amber-900">
+        <div class="text-3xl font-black text-amber-600 dark:text-amber-400">글로벌</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">결제·광고 수익화</div>
+      </div>
+    </div>
+
+    <!-- 핵심 포인트 카드 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md card-hover border-l-4 border-violet-500">
+        <div class="text-2xl mb-3">🤖</div>
+        <h3 class="font-bold text-base mb-2">바이브 코딩으로 왕초보도 가능</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">AI(Claude, Gemini CLI 등)를 활용해 코드를 직접 짜지 않고 웹 개발·배포·광고 수익화를 구현. HTML/CSS/JS 개념만 이해하면 충분.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md card-hover border-l-4 border-sky-500">
+        <div class="text-2xl mb-3">💳</div>
+        <h3 class="font-bold text-base mb-2">글로벌 광고·결제 수익화</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">구글 애드센스로 광고 수익, Polar(MOR)와 Stripe로 글로벌 결제 수익. 한국에서도 전 세계 결제를 받는 구조 완성.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md card-hover border-l-4 border-emerald-500">
+        <div class="text-2xl mb-3">🗄️</div>
+        <h3 class="font-bold text-base mb-2">Supabase DB + 구독형 SaaS</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Supabase로 DB·회원가입·소셜 로그인 구현, 무료 체험 후 자동 결제되는 구독형 반복 매출 구조 완성.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md card-hover border-l-4 border-rose-500">
+        <div class="text-2xl mb-3">📊</div>
+        <h3 class="font-bold text-base mb-2">AI 퍼널 분석 & 자동 개선</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Google Analytics + MS Clarity로 유저 행동 추적. 퍼널 데이터를 AI에 넘기면 문제 발견부터 개선 코드 배포까지 자동화.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md card-hover border-l-4 border-amber-500">
+        <div class="text-2xl mb-3">🇺🇸</div>
+        <h3 class="font-bold text-base mb-2">미국 법인 설립 (Stripe Atlas)</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">Stripe Atlas로 델라웨어 C-Corp 설립 시 약 500달러. 글로벌 결제 표준 Stripe 연동, 나스닥 IPO·VC 투자 기반 확보.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md card-hover border-l-4 border-indigo-500">
+        <div class="text-2xl mb-3">🏁</div>
+        <h3 class="font-bold text-base mb-2">3가지 엑싯 전략</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">① 현금 흐름 유지 ② M&A 매각(Acquire.com 등) ③ IPO 상장. 배달의민족·아자르·Base44 등 실제 성공 사례 분석.</p>
+      </div>
+    </div>
+
+    <!-- 5주 커리큘럼 SVG 다이어그램 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg mb-10">
+      <h3 class="font-bold text-lg mb-6 text-center">📅 5주 완성 커리큘럼 로드맵</h3>
+      <div class="overflow-x-auto">
+        <svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-4xl mx-auto" style="min-width:600px;">
+          <defs>
+            <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0284c7;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#0369a1;stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#059669;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#047857;stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#d97706;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#b45309;stop-opacity:1"/>
+            </linearGradient>
+            <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#e11d48;stop-opacity:1"/>
+              <stop offset="100%" style="stop-color:#be123c;stop-opacity:1"/>
+            </linearGradient>
+          </defs>
+          <!-- Arrows between boxes -->
+          <line x1="165" y1="100" x2="195" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="345" y1="100" x2="375" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="525" y1="100" x2="555" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <line x1="705" y1="100" x2="735" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arr)"/>
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L0,6 L6,3 z" fill="#94a3b8"/>
+            </marker>
+          </defs>
+          <!-- Week boxes -->
+          <!-- Week 1 -->
+          <rect x="10" y="30" width="155" height="140" rx="14" fill="url(#g1)"/>
+          <text x="87" y="60" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">1주차</text>
+          <text x="87" y="78" text-anchor="middle" fill="#ddd6fe" font-size="9.5" font-family="Pretendard,sans-serif">웹 개발 기초</text>
+          <text x="87" y="94" text-anchor="middle" fill="#ddd6fe" font-size="9.5" font-family="Pretendard,sans-serif">AI 바이브 코딩</text>
+          <text x="87" y="110" text-anchor="middle" fill="#ddd6fe" font-size="9.5" font-family="Pretendard,sans-serif">Cloudflare 배포</text>
+          <text x="87" y="126" text-anchor="middle" fill="#ddd6fe" font-size="9.5" font-family="Pretendard,sans-serif">Google AdSense</text>
+          <text x="87" y="155" text-anchor="middle" fill="white" font-size="18" font-family="Pretendard,sans-serif">🌐</text>
+          <!-- Week 2 -->
+          <rect x="195" y="30" width="155" height="140" rx="14" fill="url(#g2)"/>
+          <text x="272" y="60" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">2주차</text>
+          <text x="272" y="78" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="Pretendard,sans-serif">Google Analytics</text>
+          <text x="272" y="94" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="Pretendard,sans-serif">MS Clarity 히트맵</text>
+          <text x="272" y="110" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="Pretendard,sans-serif">AARRR 퍼널</text>
+          <text x="272" y="126" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="Pretendard,sans-serif">SEO · 바이럴</text>
+          <text x="272" y="155" text-anchor="middle" fill="white" font-size="18" font-family="Pretendard,sans-serif">📊</text>
+          <!-- Week 3 -->
+          <rect x="375" y="30" width="155" height="140" rx="14" fill="url(#g3)"/>
+          <text x="452" y="60" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">3주차</text>
+          <text x="452" y="78" text-anchor="middle" fill="#a7f3d0" font-size="9.5" font-family="Pretendard,sans-serif">React + Vite</text>
+          <text x="452" y="94" text-anchor="middle" fill="#a7f3d0" font-size="9.5" font-family="Pretendard,sans-serif">OpenAI API 연결</text>
+          <text x="452" y="110" text-anchor="middle" fill="#a7f3d0" font-size="9.5" font-family="Pretendard,sans-serif">Serverless Workers</text>
+          <text x="452" y="126" text-anchor="middle" fill="#a7f3d0" font-size="9.5" font-family="Pretendard,sans-serif">Polar 글로벌 결제</text>
+          <text x="452" y="155" text-anchor="middle" fill="white" font-size="18" font-family="Pretendard,sans-serif">💳</text>
+          <!-- Week 4 -->
+          <rect x="555" y="30" width="155" height="140" rx="14" fill="url(#g4)"/>
+          <text x="632" y="60" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">4주차</text>
+          <text x="632" y="78" text-anchor="middle" fill="#fde68a" font-size="9.5" font-family="Pretendard,sans-serif">Supabase DB</text>
+          <text x="632" y="94" text-anchor="middle" fill="#fde68a" font-size="9.5" font-family="Pretendard,sans-serif">회원가입·소셜 로그인</text>
+          <text x="632" y="110" text-anchor="middle" fill="#fde68a" font-size="9.5" font-family="Pretendard,sans-serif">구독형 SaaS</text>
+          <text x="632" y="126" text-anchor="middle" fill="#fde68a" font-size="9.5" font-family="Pretendard,sans-serif">반복 매출 구조</text>
+          <text x="632" y="155" text-anchor="middle" fill="white" font-size="18" font-family="Pretendard,sans-serif">🔄</text>
+          <!-- Week 5 -->
+          <rect x="735" y="30" width="155" height="140" rx="14" fill="url(#g5)"/>
+          <text x="812" y="60" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">5주차</text>
+          <text x="812" y="78" text-anchor="middle" fill="#fecdd3" font-size="9.5" font-family="Pretendard,sans-serif">퍼포먼스 마케팅</text>
+          <text x="812" y="94" text-anchor="middle" fill="#fecdd3" font-size="9.5" font-family="Pretendard,sans-serif">앱 개발 (Expo)</text>
+          <text x="812" y="110" text-anchor="middle" fill="#fecdd3" font-size="9.5" font-family="Pretendard,sans-serif">미국 법인 · Stripe</text>
+          <text x="812" y="126" text-anchor="middle" fill="#fecdd3" font-size="9.5" font-family="Pretendard,sans-serif">엑싯 전략</text>
+          <text x="812" y="155" text-anchor="middle" fill="white" font-size="18" font-family="Pretendard,sans-serif">🏁</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 바이브 코딩 개발 스택 진행 막대 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg">
+      <h3 class="font-bold text-lg mb-6">🛠️ 주요 기술 스택 & 활용 비중</h3>
+      <div class="space-y-5">
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-1">
+            <span>AI 코딩 (Claude Code / Gemini CLI / Codex)</span><span class="text-violet-500 font-bold">90%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-violet-500 h-3 rounded-full" style="width:90%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-1">
+            <span>Cloudflare Pages + Workers (배포·서버리스)</span><span class="text-sky-500 font-bold">80%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-sky-500 h-3 rounded-full" style="width:80%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-1">
+            <span>React + Vite + TypeScript (프론트엔드)</span><span class="text-emerald-500 font-bold">70%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-emerald-500 h-3 rounded-full" style="width:70%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-1">
+            <span>Supabase (DB·인증·스토리지)</span><span class="text-amber-500 font-bold">60%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-amber-500 h-3 rounded-full" style="width:60%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-1">
+            <span>Polar / Stripe (결제·구독)</span><span class="text-rose-500 font-bold">55%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-rose-500 h-3 rounded-full" style="width:55%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm font-medium mb-1">
+            <span>Expo (크로스 플랫폼 앱)</span><span class="text-indigo-500 font-bold">35%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-indigo-500 h-3 rounded-full" style="width:35%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 하단: 자세히 알아보기 ===== -->
+  <section>
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-1 h-8 bg-sky-500 rounded-full"></div>
+      <h2 class="text-2xl md:text-3xl font-black">🔍 자세히 알아보기</h2>
+    </div>
+
+    <!-- 인용구 1 -->
+    <blockquote class="border-l-4 border-violet-500 bg-violet-50 dark:bg-violet-950/40 rounded-r-2xl p-6 mb-10 shadow">
+      <p class="text-lg md:text-xl font-bold text-violet-700 dark:text-violet-300 mb-1">"조만간 한 명이 운영하는 1조 원 가치 기업이 나온다."</p>
+      <p class="text-sm text-violet-500 dark:text-violet-400 mb-2">— Sam Altman (OpenAI CEO)</p>
+      <p class="text-sm text-slate-600 dark:text-slate-300">(언젠가 1인이 운영하는 1조 원짜리 기업이 등장할 것이다라는 발언으로, AI 시대 1인 창업 가능성을 단적으로 보여준 발언)</p>
+    </blockquote>
+
+    <!-- 1주차 상세 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="week-badge text-white font-bold text-sm px-4 py-1.5 rounded-full">1주차</span>
+        <h3 class="text-xl font-black">웹 개발 기초 → 광고 수익화까지</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md">
+          <h4 class="font-bold text-violet-600 dark:text-violet-400 mb-3">📌 HTML / CSS / JavaScript 역할</h4>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li class="flex gap-2"><span class="text-violet-500 font-bold">HTML</span>— 뼈대. 제목·버튼·입력창 구조 설계</li>
+            <li class="flex gap-2"><span class="text-sky-500 font-bold">CSS</span>— 꾸미기. 색상·폰트·레이아웃 스타일링</li>
+            <li class="flex gap-2"><span class="text-emerald-500 font-bold">JS</span>— 동작. 클릭·이벤트·API 호출 처리</li>
+          </ul>
+          <p class="text-xs text-slate-400 dark:text-slate-500 mt-3">※ 문법을 외울 필요 없음. AI에게 시키면 끝.</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md">
+          <h4 class="font-bold text-sky-600 dark:text-sky-400 mb-3">🚀 Cloudflare Pages 배포 장점</h4>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>✅ 무제한 트래픽 (Unlimited Bandwidth) 무료</li>
+            <li>✅ GitHub 연동 → 자동 빌드·배포</li>
+            <li>✅ 전 세계 CDN 엣지 배포 (Region: Earth)</li>
+            <li>✅ Workers 함수로 서버리스 백엔드 확장</li>
+          </ul>
+        </div>
+      </div>
+      <div class="bg-amber-50 dark:bg-amber-950/30 rounded-2xl p-5 border border-amber-200 dark:border-amber-800 text-sm text-slate-700 dark:text-slate-300">
+        <span class="font-bold text-amber-600">💡 애드센스 통과 팁:</span> AI로 고품질 사이트 최적화 후 심사 요청. 공식 도움말 링크를 AI에게 넘기면 체크리스트 자동 반영. 블로그 15개 글 채워서 컨텐츠 풍부도 증명 후 통과율 상승.
+      </div>
+    </div>
+
+    <!-- 수익화 모델 비교 표 -->
+    <div class="mb-12">
+      <h3 class="text-xl font-black mb-5">💰 수익화 방법 비교</h3>
+      <div class="overflow-x-auto rounded-2xl shadow-lg">
+        <table class="w-full text-sm bg-white dark:bg-slate-800">
+          <thead>
+            <tr class="bg-gradient-to-r from-violet-600 to-indigo-600 text-white">
+              <th class="px-5 py-4 text-left font-bold">방법</th>
+              <th class="px-5 py-4 text-left font-bold">수수료</th>
+              <th class="px-5 py-4 text-left font-bold">한국 사용</th>
+              <th class="px-5 py-4 text-left font-bold">특징</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+            <tr class="hover:bg-violet-50 dark:hover:bg-violet-950/30">
+              <td class="px-5 py-4 font-semibold text-violet-600 dark:text-violet-400">Google AdSense</td>
+              <td class="px-5 py-4">광고주 수익의 ~68%</td>
+              <td class="px-5 py-4"><span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full text-xs font-bold">가능</span></td>
+              <td class="px-5 py-4 text-slate-500 dark:text-slate-400">트래픽 기반 자동 광고. 심사 필요.</td>
+            </tr>
+            <tr class="hover:bg-sky-50 dark:hover:bg-sky-950/30">
+              <td class="px-5 py-4 font-semibold text-sky-600 dark:text-sky-400">Polar (MOR)</td>
+              <td class="px-5 py-4">4% + $0.40</td>
+              <td class="px-5 py-4"><span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full text-xs font-bold">가능</span></td>
+              <td class="px-5 py-4 text-slate-500 dark:text-slate-400">법인 대행 결제. 소프트웨어·SaaS 전용.</td>
+            </tr>
+            <tr class="hover:bg-rose-50 dark:hover:bg-rose-950/30">
+              <td class="px-5 py-4 font-semibold text-rose-600 dark:text-rose-400">Stripe (직접)</td>
+              <td class="px-5 py-4">2.9% + $0.30</td>
+              <td class="px-5 py-4"><span class="bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full text-xs font-bold">미국 법인 필요</span></td>
+              <td class="px-5 py-4 text-slate-500 dark:text-slate-400">글로벌 결제 표준. 델라웨어 법인 시 이용.</td>
+            </tr>
+            <tr class="hover:bg-emerald-50 dark:hover:bg-emerald-950/30">
+              <td class="px-5 py-4 font-semibold text-emerald-600 dark:text-emerald-400">Stripe Atlas</td>
+              <td class="px-5 py-4">초기 $500 (법인 설립)</td>
+              <td class="px-5 py-4"><span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full text-xs font-bold">신청 가능</span></td>
+              <td class="px-5 py-4 text-slate-500 dark:text-slate-400">미국 델라웨어 C-Corp 설립 + Stripe 바로 연동.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 2주차 상세: 퍼널 & 데이터 분석 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="bg-sky-600 text-white font-bold text-sm px-4 py-1.5 rounded-full">2주차</span>
+        <h3 class="text-xl font-black">퍼널 분석 & 그로스 해킹</h3>
+      </div>
+
+      <!-- AARRR SVG 다이어그램 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg mb-6">
+        <h4 class="font-bold text-center mb-5 text-sky-600 dark:text-sky-400">📐 AARRR 퍼널 프레임워크</h4>
+        <div class="overflow-x-auto">
+          <svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto" style="min-width:500px;">
+            <!-- Funnel stages -->
+            <rect x="0" y="20" width="130" height="70" rx="10" fill="#7c3aed" opacity="0.9"/>
+            <text x="65" y="52" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Pretendard,sans-serif">Acquisition</text>
+            <text x="65" y="70" text-anchor="middle" fill="#ddd6fe" font-size="10" font-family="Pretendard,sans-serif">신규 유입</text>
+            <text x="65" y="85" text-anchor="middle" fill="white" font-size="10" font-family="Pretendard,sans-serif">100명</text>
+
+            <polygon points="135,20 145,55 135,90" fill="#94a3b8" opacity="0.5"/>
+
+            <rect x="150" y="30" width="120" height="55" rx="10" fill="#0284c7" opacity="0.9"/>
+            <text x="210" y="56" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Pretendard,sans-serif">Activation</text>
+            <text x="210" y="73" text-anchor="middle" fill="#bae6fd" font-size="10" font-family="Pretendard,sans-serif">첫 가치 경험 · 40명</text>
+
+            <polygon points="275,30 285,57 275,85" fill="#94a3b8" opacity="0.5"/>
+
+            <rect x="290" y="40" width="110" height="45" rx="10" fill="#059669" opacity="0.9"/>
+            <text x="345" y="60" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Pretendard,sans-serif">Retention</text>
+            <text x="345" y="75" text-anchor="middle" fill="#a7f3d0" font-size="10" font-family="Pretendard,sans-serif">재방문 · 20명</text>
+
+            <polygon points="405,40 415,62 405,85" fill="#94a3b8" opacity="0.5"/>
+
+            <rect x="420" y="50" width="110" height="35" rx="10" fill="#d97706" opacity="0.9"/>
+            <text x="475" y="68" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Pretendard,sans-serif">Revenue</text>
+            <text x="475" y="80" text-anchor="middle" fill="#fde68a" font-size="10" font-family="Pretendard,sans-serif">결제 · 5명</text>
+
+            <polygon points="535,50 545,67 535,85" fill="#94a3b8" opacity="0.5"/>
+
+            <rect x="550" y="55" width="110" height="30" rx="10" fill="#e11d48" opacity="0.9"/>
+            <text x="605" y="72" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Pretendard,sans-serif">Referral</text>
+            <text x="605" y="83" text-anchor="middle" fill="#fecdd3" font-size="9.5" font-family="Pretendard,sans-serif">추천 · 2명</text>
+
+            <!-- Labels below -->
+            <text x="350" y="130" text-anchor="middle" fill="#64748b" font-size="10" font-family="Pretendard,sans-serif">각 단계 이탈률을 줄이는 것이 그로스 해킹의 핵심입니다</text>
+            <text x="350" y="148" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Pretendard,sans-serif">PMF 달성 기준: 리텐션 커브 평탄화 (유니콘 40%+, 세상 변화 70%+)</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md text-sm">
+          <h4 class="font-bold text-sky-600 dark:text-sky-400 mb-3">Google Analytics 주요 추적 항목</h4>
+          <ul class="space-y-1.5 text-slate-600 dark:text-slate-300">
+            <li>📍 DAU/WAU/MAU — 일간·주간·월간 활성 유저</li>
+            <li>📍 리텐션 커브 — PMF 달성 여부 판단</li>
+            <li>📍 전환 이벤트 — 회원가입, 결제 등 핵심 행동</li>
+            <li>📍 유입 채널 — 구글 검색, SNS, 직접 유입 분류</li>
+            <li>📍 국가·언어·연령대 인구통계</li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md text-sm">
+          <h4 class="font-bold text-rose-600 dark:text-rose-400 mb-3">MS Clarity 히트맵 & 세션 녹화</h4>
+          <ul class="space-y-1.5 text-slate-600 dark:text-slate-300">
+            <li>🎥 세션 레코딩 — 유저 행동 동영상으로 확인</li>
+            <li>🗺️ 히트맵 — 어느 영역을 많이 클릭했는지 시각화</li>
+            <li>🤖 AI 세션 인사이트 자동 요약</li>
+            <li>🔗 Google Analytics와 무료 연동</li>
+            <li>💡 Dead Click, 이탈 원인 자동 감지</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3주차 상세 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="bg-emerald-600 text-white font-bold text-sm px-4 py-1.5 rounded-full">3주차</span>
+        <h3 class="text-xl font-black">AI API + 글로벌 결제 구현</h3>
+      </div>
+
+      <!-- JamStack 아키텍처 SVG -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg mb-6">
+        <h4 class="font-bold text-center mb-4 text-emerald-600 dark:text-emerald-400">🏗️ JamStack 서비스 아키텍처</h4>
+        <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto" style="min-width:480px;">
+          <!-- User -->
+          <rect x="10" y="60" width="110" height="60" rx="12" fill="#4f46e5" opacity="0.9"/>
+          <text x="65" y="87" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">👤 유저</text>
+          <text x="65" y="104" text-anchor="middle" fill="#c7d2fe" font-size="9.5" font-family="Pretendard,sans-serif">브라우저 / 앱</text>
+
+          <line x1="122" y1="90" x2="148" y2="90" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="135" y="84" text-anchor="middle" fill="#64748b" font-size="8" font-family="Pretendard,sans-serif">HTTPS</text>
+
+          <!-- Cloudflare Pages -->
+          <rect x="150" y="40" width="145" height="100" rx="12" fill="#f97316" opacity="0.85"/>
+          <text x="222" y="75" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">Cloudflare</text>
+          <text x="222" y="91" text-anchor="middle" fill="#fed7aa" font-size="9.5" font-family="Pretendard,sans-serif">Pages (React/Vite)</text>
+          <text x="222" y="107" text-anchor="middle" fill="#fed7aa" font-size="9.5" font-family="Pretendard,sans-serif">+ Workers (서버리스)</text>
+          <text x="222" y="128" text-anchor="middle" fill="white" font-size="10" font-family="Pretendard,sans-serif">무제한 무료 트래픽</text>
+
+          <line x1="297" y1="90" x2="323" y2="90" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="310" y="84" text-anchor="middle" fill="#64748b" font-size="8" font-family="Pretendard,sans-serif">API</text>
+
+          <!-- Services column -->
+          <rect x="325" y="20" width="130" height="50" rx="10" fill="#0ea5e9" opacity="0.9"/>
+          <text x="390" y="43" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">OpenAI API</text>
+          <text x="390" y="59" text-anchor="middle" fill="#bae6fd" font-size="9.5" font-family="Pretendard,sans-serif">GPT-4o · DALL·E</text>
+
+          <rect x="325" y="80" width="130" height="50" rx="10" fill="#16a34a" opacity="0.9"/>
+          <text x="390" y="103" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">Supabase</text>
+          <text x="390" y="119" text-anchor="middle" fill="#bbf7d0" font-size="9.5" font-family="Pretendard,sans-serif">DB · Auth · Storage</text>
+
+          <rect x="325" y="140" width="130" height="35" rx="10" fill="#7c3aed" opacity="0.9"/>
+          <text x="390" y="158" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">Polar / Stripe</text>
+          <text x="390" y="170" text-anchor="middle" fill="#ddd6fe" font-size="9" font-family="Pretendard,sans-serif">글로벌 결제·구독</text>
+
+          <!-- GitHub -->
+          <rect x="590" y="60" width="130" height="60" rx="12" fill="#1e293b" opacity="0.95"/>
+          <text x="655" y="87" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="Pretendard,sans-serif">GitHub</text>
+          <text x="655" y="104" text-anchor="middle" fill="#94a3b8" font-size="9.5" font-family="Pretendard,sans-serif">버전 관리 · CI/CD</text>
+
+          <line x1="457" y1="90" x2="588" y2="90" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <text x="522" y="84" text-anchor="middle" fill="#64748b" font-size="8" font-family="Pretendard,sans-serif">push → 자동 배포</text>
+        </svg>
+      </div>
+
+      <blockquote class="border-l-4 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/30 rounded-r-2xl p-5 text-sm text-slate-700 dark:text-slate-300">
+        <p class="font-bold text-emerald-700 dark:text-emerald-400 mb-1">"Your margin is my opportunity."</p>
+        <p class="text-emerald-600 dark:text-emerald-500 text-xs mb-2">— Jeff Bezos (아마존 창업자)</p>
+        <p>(당신의 이윤이 내 기회다) — 비싼 오프라인 패션 컨설팅 시장을 AI로 파괴하면 된다는 아이디어의 근거로 소개됨</p>
+      </blockquote>
+    </div>
+
+    <!-- 4주차 상세 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="bg-amber-600 text-white font-bold text-sm px-4 py-1.5 rounded-full">4주차</span>
+        <h3 class="text-xl font-black">Supabase DB + 구독형 SaaS 완성</h3>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 text-center shadow card-hover">
+          <div class="text-3xl mb-1">🗄️</div>
+          <div class="text-xs font-bold text-amber-600">SQL DB</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">표 형태 관계형 DB. 회원·결제 정보 저장</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 text-center shadow card-hover">
+          <div class="text-3xl mb-1">🔐</div>
+          <div class="text-xs font-bold text-sky-600">Auth</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">구글·카카오 소셜 로그인 원클릭 구현</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 text-center shadow card-hover">
+          <div class="text-3xl mb-1">☁️</div>
+          <div class="text-xs font-bold text-emerald-600">Storage</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">R2·Supabase로 이미지·파일 클라우드 저장</div>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-4 text-center shadow card-hover">
+          <div class="text-3xl mb-1">🔄</div>
+          <div class="text-xs font-bold text-rose-600">반복 결제</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">무료 체험 → 자동 구독 전환 심리 트릭</div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md text-sm text-slate-600 dark:text-slate-300">
+        <h4 class="font-bold text-amber-600 dark:text-amber-400 mb-3">💡 구독 전환율 높이는 인간 심리 활용</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border border-amber-200 dark:border-amber-800 rounded-xl p-3">
+            <div class="font-bold mb-1">1️⃣ 무료 체험 (Free Trial)</div>
+            <p class="text-xs">카드 먼저 등록 → 7일 무료 → 자동 결제. 취소 안 하면 계속 과금.</p>
+          </div>
+          <div class="border border-amber-200 dark:border-amber-800 rounded-xl p-3">
+            <div class="font-bold mb-1">2️⃣ 손실 회피 심리</div>
+            <p class="text-xs">"오늘 가입하지 않으면 이 기회를 잃습니다" 등 희소성·긴박감 유발 메시지.</p>
+          </div>
+          <div class="border border-amber-200 dark:border-amber-800 rounded-xl p-3">
+            <div class="font-bold mb-1">3️⃣ 앵커링 가격</div>
+            <p class="text-xs">비싼 요금제를 먼저 보여준 뒤 중간 가격이 합리적으로 보이게 설계.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5주차 상세 -->
+    <div class="mb-12">
+      <div class="flex items-center gap-3 mb-5">
+        <span class="bg-rose-600 text-white font-bold text-sm px-4 py-1.5 rounded-full">5주차</span>
+        <h3 class="text-xl font-black">미국 법인 · 앱 개발 · 엑싯 전략</h3>
+      </div>
+
+      <!-- 엑싯 전략 SVG -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg mb-6">
+        <h4 class="font-bold text-center mb-5 text-rose-600 dark:text-rose-400">🏁 3가지 엑싯 전략 비교</h4>
+        <svg viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto" style="min-width:480px;">
+          <!-- Box 1: Cash Flow -->
+          <rect x="10" y="20" width="210" height="125" rx="14" fill="none" stroke="#7c3aed" stroke-width="2"/>
+          <rect x="10" y="20" width="210" height="38" rx="14" fill="#7c3aed"/>
+          <text x="115" y="43" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Pretendard,sans-serif">① 현금 흐름 유지</text>
+          <text x="115" y="77" text-anchor="middle" fill="#7c3aed" font-size="10" font-family="Pretendard,sans-serif">구독·광고 수익 반복 수령</text>
+          <text x="115" y="95" text-anchor="middle" fill="#64748b" font-size="9.5" font-family="Pretendard,sans-serif">법인세 절감 설계 가능</text>
+          <text x="115" y="113" text-anchor="middle" fill="#64748b" font-size="9.5" font-family="Pretendard,sans-serif">예: 알람 앱 1인개발 연 460억 매출</text>
+          <text x="115" y="132" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Pretendard,sans-serif">리스크 낮음 · 즉시 수익</text>
