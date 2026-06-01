@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하네스 엔지니어링 15분 만에 이해시켜드립니다 | 이동훈의 루트AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = { darkMode: 'class' }
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+</script>
+<style>
+  body { font-family: 'Pretendard', 'Noto Sans KR', sans-serif; }
+  .gradient-hero { background: linear-gradient(135deg, #6d28d9 0%, #4f46e5 50%, #0ea5e9 100%); }
+  .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+  .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+  .flow-arrow { fill: none; stroke-width: 2; }
+</style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+<!-- 헤더 -->
+<header class="gradient-hero text-white py-12 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge bg-white/20 text-white">⚡ 기술</span>
+      <span class="badge bg-white/20 text-white">🤖 AI 에이전트</span>
+      <span class="badge bg-white/20 text-white">15분 14초</span>
+    </div>
+    <h1 class="text-3xl md:text-5xl font-black leading-tight mb-3">
+      하네스 엔지니어링<br>
+      <span class="text-yellow-300">15분 만에 이해시켜드립니다</span>
+    </h1>
+    <p class="text-lg text-white/80 font-medium mb-2">개념, 핵심 원칙, AI 에이전트</p>
+    <div class="flex items-center gap-4 text-sm text-white/70 mt-4">
+      <span>📺 이동훈의 루트AI</span>
+      <span>📅 2026년 4월 16일</span>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-10 space-y-14">
+
+  <!-- 유튜브 임베드 -->
+  <section>
+    <div class="rounded-2xl overflow-hidden shadow-2xl bg-black">
+      <div style="position:relative;padding-top:56.25%">
+        <iframe
+          src="https://www.youtube.com/embed/MFZX1I_REyg"
+          style="position:absolute;top:0;left:0;width:100%;height:100%"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+    <div class="mt-4 text-center">
+      <a href="https://www.youtube.com/watch?v=MFZX1I_REyg" target="_blank"
+         class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-200 shadow-lg">
+        ▶ 원본 영상 보기
+      </a>
+    </div>
+  </section>
+
+  <!-- 한 줄 요약 -->
+  <section class="bg-gradient-to-r from-violet-50 to-sky-50 dark:from-violet-950/50 dark:to-sky-950/50 rounded-2xl p-6 border border-violet-200 dark:border-violet-800">
+    <div class="flex items-start gap-4">
+      <div class="text-4xl">💡</div>
+      <div>
+        <p class="text-sm font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-widest mb-2">한 줄 요약</p>
+        <p class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100 leading-snug">
+          AI 에이전트를 제어하는 <span class="text-violet-600 dark:text-violet-400">하네스 엔지니어링</span>의 개념과 핵심 원칙 정리
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI 지표 박스 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-amber-500">📊</span> 핵심 수치로 보는 하네스 효과
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border border-gray-100 dark:border-gray-800 text-center card-hover">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400">52.8%</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-1 font-medium">하네스 적용 전<br>코딩 벤치마크</div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border border-gray-100 dark:border-gray-800 text-center card-hover">
+        <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400">66.5%</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-1 font-medium">하네스 적용 후<br>코딩 벤치마크</div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border border-gray-100 dark:border-gray-800 text-center card-hover">
+        <div class="text-4xl font-black text-sky-600 dark:text-sky-400">1M+</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-1 font-medium">OpenAI 실험<br>코드 줄 수</div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border border-gray-100 dark:border-gray-800 text-center card-hover">
+        <div class="text-4xl font-black text-rose-600 dark:text-rose-400">0줄</div>
+        <div class="text-sm text-gray-500 dark:text-gray-400 mt-1 font-medium">사람이 직접 작성한<br>코드 분량</div>
+      </div>
+    </div>
+
+    <!-- 벤치마크 비교 바 -->
+    <div class="mt-6 bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-800">
+      <h3 class="font-bold text-gray-700 dark:text-gray-300 mb-4">LangChain 하네스 개선 실험 — 같은 모델, 다른 결과</h3>
+      <div class="space-y-4">
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="font-semibold text-gray-600 dark:text-gray-400">하네스 적용 전 (30위권 밖)</span>
+            <span class="font-bold text-gray-500">52.8%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+            <div class="bg-gray-400 h-4 rounded-full transition-all duration-700" style="width:52.8%"></div>
+          </div>
+        </div>
+        <div>
+          <div class="flex justify-between text-sm mb-1">
+            <span class="font-semibold text-violet-700 dark:text-violet-400">하네스 적용 후 (5위 안)</span>
+            <span class="font-bold text-violet-600 dark:text-violet-400">66.5%</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+            <div class="bg-violet-500 h-4 rounded-full transition-all duration-700" style="width:66.5%"></div>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 dark:text-gray-500 mt-3">※ 모델 변경 없이 하네스 설계만 개선</p>
+    </div>
+  </section>
+
+  <!-- 개념 발전 흐름 SVG 다이어그램 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-sky-500">🔄</span> AI 엔지니어링의 발전 흐름
+    </h2>
+    <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-800 overflow-x-auto">
+      <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto">
+        <!-- 배경 -->
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <!-- 큰 하네스 외곽 -->
+        <rect x="10" y="10" width="740" height="180" rx="18" fill="none" stroke="url(#grad1)" stroke-width="2.5" stroke-dasharray="8,4"/>
+        <text x="650" y="30" font-size="11" fill="#8b5cf6" font-family="Pretendard,sans-serif" font-weight="700">하네스 엔지니어링</text>
+
+        <!-- 컨텍스트 엔지니어링 중간 박스 -->
+        <rect x="30" y="50" width="480" height="120" rx="14" fill="#e0f2fe" fill-opacity="0.5" stroke="#0ea5e9" stroke-width="1.5" stroke-dasharray="6,3"/>
+        <text x="390" y="70" font-size="10" fill="#0284c7" font-family="Pretendard,sans-serif" font-weight="700">컨텍스트 엔지니어링</text>
+
+        <!-- 프롬프트 엔지니어링 박스 -->
+        <rect x="50" y="80" width="220" height="70" rx="12" fill="#f3e8ff" stroke="#a855f7" stroke-width="2"/>
+        <text x="160" y="108" text-anchor="middle" font-size="13" fill="#7c3aed" font-family="Pretendard,sans-serif" font-weight="800">프롬프트 엔지니어링</text>
+        <text x="160" y="128" text-anchor="middle" font-size="11" fill="#9333ea" font-family="Pretendard,sans-serif">뭘 말할까</text>
+        <text x="160" y="145" text-anchor="middle" font-size="10" fill="#a855f7" font-family="Pretendard,sans-serif">2023</text>
+
+        <!-- 화살표 1 -->
+        <path d="M 272 115 L 300 115" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow1)"/>
+        <defs>
+          <marker id="arrow1" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+          </marker>
+        </defs>
+
+        <!-- 컨텍스트 박스 내부 -->
+        <rect x="305" y="80" width="190" height="70" rx="12" fill="#e0f2fe" stroke="#0ea5e9" stroke-width="2"/>
+        <text x="400" y="108" text-anchor="middle" font-size="13" fill="#0369a1" font-family="Pretendard,sans-serif" font-weight="800">컨텍스트 엔지니어링</text>
+        <text x="400" y="128" text-anchor="middle" font-size="11" fill="#0284c7" font-family="Pretendard,sans-serif">뭘 보여줄까</text>
+        <text x="400" y="145" text-anchor="middle" font-size="10" fill="#0ea5e9" font-family="Pretendard,sans-serif">2025</text>
+
+        <!-- 화살표 2 -->
+        <path d="M 497 115 L 525 115" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow2)"/>
+        <defs>
+          <marker id="arrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/>
+          </marker>
+        </defs>
+
+        <!-- 하네스 박스 -->
+        <rect x="530" y="60" width="200" height="110" rx="14" fill="#fef3c7" stroke="#f59e0b" stroke-width="2.5"/>
+        <text x="630" y="95" text-anchor="middle" font-size="14" fill="#92400e" font-family="Pretendard,sans-serif" font-weight="800">하네스 엔지니어링</text>
+        <text x="630" y="118" text-anchor="middle" font-size="11" fill="#b45309" font-family="Pretendard,sans-serif">어떤 환경에서</text>
+        <text x="630" y="135" text-anchor="middle" font-size="11" fill="#b45309" font-family="Pretendard,sans-serif">일하게 할까</text>
+        <text x="630" y="155" text-anchor="middle" font-size="10" fill="#f59e0b" font-family="Pretendard,sans-serif">2026 🔥</text>
+      </svg>
+      <p class="text-center text-sm text-gray-500 dark:text-gray-400 mt-2">하네스 엔지니어링은 앞선 두 개념을 <strong>포함</strong>하는 가장 큰 틀</p>
+    </div>
+  </section>
+
+  <!-- 핵심 포인트 카드 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-emerald-500">✅</span> 핵심 포인트
+    </h2>
+    <div class="grid md:grid-cols-2 gap-4">
+
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border-l-4 border-violet-500 card-hover">
+        <div class="text-2xl mb-2">🐴</div>
+        <h3 class="font-bold text-violet-700 dark:text-violet-400 mb-2">하네스 = AI의 운영체제</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">AI 에이전트를 감싸는 제약 조건, 도구, 피드백 루프, 문서화를 포함한 전체 운영 환경. 모델이 CPU라면 하네스는 OS에 해당한다.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border-l-4 border-sky-500 card-hover">
+        <div class="text-2xl mb-2">📈</div>
+        <h3 class="font-bold text-sky-700 dark:text-sky-400 mb-2">진화 순서</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">프롬프트 엔지니어링(뭘 말할까) → 컨텍스트 엔지니어링(뭘 보여줄까) → 하네스 엔지니어링(어떤 환경에서 일하게 할까) 순으로 발전했으며, 하네스가 앞선 두 개념을 포함한다.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border-l-4 border-emerald-500 card-hover">
+        <div class="text-2xl mb-2">🏛️</div>
+        <h3 class="font-bold text-emerald-700 dark:text-emerald-400 mb-2">하네스의 4가지 기둥</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">① 컨텍스트 엔지니어링(선별적 정보 제공) ② 아키텍처 제약(규칙을 기계적으로 강제) ③ 피드백 루프(외부 기준으로 검증) ④ 엔트로피 관리(코드베이스 품질 유지)</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border-l-4 border-amber-500 card-hover">
+        <div class="text-2xl mb-2">🧪</div>
+        <h3 class="font-bold text-amber-700 dark:text-amber-400 mb-2">LangChain 실험 결과</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">같은 모델로 하네스만 개선했을 때 코딩 벤치마크 52.8% → 66.5% 상승. 순위는 30위권 밖 → 5위 안으로 진입.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border-l-4 border-rose-500 card-hover">
+        <div class="text-2xl mb-2">⚙️</div>
+        <h3 class="font-bold text-rose-700 dark:text-rose-400 mb-2">핵심 원칙 요약</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">모델 교체 대신 환경 개선, 실패 후 구조적 방지 장치 추가, 규칙은 최소화, 프롬프트 대신 린터·테스트 등 시스템으로 강제.</p>
+      </div>
+
+      <div class="bg-white dark:bg-gray-900 rounded-2xl p-5 shadow-md border-l-4 border-indigo-500 card-hover">
+        <div class="text-2xl mb-2">🔄</div>
+        <h3 class="font-bold text-indigo-700 dark:text-indigo-400 mb-2">하네스는 살아있는 시스템</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">한 번 만들고 끝이 아니라 모델 발전에 맞춰 지속적으로 진화해야 한다. 모델이 좋아지면 복잡한 멀티 에이전트 구조도 단순화될 수 있다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 하네스의 4기둥 SVG 다이어그램 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-amber-500">🏛️</span> 하네스의 4가지 기둥 구조
+    </h2>
+    <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-800 overflow-x-auto">
+      <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto">
+        <!-- 지붕 / 상단 레이블 -->
+        <rect x="20" y="10" width="720" height="50" rx="14" fill="#7c3aed" opacity="0.9"/>
+        <text x="380" y="43" text-anchor="middle" font-size="18" fill="white" font-family="Pretendard,sans-serif" font-weight="800">HARNESS (하네스)</text>
+
+        <!-- 4 기둥 박스 -->
+        <!-- 기둥 1: 컨텍스트 엔지니어링 -->
+        <rect x="25" y="80" width="165" height="140" rx="12" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+        <text x="107" y="108" text-anchor="middle" font-size="11" fill="#6d28d9" font-family="Pretendard,sans-serif" font-weight="800">① 컨텍스트</text>
+        <text x="107" y="124" text-anchor="middle" font-size="11" fill="#6d28d9" font-family="Pretendard,sans-serif" font-weight="800">엔지니어링</text>
+        <text x="107" y="148" text-anchor="middle" font-size="10" fill="#7c3aed" font-family="Pretendard,sans-serif">필요한 정보를</text>
+        <text x="107" y="164" text-anchor="middle" font-size="10" fill="#7c3aed" font-family="Pretendard,sans-serif">선별적으로 제공</text>
+        <text x="107" y="185" text-anchor="middle" font-size="22" font-family="Pretendard,sans-serif">📄</text>
+        <text x="107" y="212" text-anchor="middle" font-size="9" fill="#a78bfa" font-family="Pretendard,sans-serif">claude.md / agent.md</text>
+
+        <!-- 기둥 2: 아키텍처 제약 -->
+        <rect x="205" y="80" width="165" height="140" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+        <text x="287" y="108" text-anchor="middle" font-size="11" fill="#be185d" font-family="Pretendard,sans-serif" font-weight="800">② 아키텍처</text>
+        <text x="287" y="124" text-anchor="middle" font-size="11" fill="#be185d" font-family="Pretendard,sans-serif" font-weight="800">제약</text>
+        <text x="287" y="148" text-anchor="middle" font-size="10" fill="#db2777" font-family="Pretendard,sans-serif">규칙을 기계적으로</text>
+        <text x="287" y="164" text-anchor="middle" font-size="10" fill="#db2777" font-family="Pretendard,sans-serif">강제 적용</text>
+        <text x="287" y="185" text-anchor="middle" font-size="22" font-family="Pretendard,sans-serif">🔒</text>
+        <text x="287" y="212" text-anchor="middle" font-size="9" fill="#f472b6" font-family="Pretendard,sans-serif">잘못된 행동 자체를 차단</text>
+
+        <!-- 기둥 3: 피드백 루프 -->
+        <rect x="385" y="80" width="165" height="140" rx="12" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+        <text x="467" y="108" text-anchor="middle" font-size="11" fill="#065f46" font-family="Pretendard,sans-serif" font-weight="800">③ 피드백</text>
+        <text x="467" y="124" text-anchor="middle" font-size="11" fill="#065f46" font-family="Pretendard,sans-serif" font-weight="800">루프</text>
+        <text x="467" y="148" text-anchor="middle" font-size="10" fill="#047857" font-family="Pretendard,sans-serif">외부 기준으로</text>
+        <text x="467" y="164" text-anchor="middle" font-size="10" fill="#047857" font-family="Pretendard,sans-serif">결과 검증</text>
+        <text x="467" y="185" text-anchor="middle" font-size="22" font-family="Pretendard,sans-serif">🔁</text>
+        <text x="467" y="212" text-anchor="middle" font-size="9" fill="#34d399" font-family="Pretendard,sans-serif">가이드 + 센서</text>
+
+        <!-- 기둥 4: 엔트로피 관리 -->
+        <rect x="565" y="80" width="175" height="140" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+        <text x="652" y="108" text-anchor="middle" font-size="11" fill="#92400e" font-family="Pretendard,sans-serif" font-weight="800">④ 엔트로피</text>
+        <text x="652" y="124" text-anchor="middle" font-size="11" fill="#92400e" font-family="Pretendard,sans-serif" font-weight="800">관리</text>
+        <text x="652" y="148" text-anchor="middle" font-size="10" fill="#b45309" font-family="Pretendard,sans-serif">코드베이스 품질</text>
+        <text x="652" y="164" text-anchor="middle" font-size="10" fill="#b45309" font-family="Pretendard,sans-serif">지속 유지</text>
+        <text x="652" y="185" text-anchor="middle" font-size="22" font-family="Pretendard,sans-serif">🧹</text>
+        <text x="652" y="212" text-anchor="middle" font-size="9" fill="#fbbf24" font-family="Pretendard,sans-serif">정리 전담 에이전트 운영</text>
+
+        <!-- 하단 바닥 -->
+        <rect x="20" y="235" width="720" height="35" rx="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1.5"/>
+        <text x="380" y="257" text-anchor="middle" font-size="12" fill="#64748b" font-family="Pretendard,sans-serif" font-weight="600">AI 에이전트 (모델) — GPT / Claude / Gemini</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 핵심 원칙 5가지 카드 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-rose-500">⚡</span> 5가지 핵심 원칙
+    </h2>
+    <div class="space-y-3">
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex items-start gap-4 card-hover">
+        <div class="w-10 h-10 rounded-full bg-violet-100 dark:bg-violet-900 flex items-center justify-center text-violet-600 dark:text-violet-400 font-black text-lg flex-shrink-0">1</div>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-1">모델을 바꾸지 말고 환경을 바꿔라</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">AI 결과물이 안 좋을 때 더 좋은 모델로 교체하려는 충동을 억제. 하네스 설계만 개선해도 상위 모델 간 성능 차이보다 큰 결과를 만들 수 있다.</p>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex items-start gap-4 card-hover">
+        <div class="w-10 h-10 rounded-full bg-sky-100 dark:bg-sky-900 flex items-center justify-center text-sky-600 dark:text-sky-400 font-black text-lg flex-shrink-0">2</div>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-1">실패해서 시작하라</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">완벽한 시스템을 미리 설계하려 하지 말 것. 에이전트를 먼저 돌려보고, 실패하면 그 실패를 구조적으로 방지하는 장치를 추가. 매주 금요일 20분 투자로도 충분하다.</p>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex items-start gap-4 card-hover">
+        <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center text-emerald-600 dark:text-emerald-400 font-black text-lg flex-shrink-0">3</div>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-1">적게 넣어라 (최소한의 규칙)</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">규칙을 너무 많이 넣으면 오히려 성능이 저하된다. 특히 AI가 생성한 규칙 파일은 성능을 낮추면서 비용만 높인다. 최소 규칙으로 최대 효과가 진짜 핵심.</p>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex items-start gap-4 card-hover">
+        <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900 flex items-center justify-center text-amber-600 dark:text-amber-400 font-black text-lg flex-shrink-0">4</div>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-1">말로 하지 말고 시스템으로 강제하라</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">프롬프트 대신 린터(Linter), 테스트(Test), CI 파이프라인 같은 도구로 규칙을 강제. 프롬프트는 에이전트가 무시할 수 있지만 시스템적 강제는 무시 불가.</p>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800 flex items-start gap-4 card-hover">
+        <div class="w-10 h-10 rounded-full bg-rose-100 dark:bg-rose-900 flex items-center justify-center text-rose-600 dark:text-rose-400 font-black text-lg flex-shrink-0">5</div>
+        <div>
+          <h3 class="font-bold text-gray-800 dark:text-gray-100 mb-1">하네스도 진화한다</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400">모델이 발전하면 하네스도 바꿔야 한다. 복잡하게 설계한 멀티 에이전트 구조가 모델 발전으로 단일 에이전트로 단순화·비용 절감 가능. 하네스는 모델과 함께 진화하는 시스템이다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 비교표 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-indigo-500">📋</span> 프롬프트 vs 컨텍스트 vs 하네스 엔지니어링 비교
+    </h2>
+    <div class="overflow-x-auto rounded-2xl shadow-md border border-gray-200 dark:border-gray-700">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gradient-to-r from-violet-600 to-sky-600 text-white">
+            <th class="px-4 py-3 text-left font-bold">구분</th>
+            <th class="px-4 py-3 text-left font-bold">프롬프트 엔지니어링</th>
+            <th class="px-4 py-3 text-left font-bold">컨텍스트 엔지니어링</th>
+            <th class="px-4 py-3 text-left font-bold">하네스 엔지니어링</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+          <tr class="bg-white dark:bg-gray-900">
+            <td class="px-4 py-3 font-semibold text-gray-700 dark:text-gray-300">핵심 질문</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">뭘 말할까?</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">뭘 보여줄까?</td>
+            <td class="px-4 py-3 font-semibold text-violet-700 dark:text-violet-400">어떤 환경에서 일하게 할까?</td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-800/50">
+            <td class="px-4 py-3 font-semibold text-gray-700 dark:text-gray-300">주목 시기</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">2023년</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">2025년</td>
+            <td class="px-4 py-3 font-semibold text-amber-600 dark:text-amber-400">2026년 🔥</td>
+          </tr>
+          <tr class="bg-white dark:bg-gray-900">
+            <td class="px-4 py-3 font-semibold text-gray-700 dark:text-gray-300">이메일 비유</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">완벽한 이메일 한 통 쓰기</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">필요한 첨부 파일 모두 붙이기</td>
+            <td class="px-4 py-3 font-semibold text-sky-700 dark:text-sky-400">사무실 전체 환경 설계</td>
+          </tr>
+          <tr class="bg-gray-50 dark:bg-gray-800/50">
+            <td class="px-4 py-3 font-semibold text-gray-700 dark:text-gray-300">적용 범위</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">단발성 질의응답</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">단일 세션 작업</td>
+            <td class="px-4 py-3 font-semibold text-emerald-700 dark:text-emerald-400">장기 프로덕션 에이전트</td>
+          </tr>
+          <tr class="bg-white dark:bg-gray-900">
+            <td class="px-4 py-3 font-semibold text-gray-700 dark:text-gray-300">포함 관계</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">독립</td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">프롬프트 포함</td>
+            <td class="px-4 py-3 font-semibold text-violet-700 dark:text-violet-400">앞선 두 개념 모두 포함</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 인용문 섹션 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-sky-500">💬</span> 영상 속 핵심 발언
+    </h2>
+    <div class="space-y-4">
+
+      <blockquote class="bg-violet-50 dark:bg-violet-950/40 border-l-4 border-violet-500 rounded-r-2xl p-5">
+        <p class="text-lg font-bold text-violet-800 dark:text-violet-300 mb-1">
+          "모델은 CPU고 하네스는 운영체제다"
+        </p>
+        <p class="text-sm text-violet-600 dark:text-violet-400 mb-2">(모델이 아무리 뛰어나도 하네스가 부실하면 쓸만한 결과물을 만들어낼 수 없다)</p>
+        <footer class="text-xs text-gray-500 dark:text-gray-400">— 필립 슈미드 (Google DeepMind 엔지니어)</footer>
+      </blockquote>
+
+      <blockquote class="bg-sky-50 dark:bg-sky-950/40 border-l-4 border-sky-500 rounded-r-2xl p-5">
+        <p class="text-lg font-bold text-sky-800 dark:text-sky-300 mb-1">
+          "저장소에서 발견할 수 없으면 에이전트에는 존재하지 않는 것과 같아서 엇나간 결과물로 이어진다"
+        </p>
+        <p class="text-sm text-sky-600 dark:text-sky-400 mb-2">(컨텍스트 안에 없는 정보는 에이전트 입장에서 존재하지 않는 것과 같다)</p>
+        <footer class="text-xs text-gray-500 dark:text-gray-400">— OpenAI Codex 팀</footer>
+      </blockquote>
+
+      <blockquote class="bg-emerald-50 dark:bg-emerald-950/40 border-l-4 border-emerald-500 rounded-r-2xl p-5">
+        <p class="text-lg font-bold text-emerald-800 dark:text-emerald-300 mb-1">
+          "1000페이지의 매뉴얼이 아니라 지도를 줘라"
+        </p>
+        <p class="text-sm text-emerald-600 dark:text-emerald-400 mb-2">(모든 규칙을 하나의 파일에 넣는 대신, 분리하고 주소만 적어주는 방식으로 전환)</p>
+        <footer class="text-xs text-gray-500 dark:text-gray-400">— OpenAI의 컨텍스트 관리 결론</footer>
+      </blockquote>
+
+      <blockquote class="bg-amber-50 dark:bg-amber-950/40 border-l-4 border-amber-500 rounded-r-2xl p-5">
+        <p class="text-lg font-bold text-amber-800 dark:text-amber-300 mb-1">
+          "에이전트가 실수할 때마다 다음에 잘하라고 말하지 말고, 그 실수가 구조적으로 재발하지 않도록 시스템을 엔지니어링하라"
+        </p>
+        <p class="text-sm text-amber-600 dark:text-amber-400 mb-2">(하네스 엔지니어링의 핵심 철학)</p>
+        <footer class="text-xs text-gray-500 dark:text-gray-400">— 미셸 하시모토 (HashiCorp 공동창업자, Terraform 개발자)</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 배경 지식: 왜 2026년인가 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-violet-500">📅</span> 왜 2026년에 하네스 엔지니어링인가?
+    </h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div class="bg-gradient-to-br from-violet-50 to-violet-100 dark:from-violet-950/60 dark:to-violet-900/30 rounded-2xl p-5 border border-violet-200 dark:border-violet-800">
+        <div class="text-3xl mb-3">⚖️</div>
+        <h3 class="font-bold text-violet-800 dark:text-violet-300 mb-2">모델 상향 평준화</h3>
+        <p class="text-sm text-violet-700 dark:text-violet-400">Claude, GPT, Gemini 등 주요 모델들의 성능 차이가 좁혀져 어떤 모델을 쓰느냐보다 어떻게 활용하느냐가 경쟁력이 됨.</p>
+      </div>
+      <div class="bg-gradient-to-br from-sky-50 to-sky-100 dark:from-sky-950/60 dark:to-sky-900/30 rounded-2xl p-5 border border-sky-200 dark:border-sky-800">
+        <div class="text-3xl mb-3">🏭</div>
+        <h3 class="font-bold text-sky-800 dark:text-sky-300 mb-2">데모 → 프로덕션</h3>
+        <p class="text-sm text-sky-700 dark:text-sky-400">AI 에이전트가 실험 단계를 넘어 실제 프로덕션 환경에서 운영되기 시작. 장시간 복잡한 작업에서 구조적 문제가 본격적으로 나타남.</p>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-950/60 dark:to-emerald-900/30 rounded-2xl p-5 border border-emerald-200 dark:border-emerald-800">
+        <div class="text-3xl mb-3">🏷️</div>
+        <h3 class="font-bold text-emerald-800 dark:text-emerald-300 mb-2">개념에 이름이 붙음</h3>
+        <p class="text-sm text-emerald-700 dark:text-emerald-400">2026년 2월 미셸 하시모토가 블로그에 "Harness Engineering" 용어를 정립. 며칠 후 OpenAI가 100만 줄 코드 실험을 같은 이름으로 발표하며 업계 전파.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 하네스 vs 프롬프트 비교 SVG -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-rose-500">🔍</span> 접근 방식 비교: 프롬프트 vs 하네스
+    </h2>
+    <div class="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-md border border-gray-100 dark:border-gray-800 overflow-x-auto">
+      <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-3xl mx-auto">
+        <!-- 왼쪽: 프롬프트 방식 -->
+        <rect x="15" y="15" width="335" height="190" rx="16" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+        <text x="182" y="45" text-anchor="middle" font-size="14" fill="#c2410c" font-family="Pretendard,sans-serif" font-weight="800">❌ 프롬프트 방식</text>
+
+        <rect x="35" y="60" width="295" height="35" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+        <text x="182" y="78" text-anchor="middle" font-size="11" fill="#9a3412" font-family="Pretendard,sans-serif" font-weight="600">"좋은 코드를 짜줘" (말로 부탁)</text>
+        <text x="182" y="93" text-anchor="middle" font-size="10" fill="#c2410c" font-family="Pretendard,sans-serif">→ 에이전트가 무시 가능</text>
+
+        <rect x="35" y="110" width="295" height="35" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+        <text x="182" y="128" text-anchor="middle" font-size="11" fill="#9a3412" font-family="Pretendard,sans-serif" font-weight="600">실수 발생 → "다음엔 잘해줘"</text>
+        <text x="182" y="143" text-anchor="middle" font-size="10" fill="#c2410c" font-family="Pretendard,sans-serif">→ 같은 실수 반복</text>
+
+        <rect x="35" y="160" width="295" height="35" rx="8" fill="#fed7aa" stroke="#fb923c" stroke-width="1"/>
+        <text x="182" y="178" text-anchor="middle" font-size="11" fill="#9a3412" font-family="Pretendard,sans-serif" font-weight="600">더 좋은 모델로 교체</text>
+        <text x="182" y="193" text-anchor="middle" font-size="10" fill="#c2410c" font-family="Pretendard,sans-serif">→ 근본 원인 미해결</text>
+
+        <!-- 화살표 중간 -->
+        <text x="380" y="115" text-anchor="middle" font-size="28" font-family="sans-serif">⚡</text>
+        <text x="380" y="135" text-anchor="middle" font-size="10" fill="#64748b" font-family="Pretendard,sans-serif">vs</text>
+
+        <!-- 오른쪽: 하네스 방식 -->
+        <rect x="410" y="15" width="335" height="190" rx="16" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+        <text x="577" y="45" text-anchor="middle" font-size="14" fill="#15803d" font-family="Pretendard,sans-serif" font-weight="800">✅ 하네스 방식</text>
+
+        <rect x="430" y="60" width="295" height="35" rx="8" fill="#bbf7d0" stroke="#4ade80" stroke-width="1"/>
+        <text x="577" y="78" text-anchor="middle" font-size="11" fill="#14532d" font-family="Pretendard,sans-serif" font-weight="600">린터·테스트로 규칙 기계적 강제</text>
+        <text x="577" y="93" text-anchor="middle" font-size="10" fill="#16a34a" font-family="Pretendard,sans-serif">→ 무시 불가능</text>
+
+        <rect x="430" y="110" width="295" height="35" rx="8" fill="#bbf7d0" stroke="#4ade80" stroke-width="1"/>
+        <text x="577" y="128" text-anchor="middle" font-size="11" fill="#14532d" font-family="Pretendard,sans-serif" font-weight="600">실수 발생 → 구조적 방지 장치 추가</text>
+        <text x="577" y="143" text-anchor="middle" font-size="10" fill="#16a34a" font-family="Pretendard,sans-serif">→ 시스템이 점점 강해짐</text>
+
+        <rect x="430" y="160" width="295" height="35" rx="8" fill="#bbf7d0" stroke="#4ade80" stroke-width="1"/>
+        <text x="577" y="178" text-anchor="middle" font-size="11" fill="#14532d" font-family="Pretendard,sans-serif" font-weight="600">환경(하네스) 개선</text>
+        <text x="577" y="193" text-anchor="middle" font-size="10" fill="#16a34a" font-family="Pretendard,sans-serif">→ 같은 모델, 더 나은 결과</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 관련 인물 및 출처 -->
+  <section>
+    <h2 class="text-2xl font-black mb-6 flex items-center gap-2">
+      <span class="text-indigo-500">👤</span> 관련 인물 및 출처
+    </h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+        <div class="text-2xl mb-2">🧑‍💻</div>
+        <h3 class="font-bold text-gray-800 dark:text-gray-100 text-sm">미셸 하시모토</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">HashiCorp 공동창업자, Terraform 개발자. 2026년 2월 "Harness Engineering" 개념을 블로그에 정식 명명.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+        <div class="text-2xl mb-2">🔬</div>
+        <h3 class="font-bold text-gray-800 dark:text-gray-100 text-sm">필립 슈미드</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Google DeepMind 엔지니어. "모델은 CPU, 하네스는 운영체제" 비유로 개념을 명확히 설명.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+        <div class="text-2xl mb-2">🧠</div>
+        <h3 class="font-bold text-gray-800 dark:text-gray-100 text-sm">안드레 카르파티</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">OpenAI 공동창업자 출신. 컨텍스트 엔지니어링(Context Engineering) 개념을 주도한 AI 연구자.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+        <div class="text-2xl mb-2">🏢</div>
+        <h3 class="font-bold text-gray-800 dark:text-gray-100 text-sm">OpenAI Codex 팀</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">5개월간 100만 줄 코드를 AI로만 작성하는 실험 진행. 엔지니어가 코드 대신 하네스를 설계.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+        <div class="text-2xl mb-2">⛓️</div>
+        <h3 class="font-bold text-gray-800 dark:text-gray-100 text-sm">LangChain</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">같은 모델에 하네스만 개선해 코딩 벤치마크 52.8% → 66.5%, 30위권 → 5위 안으로 진입한 실험 진행.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-4 shadow-sm border border-gray-100 dark:border-gray-800">
+        <div class="text-2xl mb-2">📝</div>
+        <h3 class="font-bold text-gray-800 dark:text-gray-100 text-sm">마틴 파울러 블로그</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">피드백 루프를 "가이드(행동 전 방향 설정)"와 "센서(행동 후 결과 체크)"로 구분한 프레임워크 제시.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 최종 요약 -->
+  <section class="bg-gradient-to-br from-violet-600 to-sky-600 rounded-2xl p-8 text-white shadow-xl">
+    <h2 class="text-2xl font-black mb-6 text-center">🎯 최종 정리</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-center">
+      <div class="bg-white/10 rounded-xl p-4">
+        <div class="text-3xl mb-2">💬</div>
+        <div class="font-black text-lg mb-1">프롬프트 엔지니어링</div>
+        <div class="text-white/80 text-sm">AI에게 뭘 말할까</div>
+        <div class="mt-2 text-xs bg-white/20 rounded-full px-3 py-1 inline-block">2023</div>
+      </div>
+      <div class="bg-white/10 rounded-xl p-4">
+        <div class="text-3xl mb-2">📎</div>
+        <div class="font-black text-lg mb-1">컨텍스트 엔지니어링</div>
+        <div class="text-white/80 text-sm">AI에게 뭘 보여줄까</div>
+        <div

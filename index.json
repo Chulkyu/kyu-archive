@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-06-01T07:39:28",
+  "updated_at": "2026-06-01T08:34:50",
   "reports": [
+    {
+      "slug": "harness-engineering-ai-agent",
+      "category": "tech",
+      "video_id": "MFZX1I_REyg",
+      "title": "하네스 엔지니어링 15분 만에 이해시켜드립니다 | 개념, 핵심 원칙, AI 에이전트",
+      "channel": "이동훈의 루트AI",
+      "duration_string": "15분 14초",
+      "duration_seconds": 914,
+      "summary": "AI 에이전트를 제어하는 하네스 엔지니어링의 개념과 핵심 원칙 정리",
+      "video_url": "https://www.youtube.com/watch?v=MFZX1I_REyg",
+      "report_url": "tech/harness-engineering-ai-agent.html",
+      "thumbnail_url": "https://img.youtube.com/vi/MFZX1I_REyg/maxresdefault.jpg",
+      "processed_date": "2026-06-01"
+    },
     {
       "slug": "vibe-coding-solo-startup-bootcamp",
       "category": "business",
