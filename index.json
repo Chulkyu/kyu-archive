@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-06-01T08:34:50",
+  "updated_at": "2026-06-02T07:17:32",
   "reports": [
+    {
+      "slug": "stock-selling-timing-investment-strategy",
+      "category": "finance",
+      "video_id": "40BI92UQTLw",
+      "title": "⏰주식을 파는 타이밍 전략 & 투자 자금 마련하는 최고의 방법",
+      "channel": "미키피디아",
+      "duration_string": "25분 23초",
+      "duration_seconds": 1523,
+      "summary": "주식 매도 타이밍 3가지 기준과 투자 자금 마련을 위한 3주머니 전략",
+      "video_url": "https://www.youtube.com/watch?v=40BI92UQTLw",
+      "report_url": "finance/stock-selling-timing-investment-strategy.html",
+      "thumbnail_url": "https://img.youtube.com/vi/40BI92UQTLw/maxresdefault.jpg",
+      "processed_date": "2026-06-02"
+    },
     {
       "slug": "harness-engineering-ai-agent",
       "category": "tech",
