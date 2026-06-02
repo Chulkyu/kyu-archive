@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko" class="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강세장에 취하지 마세요 - 주식 고수들의 투자 전략 분석</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = { darkMode: 'class' }
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.replace('light', 'dark');
+  }
+</script>
+<style>
+  body { font-family: 'Pretendard', sans-serif; }
+  .hero-video { position: relative; padding-top: 56.25%; overflow: hidden; border-radius: 1rem; }
+  .hero-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  .gradient-text { background: linear-gradient(135deg, #7c3aed, #2563eb); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .card-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+  .quote-mark::before { content: '"'; font-size: 4rem; color: #7c3aed; line-height: 0.5; vertical-align: -0.6em; margin-right: 0.2em; }
+  @keyframes pulse-slow { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+  .pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+</style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+<!-- 상단 헤더 -->
+<header class="bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="text-2xl">📊</span>
+      <div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">지식인사이드 · 2026-05-29</div>
+        <div class="text-sm font-bold text-slate-700 dark:text-slate-200">투자 인사이트 레포트</div>
+      </div>
+    </div>
+    <span class="bg-violet-100 dark:bg-violet-900 text-violet-700 dark:text-violet-300 text-xs font-bold px-3 py-1 rounded-full">Finance</span>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-8 space-y-10">
+
+  <!-- 히어로: 영상 임베드 -->
+  <section>
+    <div class="hero-video shadow-2xl">
+      <iframe src="https://www.youtube.com/embed/YNAR4AiiiRU" title="강세장에 취하지 마세요" allowfullscreen loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <div class="mt-4 text-center">
+      <a href="https://www.youtube.com/watch?v=YNAR4AiiiRU" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-full transition-colors duration-200 shadow-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        원본 영상 보기 (41분 54초)
+      </a>
+    </div>
+  </section>
+
+  <!-- 영상 제목 & 한 줄 요약 -->
+  <section class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700">
+    <h1 class="text-xl md:text-2xl font-black text-slate-800 dark:text-slate-100 leading-tight mb-2">
+      "강세장에 취하지 마세요." 주식 고수들이 주목하는 시그널ㅣ지식인초대석: 합석 EP.5 (이선엽 X 윤지호)
+    </h1>
+    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">📺 지식인사이드 · 이선엽 대표 × 윤지호 평론가</p>
+    <div class="bg-gradient-to-r from-violet-50 to-blue-50 dark:from-violet-900/30 dark:to-blue-900/30 rounded-xl p-4 border-l-4 border-violet-500">
+      <p class="text-base font-bold text-violet-800 dark:text-violet-200">💡 한 줄 요약</p>
+      <p class="text-slate-700 dark:text-slate-200 mt-1 font-medium">코스피 8000시대, 강세장 속 냉철한 투자 전략과 리스크 관리법</p>
+    </div>
+  </section>
+
+  <!-- ===== 상단: 쉽게 이해하기 ===== -->
+  <section>
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-10 h-10 bg-violet-500 rounded-xl flex items-center justify-center text-white font-black text-lg">1</div>
+      <h2 class="text-2xl font-black gradient-text">쉽게 이해하기</h2>
+    </div>
+
+    <!-- KPI 박스 4개 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-slate-100 dark:border-slate-700 text-center card-hover">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400">8,000</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">코스피 돌파 포인트</div>
+        <div class="text-xs text-violet-500 mt-1">🚀 역대 최고</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-slate-100 dark:border-slate-700 text-center card-hover">
+        <div class="text-4xl font-black text-sky-600 dark:text-sky-400">10,000</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">목표 예상 포인트</div>
+        <div class="text-xs text-sky-500 mt-1">📈 낯설지 않은 숫자</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-slate-100 dark:border-slate-700 text-center card-hover">
+        <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400">AI</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">상승의 핵심 동력</div>
+        <div class="text-xs text-emerald-500 mt-1">💻 실적 기반 상승</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-slate-100 dark:border-slate-700 text-center card-hover">
+        <div class="text-4xl font-black text-amber-600 dark:text-amber-400">금리</div>
+        <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mt-1">최우선 모니터링</div>
+        <div class="text-xs text-amber-500 mt-1">⚠️ 핵심 위험 신호</div>
+      </div>
+    </div>
+
+    <!-- 핵심 포인트 카드 6개 -->
+    <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200 mb-4">🎯 핵심 포인트 6가지</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-l-4 border-l-violet-500 border-slate-100 dark:border-slate-700 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🏗️</span>
+          <div>
+            <div class="font-bold text-slate-800 dark:text-slate-100 mb-1">버블이 아닌 이익 중심 상승</div>
+            <div class="text-sm text-slate-600 dark:text-slate-300">코스피 8000은 AI 산업 실적에 기반한 견고한 상승. 단순 버블이 아니며 만 포인트도 가능하다는 시각이 제시됨. 애널리스트들의 목표주가(TP) 상향도 이익 기반이기 때문.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-l-4 border-l-rose-500 border-slate-100 dark:border-slate-700 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">📉</span>
+          <div>
+            <div class="font-bold text-slate-800 dark:text-slate-100 mb-1">금리 인하 연속성 = 경기침체 신호</div>
+            <div class="text-sm text-slate-600 dark:text-slate-300">연준의 금리 인하가 한 번이 아닌 연속적으로 나타날 경우 경기침체 신호. 금리 움직임을 최우선 시그널로 주시해야 함. 연준 정책 방향이 시장의 방향을 결정.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-l-4 border-l-amber-500 border-slate-100 dark:border-slate-700 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🔥</span>
+          <div>
+            <div class="font-bold text-slate-800 dark:text-slate-100 mb-1">FOMO vs 비이성적 과열 구분</div>
+            <div class="text-sm text-slate-600 dark:text-slate-300">FOMO(소외감)는 꼭지가 아님. '무조건 사야 해'라는 근거 없는 확신이 팽배할 때, 줄 서서 사는 군중심리가 생길 때가 진짜 비이성적 과열이자 꼭지 신호.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-l-4 border-l-emerald-500 border-slate-100 dark:border-slate-700 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🌱</span>
+          <div>
+            <div class="font-bold text-slate-800 dark:text-slate-100 mb-1">초보자는 지수 ETF + 불안기 진입</div>
+            <div class="text-sm text-slate-600 dark:text-slate-300">개별 종목보다 지수 ETF로 시작. 흥분된 장세가 아닌 불안기에 진입하는 것이 원칙. 영구 자본 손실 방지가 투자의 핵심이며, 변동성은 위험이 아님.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-l-4 border-l-sky-500 border-slate-100 dark:border-slate-700 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">💡</span>
+          <div>
+            <div class="font-bold text-slate-800 dark:text-slate-100 mb-1">분석보다 상식이 강하다</div>
+            <div class="text-sm text-slate-600 dark:text-slate-300">'반도체가 좋다'는 단순한 판단을 길게 들고 가는 전략이 복잡한 단기 매매보다 수익률이 높음. 정보의 빠르기보다 흐름을 읽는 기필이 더 중요한 시대.</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-md border border-l-4 border-l-orange-500 border-slate-100 dark:border-slate-700 card-hover">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">🌍</span>
+          <div>
+            <div class="font-bold text-slate-800 dark:text-slate-100 mb-1">지정학적 변수 집중 모니터링</div>
+            <div class="text-sm text-slate-600 dark:text-slate-300">호르무즈 해협 봉쇄, 미중 대만 협상 등이 올여름 시장의 변곡점. 유가-물가-금리 연쇄 반응에 주목. 트럼프의 정치적 이해관계가 시장에 직접 영향.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG: 코스피 상승 사이클 다이어그램 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700 mb-8">
+      <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200 mb-4">📈 코스피 상승 사이클 구조도</h3>
+      <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" class="w-full">
+        <defs>
+          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1"/>
+            <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1"/>
+          </linearGradient>
+          <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+          </marker>
+        </defs>
+        <!-- 배경 -->
+        <rect x="0" y="0" width="800" height="320" rx="12" fill="transparent"/>
+        <!-- 단계 박스들 -->
+        <!-- 1단계: AI 산업 성장 -->
+        <rect x="20" y="120" width="130" height="70" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+        <text x="85" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#5b21b6">AI 산업</text>
+        <text x="85" y="163" text-anchor="middle" font-size="11" font-weight="bold" fill="#5b21b6">실적 성장</text>
+        <text x="85" y="178" text-anchor="middle" font-size="10" fill="#7c3aed">🤖 메모리 수요 급증</text>
+        <!-- 화살표 -->
+        <line x1="152" y1="155" x2="185" y2="155" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrow)"/>
+        <!-- 2단계: 반도체 주가 급등 -->
+        <rect x="188" y="105" width="130" height="100" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <text x="253" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">삼성전자</text>
+        <text x="253" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e40af">하이닉스 급등</text>
+        <text x="253" y="165" text-anchor="middle" font-size="10" fill="#2563eb">📊 지수 비중 50%+</text>
+        <text x="253" y="180" text-anchor="middle" font-size="10" fill="#2563eb">사이드카 빈발</text>
+        <!-- 화살표 -->
+        <line x1="320" y1="155" x2="353" y2="155" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrow)"/>
+        <!-- 3단계: 코스피 8000 -->
+        <rect x="356" y="80" width="130" height="150" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+        <text x="421" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">KOSPI</text>
+        <text x="421" y="138" text-anchor="middle" font-size="22" font-weight="900" fill="#16a34a">8,000</text>
+        <text x="421" y="160" text-anchor="middle" font-size="10" fill="#15803d">▲ 역대 최고</text>
+        <text x="421" y="178" text-anchor="middle" font-size="10" fill="#15803d">만 포인트 가시권</text>
+        <text x="421" y="196" text-anchor="middle" font-size="10" fill="#15803d">🎯 목표: 10,000</text>
+        <!-- 화살표 -->
+        <line x1="488" y1="155" x2="521" y2="155" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow)"/>
+        <!-- 4단계: 위험 신호 -->
+        <rect x="524" y="105" width="130" height="100" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+        <text x="589" y="133" text-anchor="middle" font-size="11" font-weight="bold" fill="#92400e">위험 모니터링</text>
+        <text x="589" y="150" text-anchor="middle" font-size="10" fill="#b45309">⚠️ 연준 금리 연속인하</text>
+        <text x="589" y="166" text-anchor="middle" font-size="10" fill="#b45309">🌍 지정학 리스크</text>
+        <text x="589" y="182" text-anchor="middle" font-size="10" fill="#b45309">🔥 비이성적 과열</text>
+        <!-- 화살표 -->
+        <line x1="656" y1="155" x2="689" y2="155" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrow)"/>
+        <!-- 5단계: 대응 전략 -->
+        <rect x="692" y="110" width="95" height="90" rx="10" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+        <text x="739" y="138" text-anchor="middle" font-size="11" font-weight="bold" fill="#9d174d">분할 매도</text>
+        <text x="739" y="155" text-anchor="middle" font-size="10" fill="#be185d">수익 실현</text>
+        <text x="739" y="170" text-anchor="middle" font-size="10" fill="#be185d">리밸런싱</text>
+        <text x="739" y="185" text-anchor="middle" font-size="10" fill="#be185d">📉 대응</text>
+        <!-- 상단 레이블 -->
+        <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold" fill="#64748b">이익 기반 상승 → 버블 가능성 → 출구 전략</text>
+        <text x="400" y="50" text-anchor="middle" font-size="12" fill="#94a3b8">이선엽 × 윤지호 투자 사이클 분석</text>
+        <!-- 하단 범례 -->
+        <rect x="20" y="285" width="12" height="12" fill="#7c3aed" rx="2"/>
+        <text x="38" y="296" font-size="10" fill="#64748b">AI·반도체 성장</text>
+        <rect x="155" y="285" width="12" height="12" fill="#16a34a" rx="2"/>
+        <text x="173" y="296" font-size="10" fill="#64748b">지수 신고가</text>
+        <rect x="270" y="285" width="12" height="12" fill="#d97706" rx="2"/>
+        <text x="288" y="296" font-size="10" fill="#64748b">리스크 신호</text>
+        <rect x="380" y="285" width="12" height="12" fill="#be185d" rx="2"/>
+        <text x="398" y="296" font-size="10" fill="#64748b">출구 전략</text>
+      </svg>
+    </div>
+
+    <!-- FOMO vs 비이성적 과열 비교표 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700">
+      <h3 class="text-lg font-bold text-slate-700 dark:text-slate-200 mb-4">⚖️ FOMO vs 비이성적 과열 — 핵심 차이점</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-slate-100 dark:bg-slate-700">
+              <th class="p-3 text-left font-bold text-slate-700 dark:text-slate-200 rounded-tl-lg">구분</th>
+              <th class="p-3 text-center font-bold text-amber-600 dark:text-amber-400">😰 FOMO (공포)</th>
+              <th class="p-3 text-center font-bold text-rose-600 dark:text-rose-400 rounded-tr-lg">🔥 비이성적 과열 (꼭지)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t border-slate-100 dark:border-slate-700">
+              <td class="p-3 font-semibold text-slate-600 dark:text-slate-300">심리 상태</td>
+              <td class="p-3 text-center text-slate-700 dark:text-slate-200">소외감, 불안함<br><span class="text-xs text-slate-500">"남들만 돈 벌었어"</span></td>
+              <td class="p-3 text-center text-slate-700 dark:text-slate-200">근거 없는 강한 확신<br><span class="text-xs text-slate-500">"무조건 올라가!"</span></td>
+            </tr>
+            <tr class="border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-750">
+              <td class="p-3 font-semibold text-slate-600 dark:text-slate-300">매수 방식</td>
+              <td class="p-3 text-center text-slate-700 dark:text-slate-200">싸게 사려는 노력 있음<br><span class="text-xs text-slate-500">합리적 접근 시도</span></td>
+              <td class="p-3 text-center text-slate-700 dark:text-slate-200">가격 무관 묻지마 매수<br><span class="text-xs text-slate-500">줄 서서 사는 군중</span></td>
+            </tr>
+            <tr class="border-t border-slate-100 dark:border-slate-700">
+              <td class="p-3 font-semibold text-slate-600 dark:text-slate-300">꼭지 신호?</td>
+              <td class="p-3 text-center"><span class="bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300 px-2 py-1 rounded-full text-xs font-bold">❌ 아직 꼭지 아님</span></td>
+              <td class="p-3 text-center"><span class="bg-rose-100 dark:bg-rose-900 text-rose-700 dark:text-rose-300 px-2 py-1 rounded-full text-xs font-bold">✅ 강력한 꼭지 신호</span></td>
+            </tr>
+            <tr class="border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-750">
+              <td class="p-3 font-semibold text-slate-600 dark:text-slate-300">대응 전략</td>
+              <td class="p-3 text-center text-slate-700 dark:text-slate-200">분할 매수 가능<br><span class="text-xs text-slate-500">조심스럽게 진입</span></td>
+              <td class="p-3 text-center text-slate-700 dark:text-slate-200">분할 매도 시작<br><span class="text-xs text-slate-500">수익 실현 준비</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 하단: 자세히 알아보기 ===== -->
+  <section>
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-10 h-10 bg-sky-500 rounded-xl flex items-center justify-center text-white font-black text-lg">2</div>
+      <h2 class="text-2xl font-black gradient-text">자세히 알아보기</h2>
+    </div>
+
+    <!-- 섹션 1: 코스피 8000, 어떻게 봐야 하나 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700 mb-6">
+      <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2">
+        <span class="text-2xl">🏦</span> 코스피 8000, 버블인가 아닌가?
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="space-y-3">
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">이선엽 대표는 코스피 8000을 두고 "역사상 이 정도 각도로 올라온 건 처음 봤다"며 놀라움을 표했습니다. 하지만 이 상승이 단순한 버블이 아닌, <strong class="text-violet-600 dark:text-violet-400">이익 기반의 견고한 상승</strong>이기 때문에 만 포인트도 충분히 가능하다고 봤습니다.</p>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">특히 한국 지수의 1~3위가 모두 메모리 반도체 기업(삼성전자, SK하이닉스, SK스퀘어)으로 채워져 있어, <strong class="text-sky-600 dark:text-sky-400">AI 수요 = 메모리 수요 = 한국 지수 상승</strong>이라는 직접적인 연결 고리가 형성됐습니다.</p>
+          <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">윤지호 평론가는 "기존의 경험이 오히려 투자 실패를 부른다"고 경고하며, 뉴노멀에 적응하지 못한 투자자들이 작은 충격에도 급락 반응을 보인다고 분석했습니다.</p>
+        </div>
+        <div class="space-y-3">
+          <!-- 지수 상승 진행 바 -->
+          <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
+            <div class="text-sm font-bold text-slate-700 dark:text-slate-200 mb-3">📊 코스피 주요 레벨 달성률</div>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1">
+                  <span>2,000 포인트 (기준선)</span><span>100%</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2.5">
+                  <div class="bg-slate-400 h-2.5 rounded-full" style="width:20%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1">
+                  <span>5,000 포인트 (예상 돌파)</span><span>달성</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2.5">
+                  <div class="bg-violet-500 h-2.5 rounded-full" style="width:50%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1">
+                  <span>8,000 포인트 (현재)</span><span>달성 ✅</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2.5">
+                  <div class="bg-emerald-500 h-2.5 rounded-full" style="width:80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1">
+                  <span>10,000 포인트 (목표)</span><span>진행중 🎯</span>
+                </div>
+                <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2.5">
+                  <div class="bg-amber-500 h-2.5 rounded-full pulse-slow" style="width:60%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 인용구 -->
+      <div class="bg-violet-50 dark:bg-violet-900/30 rounded-xl p-5 border-l-4 border-violet-500">
+        <p class="text-slate-700 dark:text-slate-200 text-sm italic leading-relaxed quote-mark">이것이 영원히 지속될 거라고 저는 생각하지는 않습니다. 하지만 이런 각도로 올라오는 시장입니다. 이익 기반의 상승세이기 때문에 상당히 견고하고 놀랍다</p>
+        <p class="text-violet-600 dark:text-violet-400 text-xs font-bold mt-2">— 이선엽 대표 ("이 정도 강세라면 역사상 기록에 남는 시장이 될 거라고 판단한 것")</p>
+      </div>
+    </div>
+
+    <!-- SVG: 금리와 시장의 관계 플로우차트 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700 mb-6">
+      <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2">
+        <span class="text-2xl">🏛️</span> 연준 금리 움직임과 시장 해석법
+      </h3>
+      <svg viewBox="0 0 780 280" xmlns="http://www.w3.org/2000/svg" class="w-full mb-4">
+        <defs>
+          <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#2563eb"/>
+          </marker>
+          <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#dc2626"/>
+          </marker>
+          <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#16a34a"/>
+          </marker>
+        </defs>
+        <!-- 중앙: 연준 결정 -->
+        <rect x="290" y="110" width="200" height="60" rx="12" fill="#1e40af" />
+        <text x="390" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🏛️ 연준 금리 결정</text>
+        <text x="390" y="155" text-anchor="middle" font-size="11" fill="#bfdbfe">주시해야 할 최우선 지표</text>
+        <!-- 왼쪽 위: 금리 동결 -->
+        <rect x="20" y="20" width="160" height="70" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+        <text x="100" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">금리 동결 / 유지</text>
+        <text x="100" y="62" text-anchor="middle" font-size="10" fill="#16a34a">경제 견조 신호</text>
+        <text x="100" y="78" text-anchor="middle" font-size="10" fill="#16a34a">✅ 강세장 지속 가능</text>
+        <line x1="183" y1="55" x2="287" y2="125" stroke="#16a34a" stroke-width="2" marker-end="url(#arrowGreen)"/>
+        <!-- 오른쪽 위: 금리 인하 1회 -->
+        <rect x="600" y="20" width="160" height="70" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+        <text x="680" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400e">금리 1회 인하</text>
+        <text x="680" y="62" text-anchor="middle" font-size="10" fill="#b45309">조심스러운 신호</text>
+        <text x="680" y="78" text-anchor="middle" font-size="10" fill="#b45309">⚠️ 모니터링 필요</text>
+        <line x1="597" y1="55" x2="493" y2="125" stroke="#d97706" stroke-width="2" marker-end="url(#arrowBlue)"/>
+        <!-- 왼쪽 아래: 금리 연속 인하 -->
+        <rect x="20" y="195" width="200" height="75" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/>
+        <text x="120" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">⚠️ 금리 연속 인하</text>
+        <text x="120" y="238" text-anchor="middle" font-size="10" fill="#dc2626">= 경기침체 사전 신호</text>
+        <text x="120" y="255" text-anchor="middle" font-size="10" fill="#dc2626">6개월 후 위기 도래 경고</text>
+        <line x1="220" y1="230" x2="285" y2="175" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+        <!-- 오른쪽 아래: 이중 천정 -->
+        <rect x="555" y="195" width="210" height="75" rx="10" fill="#fce7f3" stroke="#be185d" stroke-width="2"/>
+        <text x="660" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#9d174d">시장 이중천정 패턴</text>
+        <text x="660" y="235" text-anchor="middle" font-size="10" fill="#be185d">악재 무시 → 재매수</text>
+        <text x="660" y="252" text-anchor="middle" font-size="10" fill="#be185d">📉 결국 고점 형성</text>
+        <line x1="555" y1="230" x2="493" y2="180" stroke="#be185d" stroke-width="2" marker-end="url(#arrowRed)"/>
+        <!-- 하단 중앙 설명 -->
+        <text x="390" y="270" text-anchor="middle" font-size="11" fill="#64748b">핵심: "왜 인하하는가? 한 번인가 연속인가를 반드시 확인할 것"</text>
+      </svg>
+      <div class="bg-rose-50 dark:bg-rose-900/20 rounded-xl p-4 border-l-4 border-rose-500">
+        <p class="text-slate-700 dark:text-slate-200 text-sm leading-relaxed">
+          <strong class="text-rose-600 dark:text-rose-400">윤지호의 핵심 조언:</strong> "만약에 이 악재가 별 문제가 없다면 연준은 금리를 내리지 않습니다. 갑자기 이건 아닌 것 같다며 금리를 급격하게 한두 번 인하하기 시작하면 그거는 위기가 도래했다는 시그널이 됩니다." (만약 연준이 특별한 이유 없이 연속으로 금리를 내린다면, 이미 경기침체가 시작되었다는 신호로 봐야 함)
+        </p>
+      </div>
+    </div>
+
+    <!-- 섹션 3: 지정학적 리스크 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700 mb-6">
+      <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2">
+        <span class="text-2xl">🌍</span> 올여름 시장을 바꿀 지정학 변수
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-4 border border-orange-200 dark:border-orange-800">
+          <div class="text-2xl mb-2">🛢️</div>
+          <div class="font-bold text-orange-700 dark:text-orange-400 text-sm mb-2">호르무즈 해협 봉쇄</div>
+          <div class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
+            <p>• 봉쇄 장기화 시 각국 원유 재고 급감</p>
+            <p>• 가수요 발생 → 유가 급등</p>
+            <p>• 물가↑ → 연준 금리 인상 압박</p>
+            <p>• 트럼프 중간선거에 치명적</p>
+          </div>
+        </div>
+        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 border border-blue-200 dark:border-blue-800">
+          <div class="text-2xl mb-2">🇺🇸🇨🇳</div>
+          <div class="font-bold text-blue-700 dark:text-blue-400 text-sm mb-2">미중 협상 — 대만 카드</div>
+          <div class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
+            <p>• 트럼프: 이란 압박 위해 중국 역할 기대</p>
+            <p>• 중국 요구: 대만 무기 판매 연기</p>
+            <p>• GPU(H200) 제공 → 대만 무기 연기</p>
+            <p>• 중국이 이란 설득 가능성</p>
+          </div>
+        </div>
+        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-4 border border-purple-200 dark:border-purple-800">
+          <div class="text-2xl mb-2">🏝️</div>
+          <div class="font-bold text-purple-700 dark:text-purple-400 text-sm mb-2">대만 회색작전 리스크</div>
+          <div class="text-xs text-slate-600 dark:text-slate-400 space-y-1">
+            <p>• 대만 에너지: LNG 12일치만 보유</p>
+            <p>• 해협 봉쇄 2주면 체제 붕괴 위험</p>
+            <p>• 방어 무기 미수령 상태</p>
+            <p>• 새로운 지정학 파장 시작 가능</p>
+          </div>
+        </div>
+      </div>
+      <!-- 연쇄 반응 진행바 -->
+      <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
+        <div class="text-sm font-bold text-slate-700 dark:text-slate-200 mb-3">⚡ 지정학 리스크 → 시장 연쇄 반응 강도</div>
+        <div class="space-y-2">
+          <div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1"><span>호르무즈 봉쇄 해소 시 긍정 효과</span><span>높음</span></div>
+            <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2">
+              <div class="bg-emerald-500 h-2 rounded-full" style="width:82%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1"><span>대만 리스크 고조 시 시장 충격</span><span>매우 높음</span></div>
+            <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2">
+              <div class="bg-rose-500 h-2 rounded-full" style="width:90%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1"><span>이란 협상 타결 가능성 (추정)</span><span>중간</span></div>
+            <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2">
+              <div class="bg-amber-500 h-2 rounded-full" style="width:60%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-600 dark:text-slate-400 mb-1"><span>올 여름 변곡점 도래 확률</span><span>높음</span></div>
+            <div class="w-full bg-slate-200 dark:bg-slate-600 rounded-full h-2">
+              <div class="bg-violet-500 h-2 rounded-full" style="width:75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 섹션 4: SVG 투자자 유형별 전략 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700 mb-6">
+      <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-5 flex items-center gap-2">
+        <span class="text-2xl">🎯</span> 투자자 유형별 맞춤 전략
+      </h3>
+      <svg viewBox="0 0 780 240" xmlns="http://www.w3.org/2000/svg" class="w-full mb-4">
+        <!-- 초보자 -->
+        <rect x="10" y="20" width="230" height="200" rx="14" fill="#f3e8ff" stroke="#9333ea" stroke-width="2"/>
+        <text x="125" y="50" text-anchor="middle" font-size="20">🌱</text>
+        <text x="125" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#6b21a8">초보 투자자</text>
+        <line x1="30" y1="82" x2="220" y2="82" stroke="#d8b4fe" stroke-width="1"/>
+        <text x="125" y="103" text-anchor="middle" font-size="11" fill="#7c3aed">✅ 지수 ETF로 시작</text>
+        <text x="125" y="122" text-anchor="middle" font-size="11" fill="#7c3aed">✅ 불안기(하락기)에 진입</text>
+        <text x="125" y="141" text-anchor="middle" font-size="11" fill="#7c3aed">✅ 영구 자본 손실 방지</text>
+        <text x="125" y="160" text-anchor="middle" font-size="11" fill="#7c3aed">❌ 흥분된 장세에 진입</text>
+        <text x="125" y="179" text-anchor="middle" font-size="11" fill="#7c3aed">❌ 개별 종목 묻지마</text>
+        <text x="125" y="198" text-anchor="middle" font-size="11" fill="#7c3aed">❌ 레버리지/신용 사용</text>
+        <!-- 중급자 -->
+        <rect x="275" y="20" width="230" height="200" rx="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+        <text x="390" y="50" text-anchor="middle" font-size="20">📈</text>
+        <text x="390" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">중급 투자자</text>
+        <line x1="295" y1="82" x2="485" y2="82" stroke="#93c5fd" stroke-width="1"/>
+        <text x="390" y="103" text-anchor="middle" font-size="11" fill="#2563eb">✅ 산업 테마 ETF</text>
+        <text x="390" y="122" text-anchor="middle" font-size="11" fill="#2563eb">✅ 매출·이익 성장 분석</text>
+        <text x="390" y="141" text-anchor="middle" font-size="11" fill="#2563eb">✅ AI·반도체 집중</text>
+        <text x="390" y="160" text-anchor="middle" font-size="11" fill="#2563eb">✅ 분할 매수 전략</text>
+        <text x="390" y="179" text-anchor="middle" font-size="11" fill="#2563eb">⚠️ 금리 모니터링</text>
+        <text x="390" y="198" text-anchor="middle" font-size="11" fill="#2563eb">⚠️ 지정학 변수 주시</text>
+        <!-- 고급자 -->
+        <rect x="540" y="20" width="230" height="200" rx="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+        <text x="655" y="50" text-anchor="middle" font-size="20">🏆</text>
+        <text x="655" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803d">장기 투자자</text>
+        <line x1="560" y1="82" x2="750" y2="82" stroke="#86efac" stroke-width="1"/>
+        <text x="655" y="103" text-anchor="middle" font-size="11" fill="#16a34a">✅ 좋은 기업 + 좋은 가격</text>
+        <text x="655" y="122" text-anchor="middle" font-size="11" fill="#16a34a">✅ ROE 높은 기업 선별</text>
+        <text x="655" y="141" text-anchor="middle" font-size="11" fill="#16a34a">✅ 버블까지 들고 가기</text>
+        <text x="655" y="160" text-anchor="middle" font-size="11" fill="#16a34a">✅ 변화 감지 → 선진입</text>
+        <text x="655" y="179" text-anchor="middle" font-size="11" fill="#16a34a">✅ 시세 하루 2번만 확인</text>
+        <text x="655" y="198" text-anchor="middle" font-size="11" fill="#16a34a">✅ 상식적 판단 우선</text>
+      </svg>
+      <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-4 border-l-4 border-emerald-500">
+        <p class="text-slate-700 dark:text-slate-200 text-sm leading-relaxed">
+          <strong class="text-emerald-600 dark:text-emerald-400">이선엽의 핵심 메시지:</strong> "분석을 오래 해봤지만 분석은 상식을 이기지 못합니다. 반도체가 제일 좋대. 사실 그게 끝이에요." — 복잡한 분석보다 단순하고 상식적인 큰 그림을 오래 들고 가는 전략이 가장 효과적이라는 30년 투자 인생의 결론.
+        </p>
+      </div>
+    </div>
+
+    <!-- 섹션 5: 가치평가 기초 -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-md border border-slate-100 dark:border-slate-700 mb-6">
+      <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2">
+        <span class="text-2xl">🔍</span> 주가와 기업 가치 — 초보자를 위한 기초
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5">
+        <div class="space-y-4">
+          <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
+            <div class="font-bold text-slate-700 dark:text-slate-200 text-sm mb-2">💰 주가 ≠ 기업의 좋고 나쁨</div>
+            <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">삼성전자(20만원)와 SK하이닉스(100만원)를 단순 주가로 비교하면 안 됩니다. PER(주가/이익)로 보면 오히려 하이닉스가 더 쌀 수 있습니다. 아파트 평당가처럼, 위치와 조건이 다른 부동산을 면적만으로 비교할 수 없는 것과 같습니다.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
+            <div class="font-bold text-slate-700 dark:text-slate-200 text-sm mb-2">📊 초보자가 봐야 할 핵심 수치</div>
+            <div class="space-y-1 text-xs text-slate-600 dark:text-slate-300">
+              <div class="flex items-center gap-2"><span class="text-emerald-500 font-bold">1위</span> 매출 성장률 — 기업이 성장하고 있는가?</div>
+              <div class="flex items-center gap-2"><span class="text-sky-500 font-bold">2위</span> 이익 증가율 — 돈을 잘 벌고 있는가?</div>
+              <div class="flex items-center gap-2"><span class="text-violet-500 font-bold">3위</span> ROE — 자기 자본으로 얼마나 버는가?</div>
+              <div class="flex items-center gap-2"><span class="text-amber-500 font-bold">4위</span> 시장이 무엇을 보는지 — 실적인가? 성장인가?</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-700/50 rounded-xl p-4">
+          <div class="font-bold text-slate-700 dark:text-slate-200 text-sm mb-3">🏆 가치 있는 기업의 특징 (해자 = Moat)</div>
+          <div class="space

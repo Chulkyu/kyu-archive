@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-06-02T07:17:32",
+  "updated_at": "2026-06-02T07:29:15",
   "reports": [
+    {
+      "slug": "korea-stock-market-bull-signal",
+      "category": "finance",
+      "video_id": "YNAR4AiiiRU",
+      "title": "\"강세장에 취하지 마세요.\" 주식 고수들이 주목하는 시그널ㅣ지식인초대석: 합석 EP.5 (이선엽 X 윤지호)",
+      "channel": "지식인사이드",
+      "duration_string": "41분 54초",
+      "duration_seconds": 2514,
+      "summary": "코스피 8000시대, 강세장 속 냉철한 투자 전략과 리스크 관리법",
+      "video_url": "https://www.youtube.com/watch?v=YNAR4AiiiRU",
+      "report_url": "finance/korea-stock-market-bull-signal.html",
+      "thumbnail_url": "https://img.youtube.com/vi/YNAR4AiiiRU/maxresdefault.jpg",
+      "processed_date": "2026-06-02"
+    },
     {
       "slug": "stock-selling-timing-investment-strategy",
       "category": "finance",
