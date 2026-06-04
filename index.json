@@ -12,9 +12,10 @@
       "duration_seconds": 1450,
       "summary": "AI 에이전트를 통제하는 하네스 엔지니어링의 개념과 4가지 핵심 구성요소 정리",
       "video_url": "https://www.youtube.com/watch?v=6gvnDSAcZww",
-      "report_url": "tech/harness-engineering-ai-agent-control.html",
+      "report_url": "tech/youtube/harness-engineering-ai-agent-control.html",
       "thumbnail_url": "https://img.youtube.com/vi/6gvnDSAcZww/maxresdefault.jpg",
-      "processed_date": "2026-06-04"
+      "processed_date": "2026-06-04",
+      "type": "youtube"
     },
     {
       "slug": "korea-stock-market-bull-signal",
