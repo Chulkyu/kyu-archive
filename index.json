@@ -1,7 +1,21 @@
 {
   "version": 1,
-  "updated_at": "2026-06-02T07:29:15",
+  "updated_at": "2026-06-04T08:50:31",
   "reports": [
+    {
+      "slug": "harness-engineering-ai-agent-control",
+      "category": "tech",
+      "video_id": "6gvnDSAcZww",
+      "title": "프롬프트 엔지니어링은 끝났습니다: 이제 '하네스'의 시대입니다",
+      "channel": "실밸개발자",
+      "duration_string": "24분 10초",
+      "duration_seconds": 1450,
+      "summary": "AI 에이전트를 통제하는 하네스 엔지니어링의 개념과 4가지 핵심 구성요소 정리",
+      "video_url": "https://www.youtube.com/watch?v=6gvnDSAcZww",
+      "report_url": "tech/harness-engineering-ai-agent-control.html",
+      "thumbnail_url": "https://img.youtube.com/vi/6gvnDSAcZww/maxresdefault.jpg",
+      "processed_date": "2026-06-04"
+    },
     {
       "slug": "korea-stock-market-bull-signal",
       "category": "finance",

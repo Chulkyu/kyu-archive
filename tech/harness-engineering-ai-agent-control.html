@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>하네스 엔지니어링: AI 에이전트를 통제하는 새로운 기술</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = { darkMode: 'class' }
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    document.documentElement.classList.toggle('dark', e.matches);
+  });
+</script>
+<style>
+  * { font-family: 'Pretendard', 'Apple SD Gothic Neo', sans-serif; }
+  .gradient-hero { background: linear-gradient(135deg, #6d28d9 0%, #4f46e5 40%, #0ea5e9 100%); }
+  .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+  .flow-arrow { animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+</style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+<!-- 헤더 -->
+<header class="gradient-hero text-white py-8 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="badge bg-white/20 text-white">⚙️ Tech</span>
+      <span class="badge bg-white/20 text-white">🤖 AI Engineering</span>
+      <span class="text-white/70 text-sm">2026-04-01 · 24분 10초</span>
+    </div>
+    <h1 class="text-2xl md:text-4xl font-black leading-tight mb-2">프롬프트 엔지니어링은 끝났습니다:<br class="hidden md:block"> 이제 '하네스'의 시대입니다</h1>
+    <p class="text-white/80 text-base md:text-lg font-medium mt-3">AI 에이전트를 통제하는 하네스 엔지니어링의 개념과 4가지 핵심 구성요소 정리</p>
+    <p class="text-white/60 text-sm mt-2">채널: 실밸개발자</p>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-10 space-y-16">
+
+  <!-- 유튜브 임베드 -->
+  <section>
+    <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl" style="padding-top:56.25%">
+      <iframe
+        src="https://www.youtube.com/embed/6gvnDSAcZww"
+        class="absolute top-0 left-0 w-full h-full"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="mt-4 flex justify-center">
+      <a href="https://www.youtube.com/watch?v=6gvnDSAcZww" target="_blank"
+         class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition-colors shadow-lg">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        원본 영상 보기
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 상단: 쉽게 이해하기 ===== -->
+  <section>
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-1 h-8 bg-violet-500 rounded-full"></div>
+      <h2 class="text-2xl font-black">쉽게 이해하기</h2>
+    </div>
+
+    <!-- 한 줄 요약 -->
+    <div class="bg-gradient-to-r from-violet-500 to-indigo-500 rounded-2xl p-6 text-white mb-8 shadow-xl">
+      <p class="text-xs font-bold uppercase tracking-widest opacity-80 mb-2">📌 핵심 한 줄 요약</p>
+      <p class="text-lg md:text-xl font-bold leading-snug">AI 에이전트를 통제하는 하네스 엔지니어링의 개념과 4가지 핵심 구성요소 정리</p>
+    </div>
+
+    <!-- KPI 박스 -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow card-hover border border-slate-100 dark:border-slate-700">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400">3명</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">OpenAI 엔지니어</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow card-hover border border-slate-100 dark:border-slate-700">
+        <div class="text-4xl font-black text-sky-600 dark:text-sky-400">5개월</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">제품 배포 소요시간</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow card-hover border border-slate-100 dark:border-slate-700">
+        <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400">0줄</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">직접 작성 코드</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center shadow card-hover border border-slate-100 dark:border-slate-700">
+        <div class="text-4xl font-black text-amber-600 dark:text-amber-400">4가지</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 mt-1 font-medium">하네스의 핵심 기둥</div>
+      </div>
+    </div>
+
+    <!-- 핵심 포인트 카드 그리드 -->
+    <h3 class="text-xl font-black mb-5">🎯 핵심 포인트</h3>
+    <div class="grid md:grid-cols-2 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow card-hover border border-violet-100 dark:border-violet-900/40">
+        <div class="text-3xl mb-3">🚧</div>
+        <h4 class="font-bold text-base mb-2 text-violet-700 dark:text-violet-300">프롬프트만으로는 부족하다</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">프롬프트·컨텍스트 엔지니어링만으로는 부족하며, AI가 정보를 알아도 엉뚱한 행동을 하는 '규칙과 울타리'의 문제가 존재한다.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow card-hover border border-sky-100 dark:border-sky-900/40">
+        <div class="text-3xl mb-3">🔧</div>
+        <h4 class="font-bold text-base mb-2 text-sky-700 dark:text-sky-300">하네스 엔지니어링의 핵심 철학</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">AI 에이전트가 실수했을 때 프롬프트를 고치는 대신, 그 실패가 구조적으로 반복 불가능하도록 시스템 자체를 바꾸는 기술이다.</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow card-hover border border-emerald-100 dark:border-emerald-900/40">
+        <div class="text-3xl mb-3">🏗️</div>
+        <h4 class="font-bold text-base mb-2 text-emerald-700 dark:text-emerald-300">4가지 기둥</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">①기계가 읽는 컨텍스트 파일 ②린터·구조적 테스트·pre-commit hook으로 규칙 자동 강제 ③도구 접근 권한 제한(물리적 차단) ④AI 생성 코드의 주기적 품질 점검</p>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow card-hover border border-amber-100 dark:border-amber-900/40">
+        <div class="text-3xl mb-3">📈</div>
+        <h4 class="font-bold text-base mb-2 text-amber-700 dark:text-amber-300">개발자 역할의 상향 이동</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">코드 한 줄 작성에서 AI가 실수할 수 없는 환경을 설계하고 최종 책임을 지는 상위 레벨로 역할이 이동한다.</p>
+      </div>
+    </div>
+
+    <!-- AI 방법론 4가지 축 비교 -->
+    <h3 class="text-xl font-black mb-5">🔄 AI 활용 방법론 4가지 축</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow mb-10 border border-slate-100 dark:border-slate-700">
+      <div class="space-y-5">
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-sm font-bold text-violet-600 dark:text-violet-400">프롬프트 엔지니어링 — AI에게 말을 잘 거는 기술</span>
+            <span class="text-xs text-slate-400 font-semibold">기초</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-violet-400 h-3 rounded-full" style="width:30%"></div>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">구체적인 요청으로 AI 출력 품질 향상, 그러나 천장이 존재</p>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-sm font-bold text-sky-600 dark:text-sky-400">컨텍스트 엔지니어링 — 필요한 정보를 정확하게 제공</span>
+            <span class="text-xs text-slate-400 font-semibold">심화</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-sky-400 h-3 rounded-full" style="width:55%"></div>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">프로젝트 구조, API 문서 등 필요한 것만 제공 — 많이가 아닌 정확히</p>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-sm font-bold text-emerald-600 dark:text-emerald-400">하네스 엔지니어링 — AI가 실수할 수 없는 환경 설계</span>
+            <span class="text-xs text-emerald-600 dark:text-emerald-400 font-bold">★ 오늘의 주인공</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-emerald-500 h-3 rounded-full" style="width:80%"></div>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">규칙·울타리·테스트로 AI 행동을 시스템적으로 통제</p>
+        </div>
+        <div>
+          <div class="flex justify-between mb-1">
+            <span class="text-sm font-bold text-amber-600 dark:text-amber-400">에이전틱 엔지니어링 — 자율 워크플로우 설계</span>
+            <span class="text-xs text-slate-400 font-semibold">최상위</span>
+          </div>
+          <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3">
+            <div class="bg-amber-400 h-3 rounded-full" style="width:95%"></div>
+          </div>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">멀티 에이전트 조율, 추론 루프 설계 — 하네스와 함께 동작</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 핵심 인용구 -->
+    <blockquote class="relative bg-gradient-to-br from-violet-50 to-indigo-50 dark:from-violet-950/40 dark:to-indigo-950/40 border-l-4 border-violet-500 rounded-2xl p-6 mb-10 shadow">
+      <svg class="absolute top-4 right-4 w-8 h-8 text-violet-200 dark:text-violet-800" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+      <p class="text-base md:text-lg font-bold text-violet-800 dark:text-violet-200 leading-relaxed italic">
+        "에이전트가 규칙을 어겼을 때, 더 잘해봐라고 프롬프트를 고치는 게 아닙니다. 그 실패가 구조적으로 반복 불가능하도록 Harness를 고치는 겁니다."
+      </p>
+      <p class="text-sm text-violet-600 dark:text-violet-400 mt-3 font-semibold">— 실밸개발자, 영상 본문 중</p>
+    </blockquote>
+
+  </section>
+
+  <!-- ===== 하단: 자세히 알아보기 ===== -->
+  <section>
+    <div class="flex items-center gap-3 mb-8">
+      <div class="w-1 h-8 bg-sky-500 rounded-full"></div>
+      <h2 class="text-2xl font-black">자세히 알아보기</h2>
+    </div>
+
+    <!-- 말과 마구 비유 SVG -->
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow mb-10 border border-slate-100 dark:border-slate-700">
+      <h3 class="text-lg font-black mb-4 text-center">🐴 말과 마구(Harness) 비유</h3>
+      <svg viewBox="0 0 760 220" class="w-full max-w-3xl mx-auto" xmlns="http://www.w3.org/2000/svg">
+        <!-- 왼쪽: 말 단독 -->
+        <rect x="10" y="20" width="200" height="180" rx="16" fill="#fef3c7" stroke="#fbbf24" stroke-width="2"/>
+        <text x="110" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#92400e">하네스 없는 말</text>
+        <!-- 말 이모지 텍스트 -->
+        <text x="110" y="110" text-anchor="middle" font-size="48">🐴</text>
+        <text x="110" y="155" text-anchor="middle" font-size="11" fill="#b45309">예측 불가능</text>
+        <text x="110" y="172" text-anchor="middle" font-size="11" fill="#b45309">방향 제어 불가</text>
+        <text x="110" y="189" text-anchor="middle" font-size="11" fill="#b45309">울타리 파괴 위험</text>
+
+        <!-- 화살표 -->
+        <path d="M220 110 L290 110" stroke="#64748b" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+        <defs>
+          <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+          </marker>
+        </defs>
+        <text x="255" y="103" text-anchor="middle" font-size="10" fill="#94a3b8">하네스 적용</text>
+
+        <!-- 오른쪽: 마구 씌운 말 -->
+        <rect x="300" y="20" width="200" height="180" rx="16" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+        <text x="400" y="50" text-anchor="middle" font-size="13" font-weight="700" fill="#065f46">하네스 장착된 말</text>
+        <text x="400" y="110" text-anchor="middle" font-size="48">🐎</text>
+        <text x="400" y="155" text-anchor="middle" font-size="11" fill="#047857">방향 제어 가능</text>
+        <text x="400" y="172" text-anchor="middle" font-size="11" fill="#047857">규칙 자동 강제</text>
+        <text x="400" y="189" text-anchor="middle" font-size="11" fill="#047857">안전한 실행</text>
+
+        <!-- 오른쪽 화살표 -->
+        <path d="M510 110 L560 110" stroke="#64748b" stroke-width="2.5" marker-end="url(#arr2)"/>
+        <defs>
+          <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#64748b"/>
+          </marker>
+        </defs>
+
+        <!-- 결과 박스 -->
+        <rect x="560" y="60" width="190" height="100" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+        <text x="655" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#4c1d95">🌾 밭이 갈린다!</text>
+        <text x="655" y="118" text-anchor="middle" font-size="11" fill="#5b21b6">인간은 조종</text>
+        <text x="655" y="135" text-anchor="middle" font-size="11" fill="#5b21b6">에이전트는 실행</text>
+        <text x="655" y="152" text-anchor="middle" font-size="11" fill="#5b21b6">자동 안전 시스템</text>
+      </svg>
+    </div>
+
+    <!-- 4가지 기둥 상세 -->
+    <h3 class="text-xl font-black mb-6">🏛️ 하네스 엔지니어링의 4가지 기둥</h3>
+    <div class="space-y-6 mb-12">
+
+      <!-- 기둥 1 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow border-l-4 border-violet-500 card-hover border border-slate-100 dark:border-slate-700">
+        <div class="flex items-start gap-4">
+          <div class="bg-violet-100 dark:bg-violet-900/50 rounded-xl p-3 text-2xl flex-shrink-0">📄</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge bg-violet-100 dark:bg-violet-900/60 text-violet-700 dark:text-violet-300">기둥 1</span>
+              <h4 class="font-black text-base">기계가 읽는 컨텍스트 파일</h4>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+              <code class="bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 px-2 py-0.5 rounded font-mono text-xs">claude.md</code>,
+              <code class="bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 px-2 py-0.5 rounded font-mono text-xs">agents.md</code>,
+              <code class="bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 px-2 py-0.5 rounded font-mono text-xs">cursor-rules</code> 등은 단순 문서가 아닌 <strong>AI가 실행하는 런타임 설정 파일</strong>이다.
+            </p>
+            <div class="bg-slate-50 dark:bg-slate-900/50 rounded-xl p-4 text-sm">
+              <p class="font-bold text-xs text-slate-500 mb-2 uppercase tracking-wide">claude.md 설정 예시</p>
+              <ul class="space-y-1 text-slate-600 dark:text-slate-400 text-xs">
+                <li>• 새로운 라이브러리를 도입하지 마</li>
+                <li>• 기존 API 패턴을 무조건 따라야 해</li>
+                <li>• DB Query는 반드시 ORM을 통해서만 해야 해</li>
+              </ul>
+              <p class="text-xs text-violet-600 dark:text-violet-400 mt-2 font-semibold">→ 매번 프롬프트에 반복할 필요 없이 모든 작업에 자동 적용</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기둥 2 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow border-l-4 border-sky-500 card-hover border border-slate-100 dark:border-slate-700">
+        <div class="flex items-start gap-4">
+          <div class="bg-sky-100 dark:bg-sky-900/50 rounded-xl p-3 text-2xl flex-shrink-0">🔍</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge bg-sky-100 dark:bg-sky-900/60 text-sky-700 dark:text-sky-300">기둥 2</span>
+              <h4 class="font-black text-base">린터·구조적 테스트·Pre-commit Hook</h4>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+              규칙을 문서에 써두는 것만으로 부족하다. AI는 규칙을 읽고도 어길 수 있기 때문에 <strong>시스템이 자동으로 강제</strong>해야 한다.
+            </p>
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-sky-50 dark:bg-sky-900/30 rounded-xl p-3 text-center">
+                <div class="text-xl mb-1">📝</div>
+                <p class="text-xs font-bold text-sky-700 dark:text-sky-300">린터</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">코드 맞춤법 검사기, 규칙 어기면 자동 에러</p>
+              </div>
+              <div class="bg-sky-50 dark:bg-sky-900/30 rounded-xl p-3 text-center">
+                <div class="text-xl mb-1">🧪</div>
+                <p class="text-xs font-bold text-sky-700 dark:text-sky-300">구조적 테스트</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">의존성 규칙, 폴더 간 import 제한 강제</p>
+              </div>
+              <div class="bg-sky-50 dark:bg-sky-900/30 rounded-xl p-3 text-center">
+                <div class="text-xl mb-1">🔗</div>
+                <p class="text-xs font-bold text-sky-700 dark:text-sky-300">Pre-commit Hook</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">저장 전 자동 검사, 빌드 실패 시 자동 수정</p>
+              </div>
+            </div>
+            <p class="text-xs text-sky-600 dark:text-sky-400 font-semibold mt-3">✨ 핵심: CI가 실패하면 에이전트가 스스로 수정 → 자동 교정 루프!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기둥 3 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow border-l-4 border-rose-500 card-hover border border-slate-100 dark:border-slate-700">
+        <div class="flex items-start gap-4">
+          <div class="bg-rose-100 dark:bg-rose-900/50 rounded-xl p-3 text-2xl flex-shrink-0">🚫</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge bg-rose-100 dark:bg-rose-900/60 text-rose-700 dark:text-rose-300">기둥 3</span>
+              <h4 class="font-black text-base">도구 접근 권한 제한 (물리적 차단)</h4>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+              <span class="line-through text-slate-400">프롬프트로 "절대 DB를 삭제하지 마라"</span> → 부탁은 어길 수 있다.<br>
+              <strong class="text-rose-600 dark:text-rose-400">도구 경계 = 물리적 차단 = 어길 수 없다.</strong>
+            </p>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div>
+                <p class="font-bold text-slate-600 dark:text-slate-300 mb-2">파일 시스템</p>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2"><span class="text-emerald-500">✓</span><span class="text-slate-600 dark:text-slate-400">source 폴더 — 읽기/쓰기 가능</span></div>
+                  <div class="flex items-center gap-2"><span class="text-rose-500">✗</span><span class="text-slate-600 dark:text-slate-400">configuration 폴더 — 읽기만 가능</span></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-bold text-slate-600 dark:text-slate-300 mb-2">데이터베이스</p>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2"><span class="text-emerald-500">✓</span><span class="text-slate-600 dark:text-slate-400">SELECT — 가능</span></div>
+                  <div class="flex items-center gap-2"><span class="text-rose-500">✗</span><span class="text-slate-600 dark:text-slate-400">DROP TABLE — 절대 불가</span></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-bold text-slate-600 dark:text-slate-300 mb-2">API 호출</p>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2"><span class="text-emerald-500">✓</span><span class="text-slate-600 dark:text-slate-400">내부 API 호출 가능</span></div>
+                  <div class="flex items-center gap-2"><span class="text-rose-500">✗</span><span class="text-slate-600 dark:text-slate-400">외부 서비스 호출 불가</span></div>
+                </div>
+              </div>
+              <div>
+                <p class="font-bold text-slate-600 dark:text-slate-300 mb-2">터미널 명령</p>
+                <div class="space-y-1">
+                  <div class="flex items-center gap-2"><span class="text-emerald-500">✓</span><span class="text-slate-600 dark:text-slate-400">Whitelist 명령만 허용</span></div>
+                  <div class="flex items-center gap-2"><span class="text-rose-500">✗</span><span class="text-slate-600 dark:text-slate-400">그 외 모든 명령 차단</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 기둥 4 -->
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow border-l-4 border-emerald-500 card-hover border border-slate-100 dark:border-slate-700">
+        <div class="flex items-start gap-4">
+          <div class="bg-emerald-100 dark:bg-emerald-900/50 rounded-xl p-3 text-2xl flex-shrink-0">♻️</div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="badge bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300">기둥 4</span>
+              <h4 class="font-black text-base">AI 생성 코드의 주기적 품질 점검 (Garbage Collection)</h4>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
+              AI 에이전트는 기존 코드의 나쁜 패턴을 그대로 복제한다. <strong>마틴 파울러(Martin Fowler)</strong>가 명명한 자동 청소 시스템이 필수다.
+            </p>
+            <div class="grid grid-cols-2 gap-2">
+              <div class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-2">
+                <span class="text-emerald-500 font-bold">→</span> 코딩 규칙 위반 자동 감지
+              </div>
+              <div class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-2">
+                <span class="text-emerald-500 font-bold">→</span> 중복 코드 발견 및 제거
+              </div>
+              <div class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-2">
+                <span class="text-emerald-500 font-bold">→</span> 리팩토링 PR 자동 생성
+              </div>
+              <div class="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-400 bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-2">
+                <span class="text-emerald-500 font-bold">→</span> 안티패턴 주기적 체크
+              </div>
+            </div>
+            <p class="text-xs text-emerald-600 dark:text-emerald-400 font-bold mt-3">⚡ 진화적 특성: 에이전트가 실수할 때마다 새 규칙이 추가 → 시스템이 점점 더 견고해짐</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 하네스 시스템 구조 SVG 플로우차트 -->
+    <h3 class="text-xl font-black mb-6">⚙️ 하네스 시스템 전체 구조</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow mb-10 border border-slate-100 dark:border-slate-700">
+      <svg viewBox="0 0 760 300" class="w-full max-w-3xl mx-auto" xmlns="http://www.w3.org/2000/svg">
+        <!-- 배경 레인 -->
+        <rect x="0" y="0" width="760" height="300" rx="16" fill="transparent"/>
+
+        <!-- 사용자 요청 -->
+        <rect x="10" y="110" width="110" height="70" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+        <text x="65" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#5b21b6">👤 사용자</text>
+        <text x="65" y="157" text-anchor="middle" font-size="10" fill="#7c3aed">요청 입력</text>
+        <text x="65" y="172" text-anchor="middle" font-size="10" fill="#7c3aed">"토스 API 연동"</text>
+
+        <!-- 화살표1 -->
+        <path d="M122 145 L158 145" stroke="#7c3aed" stroke-width="2" marker-end="url(#a1)"/>
+        <defs>
+          <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#7c3aed"/></marker>
+          <marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#0ea5e9"/></marker>
+          <marker id="a3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#10b981"/></marker>
+          <marker id="a4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59e0b"/></marker>
+          <marker id="a5" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#ef4444"/></marker>
+        </defs>
+
+        <!-- 라우터 -->
+        <rect x="160" y="80" width="130" height="130" rx="12" fill="#dbeafe" stroke="#0ea5e9" stroke-width="2"/>
+        <text x="225" y="105" text-anchor="middle" font-size="11" font-weight="800" fill="#0c4a6e">🔀 Router</text>
+        <text x="225" y="122" text-anchor="middle" font-size="9.5" fill="#0369a1">요청 분류</text>
+        <text x="225" y="140" text-anchor="middle" font-size="9" fill="#0369a1">• 단순 질문?</text>
+        <text x="225" y="155" text-anchor="middle" font-size="9" fill="#0369a1">• 코드 작업?</text>
+        <text x="225" y="170" text-anchor="middle" font-size="9" fill="#0369a1">• 모호한 요청?</text>
+        <text x="225" y="188" text-anchor="middle" font-size="9" fill="#0369a1">→ 재질문 or 진행</text>
+
+        <!-- 화살표2 -->
+        <path d="M292 145 L328 145" stroke="#0ea5e9" stroke-width="2" marker-end="url(#a2)"/>
+
+        <!-- 컨텍스트 매니저 -->
+        <rect x="330" y="80" width="130" height="130" rx="12" fill="#d1fae5" stroke="#10b981" stroke-width="2"/>
+        <text x="395" y="105" text-anchor="middle" font-size="10.5" font-weight="800" fill="#064e3b">📦 Context</text>
+        <text x="395" y="120" text-anchor="middle" font-size="9" fill="#064e3b">Manager</text>
+        <text x="395" y="138" text-anchor="middle" font-size="9" fill="#047857">필요한 것만 제공</text>
+        <text x="395" y="154" text-anchor="middle" font-size="9" fill="#047857">• SDK 문서</text>
+        <text x="395" y="169" text-anchor="middle" font-size="9" fill="#047857">• 제약 사항</text>
+        <text x="395" y="184" text-anchor="middle" font-size="9" fill="#047857">• 관련 파일만</text>
+        <text x="395" y="199" text-anchor="middle" font-size="9" fill="#047857">가림막 역할</text>
+
+        <!-- 화살표3 -->
+        <path d="M462 145 L498 145" stroke="#10b981" stroke-width="2" marker-end="url(#a3)"/>
+
+        <!-- 실행 루프 -->
+        <rect x="500" y="50" width="130" height="190" rx="12" fill="#fef9c3" stroke="#f59e0b" stroke-width="2"/>
+        <text x="565" y="78" text-anchor="middle" font-size="10.5" font-weight="800" fill="#78350f">🔄 실행 루프</text>
+        <text x="565" y="97" text-anchor="middle" font-size="9" fill="#92400e">하네스의 심장</text>
+        <text x="565" y="118" text-anchor="middle" font-size="9" fill="#92400e">① AI 코드 작성</text>
+        <text x="565" y="134" text-anchor="middle" font-size="9" fill="#92400e">② 자동 테스트</text>
+        <text x="565" y="150" text-anchor="middle" font-size="9" fill="#92400e">③ 통과? → 완료</text>
+        <text x="565" y="166" text-anchor="middle" font-size="9" fill="#92400e">④ 실패? → AI에</text>
+        <text x="565" y="181" text-anchor="middle" font-size="9" fill="#92400e">   에러 피드백</text>
+        <text x="565" y="197" text-anchor="middle" font-size="9" fill="#92400e">⑤ 자동 재시도</text>
+        <!-- 루프 화살표 -->
+        <path d="M565 215 Q565 238 500 238 Q480 238 480 215" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#a4)"/>
+
+        <!-- 화살표4 -->
+        <path d="M632 145 L660 145" stroke="#f59e0b" stroke-width="2" marker-end="url(#a4)"/>
+
+        <!-- 워커 격리 -->
+        <rect x="662" y="80" width="88" height="130" rx="12" fill="#fce7f3" stroke="#ec4899" stroke-width="2"/>
+        <text x="706" y="110" text-anchor="middle" font-size="10" font-weight="800" fill="#831843">👥 워커</text>
+        <text x="706" y="126" text-anchor="middle" font-size="9" fill="#9d174d">격리</text>
+        <text x="706" y="148" text-anchor="middle" font-size="9" fill="#9d174d">✍️ 작성 AI</text>
+        <text x="706" y="163" text-anchor="middle" font-size="9" fill="#9d174d">vs</text>
+        <text x="706" y="178" text-anchor="middle" font-size="9" fill="#9d174d">🔎 검토 AI</text>
+        <text x="706" y="197" text-anchor="middle" font-size="9" fill="#9d174d">역할 분리</text>
+
+        <!-- 라벨 -->
+        <text x="380" y="280" text-anchor="middle" font-size="10" fill="#94a3b8">← 라우터 → 컨텍스트 매니저 → 실행 루프 → 워커 격리 →</text>
+      </svg>
+      <p class="text-center text-xs text-slate-500 dark:text-slate-400 mt-2">하네스 시스템의 4단계 실행 흐름</p>
+    </div>
+
+    <!-- OpenAI 사례 분석 -->
+    <h3 class="text-xl font-black mb-5">📊 OpenAI 3명 팀 사례 분석</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow overflow-hidden mb-10 border border-slate-100 dark:border-slate-700">
+      <div class="bg-gradient-to-r from-slate-700 to-slate-800 p-4 text-white">
+        <p class="font-black text-base">코드 한 줄 없이 5개월 만에 제품 배포한 비결</p>
+        <p class="text-xs text-slate-300 mt-1">OpenAI 공식 블로그 발표 (2026년 2월) — 하네스 관점 분석</p>
+      </div>
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-slate-50 dark:bg-slate-700/50">
+            <th class="text-left p-4 font-bold text-slate-600 dark:text-slate-300 w-1/4">구성 요소</th>
+            <th class="text-left p-4 font-bold text-slate-600 dark:text-slate-300 w-1/3">실제 한 일</th>
+            <th class="text-left p-4 font-bold text-slate-600 dark:text-slate-300">하네스 관점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-100 dark:border-slate-700">
+            <td class="p-4">
+              <span class="badge bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300 text-xs">컨텍스트 파일</span>
+            </td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">agents.md 작성 및 설계</td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">AI에게 줄 지침서를 사전 설계 → 기둥 1</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-700/20">
+            <td class="p-4">
+              <span class="badge bg-sky-100 dark:bg-sky-900/50 text-sky-700 dark:text-sky-300 text-xs">CI/CD 게이트</span>
+            </td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">lint, test, hook 자동 파이프라인 구축</td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">자동 검증 시스템 선구축 → 기둥 2</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700">
+            <td class="p-4">
+              <span class="badge bg-rose-100 dark:bg-rose-900/50 text-rose-700 dark:text-rose-300 text-xs">도구 경계</span>
+            </td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">AI 에이전트 접근 범위·권한 사전 설정</td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">물리적 접근 제한 → 기둥 3</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-700/20">
+            <td class="p-4">
+              <span class="badge bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-xs">피드백 루프</span>
+            </td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">AI 코딩 → 리뷰 → 규칙 보강 반복</td>
+            <td class="p-4 text-slate-600 dark:text-slate-400">자동 품질 점검, 진화하는 하네스 → 기둥 4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 프롬프트 vs 하네스 비교표 -->
+    <h3 class="text-xl font-black mb-5">⚖️ 프롬프트 고치기 vs 하네스 고치기</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl shadow overflow-hidden mb-10 border border-slate-100 dark:border-slate-700">
+      <table class="w-full text-sm">
+        <thead>
+          <tr>
+            <th class="p-4 text-center bg-slate-200 dark:bg-slate-700 font-black text-slate-600 dark:text-slate-300 w-1/3">비교 항목</th>
+            <th class="p-4 text-center bg-red-50 dark:bg-red-900/30 font-black text-red-600 dark:text-red-400 w-1/3">❌ 프롬프트 수정</th>
+            <th class="p-4 text-center bg-green-50 dark:bg-green-900/30 font-black text-green-600 dark:text-green-400 w-1/3">✅ 하네스 수정</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-100 dark:border-slate-700">
+            <td class="p-4 text-center font-semibold text-slate-600 dark:text-slate-400">성격</td>
+            <td class="p-4 text-center text-slate-600 dark:text-slate-400">부탁 (어길 수 있음)</td>
+            <td class="p-4 text-center text-slate-600 dark:text-slate-400">강제 (어길 수 없음)</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-700/20">
+            <td class="p-4 text-center font-semibold text-slate-600 dark:text-slate-400">재발 가능성</td>
+            <td class="p-4 text-center text-red-600 dark:text-red-400 font-bold">높음 — 다음번에 또 실수</td>
+            <td class="p-4 text-center text-green-600 dark:text-green-400 font-bold">없음 — 구조적으로 불가</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700">
+            <td class="p-4 text-center font-semibold text-slate-600 dark:text-slate-400">접근 방식</td>
+            <td class="p-4 text-center text-slate-600 dark:text-slate-400">"DB를 직접 호출하지 마" 추가</td>
+            <td class="p-4 text-center text-slate-600 dark:text-slate-400">아키텍처 테스트로 빌드 자동 실패</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-700/20">
+            <td class="p-4 text-center font-semibold text-slate-600 dark:text-slate-400">인간 개입</td>
+            <td class="p-4 text-center text-red-600 dark:text-red-400">매번 필요</td>
+            <td class="p-4 text-center text-green-600 dark:text-green-400">시스템이 자동 처리</td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700">
+            <td class="p-4 text-center font-semibold text-slate-600 dark:text-slate-400">시간에 따른 변화</td>
+            <td class="p-4 text-center text-red-600 dark:text-red-400">계속 같은 실수 반복</td>
+            <td class="p-4 text-center text-green-600 dark:text-green-400">시스템이 점점 견고해짐</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 개발자 역할 변화 SVG -->
+    <h3 class="text-xl font-black mb-5">🚀 AI 시대 개발자 역할의 상향 이동</h3>
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow mb-10 border border-slate-100 dark:border-slate-700">
+      <svg viewBox="0 0 700 200" class="w-full max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg">
+        <!-- 계단 구조 -->
+        <!-- 계단 1 -->
+        <rect x="30" y="130" width="140" height="60" rx="10" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+        <text x="100" y="153" text-anchor="middle" font-size="10" font-weight="700" fill="#3730a3">프롬프트 엔지니어링</text>
+        <text x="100" y="170" text-anchor="middle" font-size="9" fill="#4338ca">AI에게 말 잘 걸기</text>
+        <text x="100" y="184" text-anchor="middle" font-size="16">✍️</text>
+
+        <!-- 계단 2 -->
+        <rect x="185" y="100" width="140" height="90" rx="10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+        <text x="255" y="126" text-anchor="middle" font-size="10" font-weight="700" fill="#1e3a8a">컨텍스트</text>
+        <text x="255" y="141" text-anchor="middle" font-size="10" font-weight="700" fill="#1e3a8a">엔지니어링</text>
+        <text x="255" y="158" text-anchor="middle" font-size="9" fill="#1d4ed8">지식 체계 설계</text>
+        <text x="255" y="174" text-anchor="middle" font-size="16">📚</text>
+
+        <!-- 계단 3 -->
+        <rect x="340" y="65" width="140" height="125" rx="10" fill="#a7f3d0" stroke="#10b981" stroke-width="2.5"/>
+        <text x="410" y="95" text-anchor="middle" font-size="10" font-weight="800" fill="#064e3b">하네스</text>
+        <text x="410" y="110" text-anchor="middle" font-size="10" font-weight="800" fill="#064e3b">엔지니어링</text>
+        <text x="410" y="128" text-anchor="middle" font-size="9" fill="#047857">실수 불가 환경 설계</text>
+        <text x="410" y="143" text-anchor="middle" font-size="9" fill="#047857">★ 오늘의 주인공</text>
+        <text x="410" y="162" text-anchor="middle" font-size="18">🔧</text>
+
+        <!-- 계단 4 -->
+        <rect x="495" y="20" width="140" height="170" rx="10" fill="#fde68a" stroke="#f59e0b" stroke-width="2"/>
+        <text x="565" y="52" text-anchor="middle" font-size="10" font-weight="800" fill="#78350f">에이전틱</text>
+        <text x="565" y="67" text-anchor="middle" font-size="10" font-weight="800" fill="#78350f">엔지니어링</text>
+        <text x="565" y="88" text-anchor="middle" font-size="9" fill="#92400e">멀티 에이전트 조율</text
