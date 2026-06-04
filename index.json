@@ -12,9 +12,10 @@
       "duration_seconds": 2514,
       "summary": "코스피 8000시대, 강세장 속 냉철한 투자 전략과 리스크 관리법",
       "video_url": "https://www.youtube.com/watch?v=YNAR4AiiiRU",
-      "report_url": "finance/korea-stock-market-bull-signal.html",
+      "report_url": "finance/youtube/korea-stock-market-bull-signal.html",
       "thumbnail_url": "https://img.youtube.com/vi/YNAR4AiiiRU/maxresdefault.jpg",
-      "processed_date": "2026-06-02"
+      "processed_date": "2026-06-02",
+      "type": "youtube"
     },
     {
       "slug": "stock-selling-timing-investment-strategy",
@@ -26,9 +27,10 @@
       "duration_seconds": 1523,
       "summary": "주식 매도 타이밍 3가지 기준과 투자 자금 마련을 위한 3주머니 전략",
       "video_url": "https://www.youtube.com/watch?v=40BI92UQTLw",
-      "report_url": "finance/stock-selling-timing-investment-strategy.html",
+      "report_url": "finance/youtube/stock-selling-timing-investment-strategy.html",
       "thumbnail_url": "https://img.youtube.com/vi/40BI92UQTLw/maxresdefault.jpg",
-      "processed_date": "2026-06-02"
+      "processed_date": "2026-06-02",
+      "type": "youtube"
     },
     {
       "slug": "harness-engineering-ai-agent",
@@ -40,9 +42,10 @@
       "duration_seconds": 914,
       "summary": "AI 에이전트를 제어하는 하네스 엔지니어링의 개념과 핵심 원칙 정리",
       "video_url": "https://www.youtube.com/watch?v=MFZX1I_REyg",
-      "report_url": "tech/harness-engineering-ai-agent.html",
+      "report_url": "tech/youtube/harness-engineering-ai-agent.html",
       "thumbnail_url": "https://img.youtube.com/vi/MFZX1I_REyg/maxresdefault.jpg",
-      "processed_date": "2026-06-01"
+      "processed_date": "2026-06-01",
+      "type": "youtube"
     },
     {
       "slug": "vibe-coding-solo-startup-bootcamp",
@@ -54,9 +57,10 @@
       "duration_seconds": 11641,
       "summary": "AI 바이브 코딩으로 1인 창업, 수익화, 엑싯까지 5주 완성 커리큘럼",
       "video_url": "https://www.youtube.com/watch?v=P3jFI-VpyLg",
-      "report_url": "business/vibe-coding-solo-startup-bootcamp.html",
+      "report_url": "business/youtube/vibe-coding-solo-startup-bootcamp.html",
       "thumbnail_url": "https://img.youtube.com/vi/P3jFI-VpyLg/maxresdefault.jpg",
-      "processed_date": "2026-06-01"
+      "processed_date": "2026-06-01",
+      "type": "youtube"
     },
     {
       "slug": "investment-portfolio-strategy-guide",
@@ -68,9 +72,10 @@
       "duration_seconds": 1599,
       "summary": "나이별 포트폴리오 구성 전략과 리밸런싱 방법 총정리",
       "video_url": "https://www.youtube.com/watch?v=OhP15WXW7pA",
-      "report_url": "finance/investment-portfolio-strategy-guide.html",
+      "report_url": "finance/youtube/investment-portfolio-strategy-guide.html",
       "thumbnail_url": "https://img.youtube.com/vi/OhP15WXW7pA/maxresdefault.jpg",
-      "processed_date": "2026-05-29"
+      "processed_date": "2026-05-29",
+      "type": "youtube"
     },
     {
       "slug": "trump-policy-investment-strategy",
@@ -82,9 +87,10 @@
       "duration_seconds": 746,
       "summary": "트럼프의 모순된 정책은 역사적 레거시를 위한 계산된 설계이며 AI·에너지·디지털달러가 핵심",
       "video_url": "https://www.youtube.com/watch?v=K1zRCCBAAV4",
-      "report_url": "finance/trump-policy-investment-strategy.html",
+      "report_url": "finance/youtube/trump-policy-investment-strategy.html",
       "thumbnail_url": "https://img.youtube.com/vi/K1zRCCBAAV4/maxresdefault.jpg",
-      "processed_date": "2026-05-29"
+      "processed_date": "2026-05-29",
+      "type": "youtube"
     },
     {
       "slug": "david-gardner-investment-strategies",
@@ -96,9 +102,10 @@
       "duration_seconds": 1467,
       "summary": "데이비드 가드너의 규칙 파괴 기업 투자 7가지 원칙",
       "video_url": "https://www.youtube.com/watch?v=dGiFydMu1yU",
-      "report_url": "finance/david-gardner-investment-strategies.html",
+      "report_url": "finance/youtube/david-gardner-investment-strategies.html",
       "thumbnail_url": "https://img.youtube.com/vi/dGiFydMu1yU/maxresdefault.jpg",
-      "processed_date": "2026-05-29"
+      "processed_date": "2026-05-29",
+      "type": "youtube"
     },
     {
       "slug": "semiconductor-investment-power-map",
@@ -110,9 +117,10 @@
       "duration_seconds": 1710,
       "summary": "반도체 산업 구조와 패권 기업 5곳을 총정리한 투자 인사이트",
       "video_url": "https://www.youtube.com/watch?v=fGSpfXBzaQc",
-      "report_url": "finance/semiconductor-investment-power-map.html",
+      "report_url": "finance/youtube/semiconductor-investment-power-map.html",
       "thumbnail_url": "https://img.youtube.com/vi/fGSpfXBzaQc/maxresdefault.jpg",
-      "processed_date": "2026-05-29"
+      "processed_date": "2026-05-29",
+      "type": "youtube"
     },
     {
       "slug": "stock-investment-basics-master",
@@ -124,9 +132,10 @@
       "duration_seconds": 1349,
       "summary": "주식 투자 핵심 원칙: 심리·비중·타이밍·기업분석 완전 정리",
       "video_url": "https://www.youtube.com/watch?v=Ub-4riqQZ8I",
-      "report_url": "finance/stock-investment-basics-master.html",
+      "report_url": "finance/youtube/stock-investment-basics-master.html",
       "thumbnail_url": "https://img.youtube.com/vi/Ub-4riqQZ8I/maxresdefault.jpg",
-      "processed_date": "2026-05-27"
+      "processed_date": "2026-05-27",
+      "type": "youtube"
     },
     {
       "slug": "karpathy-claude-md-vibe-coding-2",
@@ -138,9 +147,10 @@
       "duration_seconds": 761,
       "summary": "카파시의 AI 코딩 4원칙을 담은 CLAUDE.md로 AI의 고질적 실수를 방지하는 법",
       "video_url": "https://www.youtube.com/watch?v=xnNFexW9Wrk",
-      "report_url": "tech/karpathy-claude-md-vibe-coding-2.html",
+      "report_url": "tech/youtube/karpathy-claude-md-vibe-coding-2.html",
       "thumbnail_url": "https://img.youtube.com/vi/xnNFexW9Wrk/maxresdefault.jpg",
-      "processed_date": "2026-05-27"
+      "processed_date": "2026-05-27",
+      "type": "youtube"
     },
     {
       "slug": "claude-code-essential-tools",
@@ -152,9 +162,10 @@
       "duration_seconds": 574,
       "summary": "400시간 사용 후 검증한 클로드 코드 핵심 플러그인 6가지",
       "video_url": "https://www.youtube.com/watch?v=BZPaZzjLIOY",
-      "report_url": "tech/claude-code-essential-tools.html",
+      "report_url": "tech/youtube/claude-code-essential-tools.html",
       "thumbnail_url": "https://img.youtube.com/vi/BZPaZzjLIOY/maxresdefault.jpg",
-      "processed_date": "2026-05-27"
+      "processed_date": "2026-05-27",
+      "type": "youtube"
     },
     {
       "slug": "llm-wiki-obsidian-claude-code",
@@ -166,9 +177,10 @@
       "duration_seconds": 602,
       "summary": "옵시디언+클로드코드로 AI가 관리하는 나만의 지식 위키 구축",
       "video_url": "https://www.youtube.com/watch?v=9IuIwXAz_84",
-      "report_url": "tech/llm-wiki-obsidian-claude-code.html",
+      "report_url": "tech/youtube/llm-wiki-obsidian-claude-code.html",
       "thumbnail_url": "https://img.youtube.com/vi/9IuIwXAz_84/maxresdefault.jpg",
-      "processed_date": "2026-05-22"
+      "processed_date": "2026-05-22",
+      "type": "youtube"
     }
   ]
 }
