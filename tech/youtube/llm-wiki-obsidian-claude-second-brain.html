@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기 | 영상 요약 레포트</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+  <style>
+    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css');
+    body { font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .gradient-text {
+      background: linear-gradient(135deg, #7c3aed 0%, #0891b2 50%, #10b981 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .tool-card { transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease; }
+    .tool-card:hover { transform: translateY(-6px); }
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at top left, rgba(124,58,237,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(8,145,178,0.08) 0%, transparent 55%);
+    }
+    .dark .hero-bg {
+      background:
+        radial-gradient(ellipse at top left, rgba(124,58,237,0.22) 0%, transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(8,145,178,0.15) 0%, transparent 55%);
+    }
+    .section-line { background: linear-gradient(90deg, transparent, #7c3aed 30%, #0891b2 70%, transparent); height: 1px; }
+    .warning-stripes {
+      background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(234,179,8,0.08) 8px, rgba(234,179,8,0.08) 16px);
+    }
+    .gold-stripes {
+      background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, rgba(245,158,11,0.06) 8px, rgba(245,158,11,0.06) 16px);
+    }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(180deg); }
+    .chevron { transition: transform 0.2s ease; }
+    html { scroll-behavior: smooth; }
+    .flow-arrow { animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+  </style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<script>
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.classList.add('dark');
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    e.matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  });
+</script>
+
+<!-- META BAR -->
+<div class="bg-slate-100 dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-4 py-2">
+  <div class="max-w-5xl mx-auto flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+    <div class="flex items-center gap-2">
+      <svg class="w-4 h-4 text-red-500 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <span>YouTube 영상 자동 요약 레포트</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <span>⏱ 52분 32초</span>
+      <span>📅 2026-04-12 업로드</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero-bg px-4 py-16 md:py-24">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-xs font-semibold px-3 py-1 rounded-full mb-5">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        AI 세컨드 브레인 실전 구축
+      </div>
+      <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">
+        <span class="gradient-text">LLM Wiki</span>로<br>나만의<br>두 번째 뇌 만들기
+      </h1>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-2 leading-relaxed">
+        <strong>Claude Code × Obsidian × Graphify</strong> 조합으로<br>AI 세컨드 브레인을 처음부터 구축하는 실전 가이드
+      </p>
+      <p class="text-xs text-slate-400 dark:text-slate-500 mb-5">
+        채널: Brian's Brain Trinity &nbsp;·&nbsp; 원본 제목: "카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기, 이것만 보세요— 클로드 코드 × 옵시디언 × Graphify"
+      </p>
+      <div class="bg-gradient-to-r from-violet-600 to-cyan-600 text-white rounded-2xl p-5 mb-6 shadow-lg">
+        <p class="text-xs font-semibold opacity-75 mb-1">⚡ 한 줄 요약</p>
+        <p class="text-lg font-bold leading-snug">Claude Code + Obsidian + LLM Wiki로 목적 있는 지식을 쌓고, Graphify로 Graph-RAG 수준의 AI 세컨드 브레인을 구축하는 실전 가이드</p>
+      </div>
+      <blockquote class="border-l-4 border-violet-500 pl-4 italic text-slate-600 dark:text-slate-400 text-sm">
+        "목적 없이, 내가 단순히, 진짜로, 이걸 왜 수집했지를 답변을 할 수 없으면은, LLM을 제대로 활용을 하는 것이 아닙니다."
+        <cite class="block text-xs not-italic mt-1 text-slate-400 dark:text-slate-500">— 영상 마지막 클로징</cite>
+      </blockquote>
+    </div>
+    <div class="flex flex-col gap-3">
+      <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/10 dark:ring-white/10" style="padding-top: 56.25%;">
+        <iframe
+          class="absolute inset-0 w-full h-full"
+          src="https://www.youtube.com/embed/cNlvrU-KcRg"
+          title="카파시의 LLM Wiki로 나만의 AI 세컨드 브레인 만들기"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <a
+        href="https://www.youtube.com/watch?v=cNlvrU-KcRg"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 active:bg-red-800 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-colors"
+      >
+        <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        원본 영상 보기 (YouTube)
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- 상단: 쉽게 이해하기 -->
+<section class="px-4 py-14 bg-slate-50 dark:bg-slate-900/80">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="flex items-center gap-3 mb-10">
+      <span class="bg-violet-600 text-white text-xs font-bold px-3 py-1 rounded-full">상단</span>
+      <h2 class="text-2xl font-bold">쉽게 이해하기</h2>
+      <span class="text-slate-400 dark:text-slate-500 text-sm hidden sm:inline">— 30초 안에 핵심 파악</span>
+    </div>
+
+    <!-- KPI 박스 -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-violet-600 dark:text-violet-400 mb-1">3</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">핵심 도구 조합</div>
+        <div class="text-xs text-slate-400 mt-1">Claude·Obsidian·Graphify</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-cyan-600 dark:text-cyan-400 mb-1">0</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">인프라 필요 없음</div>
+        <div class="text-xs text-slate-400 mt-1">마크다운만으로 작동</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-emerald-600 dark:text-emerald-400 mb-1">복리</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">지식 축적 방식</div>
+        <div class="text-xs text-slate-400 mt-1">수집할수록 연결 증가</div>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-5 text-center border border-slate-100 dark:border-slate-700 shadow-sm">
+        <div class="text-4xl font-black text-amber-600 dark:text-amber-400 mb-1">금</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">Gold In Gold Out</div>
+        <div class="text-xs text-slate-400 mt-1">목적 있는 수집이 핵심</div>
+      </div>
+    </div>
+
+    <!-- 핵심 조합 시스템 다이어그램 SVG -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 mb-8 shadow-sm border border-slate-100 dark:border-slate-700">
+      <h3 class="text-lg font-bold mb-6 text-center">🧠 AI 세컨드 브레인 핵심 구조</h3>
+      <div class="overflow-x-auto">
+        <svg viewBox="0 0 860 200" class="w-full min-w-[600px]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="arrowMain" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 9 3, 0 6" fill="#94a3b8"/>
+            </marker>
+            <marker id="arrowGreen" markerWidth="9" markerHeight="6" refX="8" refY="3" orient="auto">
+              <polygon points="0 0, 9 3, 0 6" fill="#10b981"/>
+            </marker>
+          </defs>
+
+          <!-- 인터넷/세계 -->
+          <rect x="10" y="60" width="120" height="80" rx="14" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+          <text x="70" y="90" text-anchor="middle" font-size="22">🌐</text>
+          <text x="70" y="112" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">세상의 정보</text>
+          <text x="70" y="126" text-anchor="middle" font-size="8.5" fill="#94a3b8">아티클·유튜브</text>
+          <text x="70" y="137" text-anchor="middle" font-size="8.5" fill="#94a3b8">논문·팟캐스트</text>
+
+          <!-- 화살표 1 -->
+          <line x1="132" y1="100" x2="168" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowMain)"/>
+          <text x="150" y="91" text-anchor="middle" font-size="7.5" fill="#94a3b8">Web Clipper</text>
+
+          <!-- Obsidian RAW -->
+          <rect x="170" y="40" width="130" height="120" rx="14" fill="#7c3aed"/>
+          <text x="235" y="70" text-anchor="middle" fill="white" font-size="18">📂</text>
+          <text x="235" y="92" text-anchor="middle" fill="white" font-size="11" font-weight="700">Obsidian</text>
+          <text x="235" y="108" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9">RAW 폴더</text>
+          <rect x="185" y="115" width="100" height="18" rx="5" fill="rgba(255,255,255,0.15)"/>
+          <text x="235" y="128" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="8">"왜 수집했는가?" 코멘트 ✍</text>
+          <text x="235" y="152" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7.5">순정 마크다운 기반</text>
+
+          <!-- 화살표 2 -->
+          <line x1="302" y1="100" x2="338" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowMain)"/>
+          <text x="320" y="91" text-anchor="middle" font-size="7.5" fill="#94a3b8">/ingest</text>
+          <text x="320" y="115" text-anchor="middle" font-size="7.5" fill="#94a3b8">스킬</text>
+
+          <!-- Claude Code (컴파일러) -->
+          <rect x="340" y="30" width="140" height="140" rx="14" fill="#0891b2"/>
+          <text x="410" y="65" text-anchor="middle" fill="white" font-size="22">🤖</text>
+          <text x="410" y="88" text-anchor="middle" fill="white" font-size="11" font-weight="700">Claude Code</text>
+          <text x="410" y="104" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9">LLM 컴파일러</text>
+          <text x="410" y="118" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8">파싱 · 연결 · 분류</text>
+          <text x="410" y="131" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8">엔티티 추출 · 링크 생성</text>
+          <rect x="355" y="138" width="110" height="16" rx="5" fill="rgba(255,255,255,0.15)"/>
+          <text x="410" y="150" text-anchor="middle" fill="white" font-size="7.5">claude.md 스키마 기반</text>
+
+          <!-- 화살표 3 -->
+          <line x1="482" y1="100" x2="518" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowMain)"/>
+
+          <!-- Wiki 폴더 -->
+          <rect x="520" y="40" width="130" height="120" rx="14" fill="#10b981"/>
+          <text x="585" y="70" text-anchor="middle" fill="white" font-size="18">📚</text>
+          <text x="585" y="92" text-anchor="middle" fill="white" font-size="11" font-weight="700">Wiki 폴더</text>
+          <text x="585" y="108" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9">구조화된 지식 베이스</text>
+          <text x="585" y="121" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8">Index · Log · Synthesis</text>
+          <text x="585" y="134" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8">개념·엔티티 분리 저장</text>
+          <text x="585" y="152" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7.5">복리로 축적됨 📈</text>
+
+          <!-- 화살표 4 -->
+          <line x1="652" y1="100" x2="688" y2="100" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+          <!-- Graphify -->
+          <rect x="690" y="40" width="155" height="120" rx="14" fill="#f59e0b"/>
+          <text x="767" y="70" text-anchor="middle" fill="white" font-size="18">🕸</text>
+          <text x="767" y="92" text-anchor="middle" fill="white" font-size="11" font-weight="700">Graphify</text>
+          <text x="767" y="108" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-size="9">Knowledge Graph JSON</text>
+          <text x="767" y="121" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8">노드 · 엣지 · 클러스터</text>
+          <text x="767" y="134" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="8">Graph-RAG 수준 쿼리</text>
+          <text x="767" y="152" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7.5">48시간 내 커뮤니티 제작 🚀</text>
+
+          <!-- 피드백 루프 화살표 (아래쪽) -->
+          <path d="M 585 162 Q 585 185 410 185 Q 235 185 235 162" stroke="#94a3b8" stroke-width="1.8" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowMain)"/>
+          <text x="410" y="197" text-anchor="middle" font-size="8" fill="#94a3b8">새 소스 추가 시 위키 업데이트 루프 (Lint 스킬)</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- LLM Wiki vs RAG 비교 -->
+    <div class="bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 mb-8 shadow-sm border border-slate-100 dark:border-slate-700">
+      <h3 class="text-lg font-bold mb-6 text-center">⚔️ LLM Wiki vs RAG — 무엇이 다른가?</h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-slate-200 dark:border-slate-600">
+              <th class="text-left py-3 px-4 text-slate-500 dark:text-slate-400 font-semibold text-xs uppercase tracking-wide">항목</th>
+              <th class="text-center py-3 px-4 text-violet-600 dark:text-violet-400 font-bold">LLM Wiki ✨</th>
+              <th class="text-center py-3 px-4 text-slate-500 dark:text-slate-400 font-semibold">RAG (전통 방식)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100 dark:divide-slate-700/50">
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">셋업 복잡도</td>
+              <td class="py-3 px-4 text-center"><span class="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-xs px-2 py-0.5 rounded-full font-semibold">매우 낮음 ✅</span></td>
+              <td class="py-3 px-4 text-center"><span class="bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-xs px-2 py-0.5 rounded-full font-semibold">높음 ❌</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">인프라 필요</td>
+              <td class="py-3 px-4 text-center text-slate-600 dark:text-slate-400">로컬 파일만 있으면 됨</td>
+              <td class="py-3 px-4 text-center text-slate-600 dark:text-slate-400">Vector DB 필요</td>
+            </tr>
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">임베딩 모델</td>
+              <td class="py-3 px-4 text-center"><span class="bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 text-xs px-2 py-0.5 rounded-full">불필요</span></td>
+              <td class="py-3 px-4 text-center"><span class="bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-xs px-2 py-0.5 rounded-full">필수</span></td>
+            </tr>
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">파일 형식</td>
+              <td class="py-3 px-4 text-center text-slate-600 dark:text-slate-400">순정 마크다운 (.md)</td>
+              <td class="py-3 px-4 text-center text-slate-600 dark:text-slate-400">특정 포맷 필요</td>
+            </tr>
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">지식 축적 방식</td>
+              <td class="py-3 px-4 text-center"><span class="bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 text-xs px-2 py-0.5 rounded-full font-semibold">복리 누적 📈</span></td>
+              <td class="py-3 px-4 text-center text-slate-500">단순 색인</td>
+            </tr>
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">최신 문서 반영</td>
+              <td class="py-3 px-4 text-center text-slate-600 dark:text-slate-400">Lint 스킬로 자동 업데이트</td>
+              <td class="py-3 px-4 text-center text-slate-600 dark:text-slate-400">재임베딩 필요</td>
+            </tr>
+            <tr class="hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+              <td class="py-3 px-4 font-medium text-slate-700 dark:text-slate-300">Graph 활용</td>
+              <td class="py-3 px-4 text-center"><span class="bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 text-xs px-2 py-0.5 rounded-full font-semibold">Graphify로 가능 🕸</span></td>
+              <td class="py-3 px-4 text-center text-slate-400">별도 Graph DB 필요</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Gold In Gold Out 섹션 -->
+    <div class="gold-stripes bg-amber-50 dark:bg-amber-950/30 border border-amber-300 dark:border-amber-700/40 rounded-3xl p-6 md:p-8 mb-8">
+      <div class="flex gap-4 items-start">
+        <span class="text-3xl shrink-0">🥇</span>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg text-amber-800 dark:text-amber-200 mb-3">Gold In, Gold Out — 목적 있는 수집의 원칙</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                단순히 인터넷에서 긁어 모은 것은 <strong class="text-red-600 dark:text-red-400">쓰레기 데이터</strong>입니다. <br>
+                AI에게 좋은 답변을 받으려면, 내가 수집할 때 <strong>"왜 이것을 저장했는가?"</strong>를 반드시 코멘트로 남겨야 합니다.
+              </p>
+              <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                이 코멘트가 없다면 — 그건 의도적인 수집이 아닙니다. <br>
+                LLM은 내 목적을 모르는 채로 답변하게 됩니다.
+              </p>
+            </div>
+            <div class="space-y-3">
+              <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-3 border border-red-200 dark:border-red-800/40">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-red-500 font-bold text-sm">❌ 나쁜 수집</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400">"LLM Wiki에 관한 아티클" — 코멘트 없음</p>
+                <p class="text-xs text-red-500 mt-1">→ Garbage In, Garbage Out</p>
+              </div>
+              <div class="bg-emerald-50 dark:bg-emerald-950/30 rounded-xl p-3 border border-emerald-200 dark:border-emerald-800/40">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-emerald-600 font-bold text-sm">✅ 좋은 수집</span>
+                </div>
+                <p class="text-xs text-slate-600 dark:text-slate-400">"LLM Wiki를 브레인 트리니티 프로그램에 적용하고 싶어서 수집" — 목적 명확</p>
+                <p class="text-xs text-emerald-600 mt-1">→ Gold In, Gold Out</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 핵심 포인트 카드 그리드 -->
+    <h3 class="text-xl font-bold mb-5 text-center">💡 영상 핵심 포인트 6가지</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-violet-200 dark:hover:border-violet-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-violet-100 dark:bg-violet-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><rect x="5" y="5" width="30" height="30" rx="5" fill="#7c3aed"/><rect x="10" y="13" width="20" height="2.5" rx="1.25" fill="white"/><rect x="10" y="19" width="15" height="2.5" rx="1.25" fill="rgba(255,255,255,0.7)"/><rect x="10" y="25" width="18" height="2.5" rx="1.25" fill="rgba(255,255,255,0.7)"/></svg>
+          </div>
+          <span class="text-xs bg-violet-100 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 px-2 py-0.5 rounded-full font-medium">프레임워크</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">① LLM Wiki 개념</p>
+        <h4 class="font-bold mb-2">Andrej Karpathy의 아이디어</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">RAW 폴더에 수집 → AI가 파싱·연결 → Wiki 폴더에 체계적으로 쌓는 지식 관리 프레임워크. RAG 대비 인프라 없이 마크다운만으로 작동.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">2025년 4월 3일 트윗으로 확산</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-cyan-200 dark:hover:border-cyan-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-cyan-100 dark:bg-cyan-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><circle cx="20" cy="20" r="14" fill="#0891b2"/><path d="M14 20 Q14 13 20 13 Q26 13 26 20 Q26 27 20 27 Q17 27 15.5 25" stroke="white" stroke-width="2" fill="none"/><circle cx="20" cy="20" r="3" fill="white"/><line x1="20" y1="6" x2="20" y2="10" stroke="white" stroke-width="2"/><line x1="20" y1="30" x2="20" y2="34" stroke="white" stroke-width="2"/></svg>
+          </div>
+          <span class="text-xs bg-cyan-100 dark:bg-cyan-900/40 text-cyan-700 dark:text-cyan-300 px-2 py-0.5 rounded-full font-medium">도구 세팅</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">② Obsidian 역할</p>
+        <h4 class="font-bold mb-2">인간을 위한 프론트엔드</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">순정 마크다운 기반 지식 입력·조회용 프론트엔드. Claude Code가 해당 폴더를 직접 읽어 처리하는 구조가 핵심.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">Karpathy: "Obsidian is the frontend"</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-emerald-200 dark:hover:border-emerald-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-emerald-100 dark:bg-emerald-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><circle cx="20" cy="10" r="6" fill="#10b981"/><line x1="20" y1="16" x2="20" y2="24" stroke="#10b981" stroke-width="2.5"/><rect x="10" y="24" width="20" height="12" rx="4" fill="#10b981"/><text x="20" y="33" text-anchor="middle" fill="white" font-size="8" font-weight="bold">ME</text></svg>
+          </div>
+          <span class="text-xs bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded-full font-medium">사전 준비</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">③ 핵심 맥락 인터뷰</p>
+        <h4 class="font-bold mb-2">나는 누구인가·왜·어떤 아웃풋</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">세컨드 브레인 구축 전 3가지 핵심 질문을 인터뷰 방식으로 정리하고 claude.md에 반영해야 AI가 목적에 맞게 작동.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">이것이 없으면 AI는 방향을 잃음</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-orange-200 dark:hover:border-orange-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-orange-100 dark:bg-orange-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><rect x="4" y="8" width="32" height="24" rx="5" fill="#ea580c"/><rect x="9" y="14" width="22" height="3" rx="1.5" fill="white"/><rect x="9" y="20" width="16" height="3" rx="1.5" fill="rgba(255,255,255,0.7)"/><circle cx="32" cy="10" r="6" fill="#fbbf24"/><path d="M29 10 L31 12 L35 8" stroke="white" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          </div>
+          <span class="text-xs bg-orange-100 dark:bg-orange-900/40 text-orange-700 dark:text-orange-300 px-2 py-0.5 rounded-full font-medium">자동화</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">④ Web Clipper 템플릿</p>
+        <h4 class="font-bold mb-2">유형별 자동 수집 템플릿</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Claude Code로 커스텀 생성한 아티클·유튜브·팟캐스트·논문용 Web Clipper 템플릿. /ingest 슬래시 스킬로 Wiki 반영 자동화.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">JSON 파일로 Obsidian에 임포트</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-amber-200 dark:hover:border-amber-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-amber-100 dark:bg-amber-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><polygon points="20,4 36,34 4,34" fill="#f59e0b"/><circle cx="20" cy="25" r="4" fill="none" stroke="white" stroke-width="2"/><line x1="20" y1="13" x2="20" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <span class="text-xs bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 px-2 py-0.5 rounded-full font-medium">품질</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">⑤ Gold In Gold Out</p>
+        <h4 class="font-bold mb-2">목적성 있는 수집의 중요성</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">"왜 수집했는지" 코멘트를 반드시 추가해야 목적성 있는 골드 데이터가 됨. 이것이 LLM 출력 품질을 결정하는 핵심.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">목적 없는 수집 = Garbage In</p>
+      </div>
+
+      <div class="tool-card bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:border-rose-200 dark:hover:border-rose-700">
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-rose-100 dark:bg-rose-900/40 p-3 rounded-xl">
+            <svg viewBox="0 0 40 40" class="w-8 h-8"><circle cx="10" cy="10" r="5" fill="#f43f5e"/><circle cx="30" cy="10" r="5" fill="#f43f5e"/><circle cx="10" cy="30" r="5" fill="#f43f5e"/><circle cx="30" cy="30" r="5" fill="#f43f5e"/><circle cx="20" cy="20" r="5" fill="#7c3aed"/><line x1="14" y1="13" x2="17" y2="17" stroke="#94a3b8" stroke-width="2"/><line x1="26" y1="13" x2="23" y2="17" stroke="#94a3b8" stroke-width="2"/><line x1="14" y1="27" x2="17" y2="23" stroke="#94a3b8" stroke-width="2"/><line x1="26" y1="27" x2="23" y2="23" stroke="#94a3b8" stroke-width="2"/></svg>
+          </div>
+          <span class="text-xs bg-rose-100 dark:bg-rose-900/40 text-rose-700 dark:text-rose-300 px-2 py-0.5 rounded-full font-medium">Graph-RAG</span>
+        </div>
+        <p class="text-xs text-slate-400 mb-1">⑥ Graphify</p>
+        <h4 class="font-bold mb-2">Knowledge Graph 자동 생성</h4>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Wiki 마크다운을 JSON 그래프로 변환, Claude Code가 그래프 탐색 기반으로 정확한 쿼리 답변. Graph-RAG 수준 활용 가능.</p>
+        <p class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700 text-xs text-slate-400">graphify.net — Karpathy 트윗 48시간 내 개발</p>
+      </div>
+
+    </div>
+
+    <!-- 인용구 3개 -->
+    <div class="grid md:grid-cols-3 gap-4">
+      <blockquote class="bg-violet-50 dark:bg-violet-950/30 rounded-2xl p-5 border border-violet-100 dark:border-violet-800/30">
+        <p class="text-sm italic text-slate-700 dark:text-slate-300 leading-relaxed mb-2">"내가 왜 수집을 했는지 이것을 적을 수 없다면은 이거는 의도적인 수집이 아닙니다."</p>
+        <cite class="text-xs text-violet-500 dark:text-violet-400">— 목적 있는 수집의 원칙</cite>
+      </blockquote>
+      <blockquote class="bg-cyan-50 dark:bg-cyan-950/30 rounded-2xl p-5 border border-cyan-100 dark:border-cyan-800/30">
+        <p class="text-sm italic text-slate-700 dark:text-slate-300 leading-relaxed mb-2">"이 LLM Wiki 같은 경우는 지식의 축적이 복리라고 생각이 돼요. 연결이 계속 이렇게 유지가 되니까."</p>
+        <cite class="text-xs text-cyan-500 dark:text-cyan-400">— RAG와의 핵심 차이</cite>
+      </blockquote>
+      <blockquote class="bg-emerald-50 dark:bg-emerald-950/30 rounded-2xl p-5 border border-emerald-100 dark:border-emerald-800/30">
+        <p class="text-sm italic text-slate-700 dark:text-slate-300 leading-relaxed mb-2">"안드레 카파씨가 외쳤는데 48시간 이내로 누가 만들었습니다." <span class="text-xs text-slate-400">(그래서 Graphify가 탄생했음)</span></p>
+        <cite class="text-xs text-emerald-500 dark:text-emerald-400">— Graphify 탄생 배경</cite>
+      </blockquote>
+    </div>
+
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- 하단: 자세히 알아보기 -->
+<section class="px-4 py-14 bg-white dark:bg-slate-950">
+  <div class="max-w-5xl mx-auto">
+
+    <div class="flex items-center gap-3 mb-8">
+      <span class="bg-slate-600 dark:bg-slate-500 text-white text-xs font-bold px-3 py-1 rounded-full">하단</span>
+      <h2 class="text-2xl font-bold">자세히 알아보기</h2>
+      <span class="text-slate-400 dark:text-slate-500 text-sm hidden sm:inline">— 깊이 보고 싶을 때</span>
+    </div>
+
+    <!-- 세컨드 브레인 구축 단계 플로우 -->
+    <div class="bg-slate-50 dark:bg-slate-800/70 rounded-3xl p-6 md:p-10 mb-8 border border-slate-200 dark:border-slate-700">
+      <h3 class="font-bold text-xl mb-6 text-center">🛠 실전 세컨드 브레인 구축 단계</h3>
+      <div class="overflow-x-auto">
+        <svg viewBox="0 0 900 260" class="w-full min-w-[700px]" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="stepArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+              <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+            </marker>
+          </defs>
+
+          <!-- STEP 1 -->
+          <rect x="10" y="10" width="145" height="240" rx="14" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="10" y="10" width="145" height="44" rx="14" fill="#7c3aed"/>
+          <rect x="10" y="40" width="145" height="14" rx="0" fill="#7c3aed"/>
+          <text x="82" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">STEP 1</text>
+          <text x="82" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Obsidian Vault 생성</text>
+          <text x="82" y="88" text-anchor="middle" font-size="8.5" fill="#64748b">새 볼트 만들기</text>
+          <rect x="22" y="100" width="121" height="60" rx="8" fill="#f8fafc"/>
+          <text x="82" y="120" text-anchor="middle" font-size="8" fill="#475569">📁 LLM Wiki Brain Trinity</text>
+          <text x="82" y="135" text-anchor="middle" font-size="8" fill="#475569">- RAW 폴더</text>
+          <text x="82" y="148" text-anchor="middle" font-size="8" fill="#475569">- Wiki 폴더</text>
+          <text x="82" y="161" text-anchor="middle" font-size="8" fill="#475569">- Output 폴더</text>
+          <text x="82" y="190" text-anchor="middle" font-size="8" fill="#94a3b8">Dropbox 등 동기화 폴더 권장</text>
+          <text x="82" y="205" text-anchor="middle" font-size="8" fill="#94a3b8">마크다운 파일이 곧 데이터베이스</text>
+
+          <!-- Arrow 1→2 -->
+          <line x1="157" y1="130" x2="185" y2="130" stroke="#7c3aed" stroke-width="2" marker-end="url(#stepArrow)"/>
+
+          <!-- STEP 2 -->
+          <rect x="187" y="10" width="145" height="240" rx="14" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="187" y="10" width="145" height="44" rx="14" fill="#0891b2"/>
+          <rect x="187" y="40" width="145" height="14" rx="0" fill="#0891b2"/>
+          <text x="260" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">STEP 2</text>
+          <text x="260" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">핵심 맥락 인터뷰</text>
+          <text x="260" y="88" text-anchor="middle" font-size="8.5" fill="#64748b">나를 AI에게 소개하기</text>
+          <rect x="199" y="100" width="121" height="80" rx="8" fill="#f0f9ff"/>
+          <text x="260" y="118" text-anchor="middle" font-size="8" fill="#0369a1" font-weight="600">3가지 핵심 질문</text>
+          <text x="260" y="133" text-anchor="middle" font-size="8" fill="#475569">① 나는 누구인가?</text>
+          <text x="260" y="147" text-anchor="middle" font-size="8" fill="#475569">② 왜 기록하는가?</text>
+          <text x="260" y="161" text-anchor="middle" font-size="8" fill="#475569">③ 어떤 아웃풋을 원하는가?</text>
+          <text x="260" y="185" text-anchor="middle" font-size="8" fill="#94a3b8">STT로 자유롭게 말하기</text>
+          <text x="260" y="200" text-anchor="middle" font-size="8" fill="#94a3b8">Claude가 인터뷰로 심화</text>
+          <text x="260" y="215" text-anchor="middle" font-size="8" fill="#94a3b8">→ 핵심 맥락.md 생성</text>
+
+          <!-- Arrow 2→3 -->
+          <line x1="334" y1="130" x2="362" y2="130" stroke="#7c3aed" stroke-width="2" marker-end="url(#stepArrow)"/>
+
+          <!-- STEP 3 -->
+          <rect x="364" y="10" width="145" height="240" rx="14" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="364" y="10" width="145" height="44" rx="14" fill="#10b981"/>
+          <rect x="364" y="40" width="145" height="14" rx="0" fill="#10b981"/>
+          <text x="437" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">STEP 3</text>
+          <text x="437" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">claude.md + 폴더 생성</text>
+          <text x="437" y="88" text-anchor="middle" font-size="8.5" fill="#64748b">LLM Wiki 스키마 적용</text>
+          <rect x="376" y="100" width="121" height="80" rx="8" fill="#f0fdf4"/>
+          <text x="437" y="118" text-anchor="middle" font-size="8" fill="#15803d" font-weight="600">claude.md 섹션</text>
+          <text x="437" y="133" text-anchor="middle" font-size="8" fill="#475569">- 나는 누구인가</text>
+          <text x="437" y="147" text-anchor="middle" font-size="8" fill="#475569">- 작업 규칙·스키마</text>
+          <text x="437" y="161" text-anchor="middle" font-size="8" fill="#475569">- 폴더별 CLAUDE.md</text>
+          <text x="437" y="185" text-anchor="middle" font-size="8" fill="#94a3b8">Karpathy LLM Wiki 패턴</text>
+          <text x="437" y="200" text-anchor="middle" font-size="8" fill="#94a3b8">그대로 붙여넣기 → 적용</text>
+          <text x="437" y="215" text-anchor="middle" font-size="8" fill="#94a3b8">폴더 자동 생성 완료</text>
+
+          <!-- Arrow 3→4 -->
+          <line x1="511" y1="130" x2="539" y2="130" stroke="#7c3aed" stroke-width="2" marker-end="url(#stepArrow)"/>
+
+          <!-- STEP 4 -->
+          <rect x="541" y="10" width="145" height="240" rx="14" fill="white" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="541" y="10" width="145" height="44" rx="14" fill="#ea580c"/>
+          <rect x="541" y="40" width="145" height="14" rx="0" fill="#ea580c"/>
+          <text x="614" y="36" text-anchor="middle" fill="white" font-size="11" font-weight="700">STEP 4</text>
+          <text x="614" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#1e293b">Web Clipper 설정</text>
+          <text x="614" y="88" text-anchor="middle" font-size="8.5" fill="#64748b">유형별 수집 템플릿</text>
+          <rect x="553" y="100" width="121" height="80" rx="8" fill="#fff7ed"/>
+          <text x="614" y="118" text-anchor="middle" font-size="8" fill="#c2410c" font-weight="600">5가지 템플릿</text>
+          <text x="614" y="133" text-anchor="middle" font-size="8" fill="#475569">📰
