@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-06-15T08:02:10",
+  "updated_at": "2026-06-15T08:38:57",
   "reports": [
+    {
+      "slug": "caveman-claude-token-saving",
+      "category": "tech",
+      "video_id": "iEScgjg_eR4",
+      "title": "클로드한테 우가우가 시켰더니 토큰 87% 줄었습니다",
+      "channel": "메이커 에반 | Maker Evan",
+      "duration_string": "6분 29초",
+      "duration_seconds": 389,
+      "summary": "AI 출력 토큰을 65~87% 줄여주는 오픈소스 도구 'Caveman' 소개",
+      "video_url": "https://www.youtube.com/watch?v=iEScgjg_eR4",
+      "report_url": "tech/youtube/caveman-claude-token-saving.html",
+      "type": "youtube",
+      "thumbnail_url": "https://img.youtube.com/vi/iEScgjg_eR4/maxresdefault.jpg",
+      "processed_date": "2026-06-15"
+    },
     {
       "slug": "claude-code-codex-workflow",
       "category": "tech",
