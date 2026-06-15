@@ -1,7 +1,22 @@
 {
   "version": 1,
-  "updated_at": "2026-06-09T07:52:03",
+  "updated_at": "2026-06-15T08:02:10",
   "reports": [
+    {
+      "slug": "claude-code-codex-workflow",
+      "category": "tech",
+      "video_id": "f0hcByvsyjU",
+      "title": "클로드 코드 하나만 쓰면 이제 망합니다(feat. Codex)",
+      "channel": "메이커 에반 | Maker Evan",
+      "duration_string": "6분 42초",
+      "duration_seconds": 402,
+      "summary": "클로드 코드 단독 사용의 한계, 코덱스 병행으로 보완하는 워크플로우 소개",
+      "video_url": "https://www.youtube.com/watch?v=f0hcByvsyjU",
+      "report_url": "tech/youtube/claude-code-codex-workflow.html",
+      "type": "youtube",
+      "thumbnail_url": "https://img.youtube.com/vi/f0hcByvsyjU/maxresdefault.jpg",
+      "processed_date": "2026-06-15"
+    },
     {
       "slug": "llm-wiki-obsidian-claude-second-brain",
       "category": "tech",
